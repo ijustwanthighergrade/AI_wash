@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>wash</title>
+    <link href="add.css" rel="stylesheet">
+    <link href="wash4.css" rel="stylesheet">
+</head>
+
+<script>
+</script>
+
+<body>
+
+    <table class="ta1">
+        <tr>
+            <td><img class ="logo" src="image/logo.jpg"></td>
+            <td><a href="member.html"><div class ="log_in">會員</div></a></td>
+        </tr>
+    </table>
+
+    <table class="ta2" >
+        <tr class="tr1">
+            <td class="td3"><div><a href="index.html"  class="back"><返回首頁</a></div></td>
+        </tr>
+
+        <tr >
+            <td>
+                <div class="div1">訂單明細
+                    <p class="p1">
+                    衣服袋數：<br>
+                    洗滌：<br>
+                    乾燥：<br>
+                    摺衣：<br>
+                    特殊衣物：<br>
+                    獲得點數：<br>
+                    扣除點數：<br><hr>
+                    </p>
+                    <p class="p2">
+                    總點數：　總金額：
+                    </p>
+                </div>              
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <form  method="post">
+                    <table class="ta3" >
+                        <tr class="div2">
+                            <td colspan="2">
+                                <input type="radio" id="re1" name="receive" checked>自取<br>
+                                <input type="radio" id="re2" name="receive" >外送
+                                <input type="checkbox" >是否用預設<br>
+                                地址
+                                <input type="text"><br>
+                                電話
+                                <input type="text"><br>
+                                付款方式<br>
+                                <input type="radio" id="re2" name="receive" >信用卡
+                                <input type="checkbox" >是否用預設<br>
+                                <input type="text"><br>
+                                <input type="checkbox" >記住卡<br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td1">
+                                <a href="wash3.html" class="next">上一步 </a>
+                                
+                            </td>
+                            <td class="td1">
+                                <div class="confirm">
+                                    <input class='confirm' type="button" value="確認下單">
+                                   <p class='show'></p>
+                                </div>
+                            </td>
+                        </tr>
+                   
+                    </table>
+                </form>
+            </td>
+        </tr>
+        
+    </table>
+
+</body>
+
+<footer >
+    Copyright@2022 By AIwash Rights Reseved
+</footer>
+
+<script>
+    var button = document.querySelector('.confirm');
+           var showtxt = document.querySelector('.show');
+   
+           function popup2(e) {
+               
+               if (confirm('是否確認下單') == true) {
+                window.location.href='index.html';
+                window.alert('已下單');
+               } else{
+                window.alert('已取消下單');
+               }
+           };
+           button.addEventListener('click', popup2);
+   
+       </script>
+</html>

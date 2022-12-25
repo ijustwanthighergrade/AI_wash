@@ -1,0 +1,118 @@
+.ta2{
+    display: flex;
+    justify-content: center;
+}
+.td1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2% 0%;
+    width: 80%;
+    border: #c7fffc 2px solid;
+    background-color: #2fcfc6;
+    color: azure;
+}
+.btn{
+    display: flex;
+    justify-content: space-around;
+}
+.text1{
+    background-color: #e8fefd;
+    color:black;
+    margin: 2% auto;
+    width: 80% ;
+}
+.text2{
+    width: 40vh;
+    height: 10vh;
+    text-align: center;
+    line-height: 10vh;
+    font-weight: bold;
+    font-size: 35px;
+    border: #2fcfc6 2px solid;
+    color: #2fcfc6;
+    background-color: #e8fefd;
+    margin: 2% auto;
+}
+.text3{
+    width: 40vh;
+    height: 10vh;
+    text-align: center;
+    line-height: 10vh;
+    font-weight: bold;
+    font-size: 35px;
+    color: #2fcfc6;
+    border: #2fcfc6;
+    background-color: #e8fefd;
+}
+.text4{
+    margin: 2% auto 2% 12%;
+    width: 10vh;
+    height: 5vh;
+    text-align: center;
+    line-height: 5vh;
+    font-weight: bold;
+    font-size: 20px;
+    border:#e8fefd 2px solid;
+    color: #e8fefd;
+    background-color: #2fcfc6;
+}
+.ta3{
+    font-weight: bold;
+    font-size: 35px;
+    color: #2fcfc6;
+    margin: 2% auto;
+}
+.td2{
+    padding-left: 7%;
+    border-bottom: #2fcfc6 2px solid;
+    width: 200vh;
+}
+
+.td21{
+    border-bottom: #2fcfc6 0px;
+}
+
+@media screen and (max-width: 768px)
+{
+    .ta1{
+        margin-bottom: 3%;
+    }
+    .td1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0%;
+        width: 80%;
+        border: #c7fffc 2px solid;
+        background-color: #2fcfc6;
+        color: azure;
+    }
+    .btn{
+        justify-content: center;
+        margin: 5% auto;
+
+    }
+    .text1{
+        margin: 0% auto;
+        background-color: #e8fefd;
+        color:black;
+        height: auto;
+    }
+    .text2{
+        margin-left: 2%;
+        width: 15vh;
+        height: 10vh;
+        font-size: 25px;
+    }
+    
+    .text3{
+        width: 15vh;
+        font-size: 20px;
+    }
+    .ta3{
+        font-size: 20px;
+    }
+    
+
+}

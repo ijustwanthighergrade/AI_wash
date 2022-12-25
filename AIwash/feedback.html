@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>return</title>
+    <link href="add.css" rel="stylesheet">
+    <link href="feedback.css" rel="stylesheet">
+</head>
+
+
+
+<body>
+
+    <table class="ta1">
+        <tr>
+            <td><img class ="logo" src="image/logo.jpg"></td>
+            <td><a href="member.html"><div class ="log_in">會員</div></a></td>
+        </tr>
+    </table>
+
+    <table class="ta2" >
+        <tr class="tr1">
+            <td class="td3"><div><a href="index.html"  class="back"><返回首頁</a></div></td>
+        </tr>
+        <tr>
+            <td>
+                <form  method="post">
+                    <table class="ta3" >
+                        <tr>
+                            <td class="return">
+                                滿意度回饋
+                            </td>
+                        </tr>
+                        <tr class="tr1">
+                            <td>
+                                <div class="type">
+                                    訂單編號
+                                    <input type="text" style="width: 70%;">
+                                </div>
+                            </td>                           
+                        </tr>
+                        <tr class="tr1">
+                            <td>
+                                <div class="type">
+                                    會員編號
+                                    <input type="text" style="width: 70%;">
+                                </div>
+                            </td>                           
+                        </tr>
+                        <tr class="tr1">
+                            <td>
+                                <div class="type">
+                                    滿意度星數：
+                                    1<input type="radio" name="star">
+                                    2<input type="radio" name="star">
+                                    3<input type="radio" name="star">
+                                    4<input type="radio" name="star">
+                                    5<input type="radio" name="star">
+                                </div>
+                            </td>                           
+                        </tr>
+                        <tr>
+                            <td  class="type">
+                                內容<br>
+                                <textarea name="comments" rows="5" cols="20">您的內容</textarea>
+                            </td>
+                        </tr>
+                        <tr><td>
+                            <div class="confirm">
+                            <input class='confirm' type="button" value="確認送出">
+                             <p class='show'></p></div>
+                        </td>
+                        </tr>
+                   
+                    </table>
+                </form>
+            </td>
+        </tr>
+        
+    </table>
+
+</body>
+
+<footer >
+    Copyright@2022 By AIwash Rights Reseved
+</footer>
+
+
+<script>
+    var button = document.querySelector('.confirm');
+           var showtxt = document.querySelector('.show');
+   
+           function popup2(e) {
+               
+               if (confirm('是否確定要送出') == true) {
+                window.location.href='index.html';
+                window.alert('已送出');
+               } else{
+                window.alert('已取消送出');
+               }
+           };
+           button.addEventListener('click', popup2);
+   
+       </script>
+</html>
