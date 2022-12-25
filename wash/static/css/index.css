@@ -1,0 +1,130 @@
+
+.ta2{
+    width: 80%;
+    margin: auto;
+    height: 3vh;
+    border: 5px solid  #2fcfc6;
+    border-radius: 10px;
+    background-color: #c7fffc;
+    margin-bottom: 1%;
+}
+
+.ta3{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    height: 35vh; 
+    margin-bottom: 1%;
+    width: 80%;
+}
+
+.td1{
+    width: 10%;
+}
+
+
+.new{
+    text-align: center;
+    width: 3%;
+    font-size: 38px;
+    font-weight: bolder;
+    border: 5px solid #2fcfc6;
+    border-radius: 100%;
+    background-color: #c7fffc;
+    margin-left: 90%;
+    margin-bottom: 1%;
+    color: #2fcfc6;
+}
+
+.text1{
+    font-size: 24px;
+    font-weight: bold;
+    border-right: 3px solid  #2fcfc6;
+    text-align: center;
+    width: 100%;
+    color: #2fcfc6;
+}
+
+.text2{
+    font-size: 20px;
+    padding-left:1% ;
+}
+
+.text3{
+    color: #2fcfc6;
+    font-weight: bold;
+    text-align: center;
+    font-size: 34px;
+    border: 5px solid  #2fcfc6;
+    border-radius: 10px;
+    background-color: #c7fffc;
+    margin-right: 0%;
+    padding: 10% 30px;    
+    height: 30vh;
+    line-height: 30vh;
+}
+
+
+@media screen and (max-width: 900px)
+{
+    .text3{
+        font-size: 30px;
+        padding: 13% 8px 0%;
+    }
+}
+@media screen and (max-width: 768px)
+{
+    .ta2{
+        margin-bottom: 3%;
+    }
+    .btn{
+        display: block;
+        height: auto;
+    }
+    .ta3{
+        flex-direction: column;
+        width: 80%;
+        margin: auto auto 1%;
+        height: 20%; 
+    }
+
+    .td1{
+        width: 25%;
+    }
+
+    .text1{
+        font-size: 14px;
+    }
+
+    .text2{
+        font-size: 12px;
+    }
+
+    .text3{
+        font-size: 30px;
+        margin-left: -50%;
+        margin-top: 20%;
+        padding: 5% 20%;
+        height: 100%;
+        width: 130%;
+        line-height:100%;
+    }
+    #small{
+        margin-top: 5%;
+    }
+    .new{
+        margin-left: 85%;
+        font-size: 28px;
+        width: 9%;
+        border: 5px solid #2fcfc6;
+        margin-bottom: 1%;
+}
+  
+
+    footer{
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        margin-top: 7.2%;
+    }
+}
