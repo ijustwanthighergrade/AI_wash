@@ -25,4 +25,8 @@ urlpatterns = [
     path('map/', include('map.urls')),
     path('friend/', include('friend.urls')),
     path('faq/', include('faq.urls')),
+    path('member/', include('member.urls')),
+    path('memSet/', include('memSet.urls')),
+    path('order/', include('order.urls')),
+    path('complain/', include('complain.urls')),
 ]

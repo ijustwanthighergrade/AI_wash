@@ -2,12 +2,13 @@
 <html lang="en">
 
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>signup</title>
-    <link href="css/signup.css" rel="stylesheet">
-    <link href="css/add.css" rel="stylesheet">
+    <link href="{% static "css/add.css" %}" rel="stylesheet">
+    <link href="{% static "css/signup.css" %}" rel="stylesheet">
 </head>
 
 <body>
@@ -15,18 +16,15 @@
 
     <table class="ta1">
         <tr>
-            <td><img class="logo" src="image/logo.jpg"></td>
-            <td><a href="member.html">
-                    <div class="log_in">會員</div>
-                </a>
-            </td>
+            <td><img class ="logo" src="{% static "images/logo.jpg" %}"></td>
+            <td><a href="{% url 'member' %}"><div class ="log_in">會員</div></a></td>
         </tr>
     </table>
 
     <div class="ta2">
         <div class="td1">
             <div class="text4">
-                <a href="member.html">返回</a>
+                <a href="{% url 'member' %}">返回</a>
             </div>
             <form>
                 <div class="text1">

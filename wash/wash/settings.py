@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'friend',
     'faq',
     'teach',
+    'member',
 ]
 
 MIDDLEWARE = [
