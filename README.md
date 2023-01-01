@@ -11,7 +11,7 @@ ex:<img class ="logo" src="{% static "images/logo.jpg" %}">
 ex:<a href="{% url 'order' %}"><div  class="text3" id="small">開始洗衣</div></a>   
 
 app的urls 16個頁面 不包括sinup.html和add.html
-home            連接的是   index.html
+index           連接的是   index.html
 teach           連接的是   teaching.html
 wash1           連接的是   wash1.html
 wash2           連接的是   wash2.html
@@ -27,6 +27,10 @@ detail          連接的是   more.html
 complain        連接的是   complain.html
 showfeedback    連接的是   feedback.html
 feedback        連接的是   return.html
+
+app資料夾內容
+home            主頁
+procedure       洗衣流程
 
 後端注意事項
 ##一、安裝與建置環境##
