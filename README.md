@@ -16,22 +16,22 @@ ex:{% static "css/aaa.css"%}{% static "images/aaa.jpg"%}
 現在要把xxx.html改成 {% url 'url.py設定的name' %} ex:{% url 'index' %}
 
 app的urls 16個頁面 不包括sinup.html和add.html
-index           連接的是   index.html
-teach           連接的是   teaching.html
-wash1           連接的是   wash1.html
+index           連接的是   index.html       .
+teach           連接的是   teaching.html    .
+wash1           連接的是   wash1.html       .
 wash2           連接的是   wash2.html
 wash3           連接的是   wash3.html
 wash4           連接的是   wash4.html
-map             連接的是   map.html
-faq             連接的是   faq.html
-friend          連接的是   friend.html
-member          連接的是   member.html
-memSet          連接的是   memberset.html
-order           連接的是   order.html
-detail          連接的是   more.html
-complain        連接的是   complain.html
-showfeedback    連接的是   feedback.html
-feedback        連接的是   return.html
+map             連接的是   map.html         .
+faq             連接的是   faq.html         .
+friend          連接的是   friend.html      .
+member          連接的是   member.html      .
+memSet          連接的是   memberset.html   .
+order           連接的是   order.html       .
+detail          連接的是   more.html        .
+complain        連接的是   complain.html    .
+showfeedback    連接的是   feedback.html    .
+feedback        連接的是   return.html      .
 
 app資料夾內容
 home            主頁
