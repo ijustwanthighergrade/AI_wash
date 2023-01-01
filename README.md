@@ -38,16 +38,16 @@ home            主頁
 procedure       洗衣流程1
 
 ## 後端注意事項
-# 一、安裝與建置環境##
+# 一、安裝與建置環境
 1.python
 https://ithelp.ithome.com.tw/articles/10210071
 2.django
 https://ithelp.ithome.com.tw/articles/10199575
 
-##django登入/登出##
+# django登入/登出
 https://ithelp.ithome.com.tw/articles/10206063
 
-##二、用python開網頁##
+# 二、用python開網頁
 比如開了新的app叫做home它裡面不會產生出urls.py
 要複製一個wash資料夾裡的urls.py丟到home資料夾裡面
 wash下方的settings.py要設定東西
@@ -57,7 +57,7 @@ wash下方的settings.py要設定東西
 3.settings.py INSTALLED_APPS 每新增一個app都要把app名稱寫上去
 4.wash資料夾下的urls.py urlpatterns
 
-#參考資料#
+# 參考資料
 1.https://www.maxlist.xyz/2018/12/31/python_django/#%E4%BF%AE%E6%94%B9Demo%E8%B3%87%E6%96%99%E5%A4%BE%E5%85%A7%E7%9A%84urlspy%EF%BC%9A
 2.https://yanwei-liu.medium.com/python-django%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-%E4%B8%80-%E5%9F%BA%E6%9C%AC%E7%92%B0%E5%A2%83-c3d5d1727d53
 3.https://www.twblogs.net/a/5d845cf2bd9eee532700039f
