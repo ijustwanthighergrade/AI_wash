@@ -1,5 +1,5 @@
-# AI_wash
-系統分析期末專案
+## AI_wash
+系統分析期末專案 麻煩各位看完注意事項，若不懂再來找我 - 吳岱芸
 
 ## 前端注意事項(請直接在templates的html中更改)
 1.請幫我在每個頁面的開頭都加上{% load static %}
@@ -64,7 +64,7 @@ wash下方的settings.py要設定東西
 
 
 
-## p.s. 可能會遇到的問題##
+## p.s. 可能會遇到的問題
 1.跑虛擬環境時可能會遇到
 https://learn.microsoft.com/zh-tw/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3
 這裡面的問題，先去vscode裝PowerShell再重開VSCODE應該就沒事了，有事再自己想辦法歐
