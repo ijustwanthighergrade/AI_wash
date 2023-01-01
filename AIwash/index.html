@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>index</title>
-    <link href="css/add.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
+    <link href="{% static "css/add.css" %}" rel="stylesheet">
+    <link href="{% static "css/index.css" %}" rel="stylesheet">
 </head>
 
 <body>
 
     <table class="ta1">
     <tr>
-        <td><img class ="logo" src="image/logo.jpg"></td>
-        <td><a href="member.html"><div class ="log_in">會員</div></a></td>
+        <td><img class ="logo" src="{% static "images/logo.jpg" %}"></td>
+        <td><a href="{% url 'member' %}"><div class ="log_in">會員</div></a></td>
         
     </tr>
     </table>
@@ -27,14 +28,14 @@
         </tr>
     </table>
 
-    <div class = "new"><a href="teaching.html" style="color: #2fcfc6;">?</a></div>
+    <div class = "new"><a href="{% url 'teach' %}" style="color: #2fcfc6;">?</a></div>
     <div class="btn"></div>
        <div class="ta3">
-            <a href="wash1.html"><div  class="text3" id="small">開始洗衣</div></a>   
-            <a href="map.html"><div  class="text3">商店地圖</div></a>              
-            <a href="return.html"><div  class="text3">問題回饋</div></a>                
-            <a href="faq.html"><div  class="text3">常見問題</div></a>                
-            <a href="friend.html"><div  class="text3">友站連結</div></a>                
+            <a href="{% url 'wash1' %}"><div  class="text3" id="small">開始洗衣</div></a>    
+            <a href="{% url 'map' %}"><div  class="text3">商店地圖</div></a>              
+            <a href="{% url 'feedback' %}"><div  class="text3">問題回饋</div></a>                
+            <a href="{% url 'faq' %}"><div  class="text3">常見問題</div></a>                
+            <a href="{% url 'friend' %}"><div  class="text3">友站連結</div></a>                
         </div>       
 
 

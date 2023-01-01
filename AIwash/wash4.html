@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>wash</title>
-    <link href="css/add.css" rel="stylesheet">
-    <link href="css/wash4.css" rel="stylesheet">
+    <link href="{% static "css/add.css" %}" rel="stylesheet">
+    <link href="{% static "css/wash4.css" %}" rel="stylesheet">
 </head>
 
 <script>
@@ -17,14 +18,14 @@
 
     <table class="ta1">
         <tr>
-            <td><img class ="logo" src="image/logo.jpg"></td>
-            <td><a href="member.html"><div class ="log_in">會員</div></a></td>
+            <td><img class ="logo" src="{% static "images/logo.jpg" %}"></td>
+            <td><a href="{% url 'member' %}"><div class ="log_in">會員</div></a></td>
         </tr>
     </table>
 
     <table class="ta2" >
         <tr class="tr1">
-            <td class="td3"><div><a href="index.html"  class="back"><返回首頁</a></div></td>
+            <td class="td3"><div><a href="{% url 'index' %}"  class="back"><返回首頁</a></div></td>
         </tr>
 
         <tr >
@@ -68,7 +69,7 @@
                         </tr>
                         <tr>
                             <td class="td1">
-                                <a href="wash3.html" class="next">上一步 </a>
+                                <a href="{% url 'wash3' %}" class="next">上一步 </a>
                                 
                             </td>
                             <td class="td1">
