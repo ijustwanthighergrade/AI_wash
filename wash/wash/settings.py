@@ -46,6 +46,10 @@ INSTALLED_APPS = [
     'faq',
     'teach',
     'member',
+    'order',
+    'detail',
+    'showfeedback',
+
 ]
 
 MIDDLEWARE = [
