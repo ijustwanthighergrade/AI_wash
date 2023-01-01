@@ -26,5 +26,5 @@ urlpatterns = [
     path('../faq/', views.faq, name='faq'),
     path('../friend/', views.friend, name='friend'),
     path('../member/', views.member, name='member'),
-    path('../teach/', views.teach, name='teach'),
+    path('../TEACHING/', views.teach, name='teach'),
 ]

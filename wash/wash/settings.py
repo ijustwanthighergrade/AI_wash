@@ -41,6 +41,10 @@ INSTALLED_APPS = [
     'home',
     'procedure',
     'feedback',
+    'map',
+    'friend',
+    'faq',
+    'teach',
 ]
 
 MIDDLEWARE = [

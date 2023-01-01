@@ -19,6 +19,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.feedback, name='feedback'),
+    path('../teach/', views.feedback, name='feedback'),
     path('../home/', views.index, name='index'),
 ]

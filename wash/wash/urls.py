@@ -21,4 +21,8 @@ urlpatterns = [
     path('home/', include('home.urls')),
     path('procedure/', include('procedure.urls')),
     path('feedback/', include('feedback.urls')),
+    path('teach/', include('teach.urls')),
+    path('map/', include('map.urls')),
+    path('friend/', include('friend.urls')),
+    path('faq/', include('faq.urls')),
 ]
