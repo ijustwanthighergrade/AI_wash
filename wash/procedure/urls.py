@@ -19,12 +19,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('../procedure/', views.wash1, name='wash1'),
-    path('../map/', views.map, name='map'),
-    path('../feedback/', views.feedback, name='feedback'),
-    path('../faq/', views.faq, name='faq'),
-    path('../friend/', views.friend, name='friend'),
-    path('../member/', views.member, name='member'),
-    path('../teach/', views.teach, name='teach'),
+    path('', views.wash1, name='wash1'),
+    path('', views.wash2, name='wash2'),
+    path('../home/', views.index, name='index'),
+
 ]

@@ -1,14 +1,14 @@
 # AI_wash
 系統分析期末專案
 
-前端注意事項
+前端注意事項(請直接在templates的html中更改)
 1.請幫我在每個頁面的開頭都加上{% load static %}
 2.css的部份請改成下列這種形式
 ex:<link href="{% static "css/add.css" %}" rel="stylesheet">
 3.圖片的部份請改成下列這種形式
 ex:<img class ="logo" src="{% static "images/logo.jpg" %}">
 4.url的部分請依照下面後端注意事項的第一個英文改{% url '對應的英文' %}
-ex:<a href="{% url 'order' %}"><div  class="text3" id="small">開始洗衣</div></a>   
+ex:<a href="{% url 'wash1' %}"><div  class="text3" id="small">開始洗衣</div></a>   
 
 app的urls 16個頁面 不包括sinup.html和add.html
 index           連接的是   index.html
