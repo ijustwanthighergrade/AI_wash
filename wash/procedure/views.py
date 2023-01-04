@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import sqlite3
-import requests
 
 
 def wash1(request):
@@ -10,9 +9,12 @@ def wash1(request):
    return render(request,"wash1.html",locals())
 
 def wash2(request):
+   
    return render(request,"wash2.html",locals())
+
 def wash3(request):
    return render(request,"wash3.html",locals())
+
 def wash4(request):
    return render(request,"wash4.html",locals())
 
