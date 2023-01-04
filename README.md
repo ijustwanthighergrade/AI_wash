@@ -68,6 +68,8 @@ import requests
 
 # 資料庫 
 db的位置以wash資料夾為準
+# 參考資料
+https://docs.python.org/zh-tw/3/library/sqlite3.html
 
 # flask
 @app.route('/get_dir/<path>')
