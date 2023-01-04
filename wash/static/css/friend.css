@@ -83,5 +83,8 @@
         font-size: 15px;
     }
     
-
+    footer{
+        position: absolute;
+        right: 0px;
+    }
 }

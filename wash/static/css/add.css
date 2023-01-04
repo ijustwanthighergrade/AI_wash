@@ -1,13 +1,16 @@
 body{
     background-color:#bbf2ee ;
+    padding: 0;
+    margin: 0;
 }
 
 .ta1{
-    width: 102%;
+    width: 100%;
     background-color: #2fcfc6;
-    margin: -1%;
+    margin: 0%;
     margin-bottom: 1%;
 }
+
 
 .log_in {  
     color: #2fcfc6;

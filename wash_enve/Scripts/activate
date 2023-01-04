@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\DAIYUNWU\Desktop\AI_wash\wash_enve"
+VIRTUAL_ENV="C:\Users\Amy\Desktop\AI_wash\wash_enve"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

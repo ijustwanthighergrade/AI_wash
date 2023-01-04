@@ -82,4 +82,11 @@
     .car{
         width: 90%;
      }
+
+     footer{
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        margin-top: 7.2%;
+    }
 }

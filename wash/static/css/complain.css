@@ -12,6 +12,9 @@
     background-color: #2fcfc6;
     color: azure;
 }
+.td2{
+    font-size: 16px;
+}
 .text1{
     text-align: center;
     border: #2fcfc6 2px solid;
@@ -38,6 +41,15 @@
     width: 10vh;
     height: 5vh;
 }
+.text5{
+    font-size: 14px;
+    color: rgb(137, 195, 246);
+}
+.ta3{
+    text-align: left;
+    margin: auto;
+    width: 90%;
+}
 @media screen and (max-width: 768px)
 {
     .ta1{
@@ -54,5 +66,10 @@
         color: azure;
     }
     
-
+    footer{
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        margin-top: 7.2%;
+    }
 }
