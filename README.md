@@ -69,6 +69,9 @@ import requests
 # 資料庫 
 db的位置以wash資料夾為準
 
+# flask
+@app.route('/get_dir/<path>')
+
 ## p.s. 可能會遇到的問題
 1.跑虛擬環境時可能會遇到
 https://learn.microsoft.com/zh-tw/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.3
