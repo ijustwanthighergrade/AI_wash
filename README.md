@@ -62,7 +62,12 @@ wash下方的settings.py要設定東西
 2.https://yanwei-liu.medium.com/python-django%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-%E4%B8%80-%E5%9F%BA%E6%9C%AC%E7%92%B0%E5%A2%83-c3d5d1727d53
 3.https://www.twblogs.net/a/5d845cf2bd9eee532700039f
 
+# 必須import的東西
+import sqlite3
+import requests
 
+# 資料庫 
+db的位置以wash資料夾為準
 
 ## p.s. 可能會遇到的問題
 1.跑虛擬環境時可能會遇到
