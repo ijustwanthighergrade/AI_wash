@@ -100,7 +100,7 @@
            function popup2(e) {
                
                if (confirm('是否確認下單') == true) {
-                window.location.href='index.html';
+                window.location.href='{% url 'index2' %}';
                 window.alert('已下單');
                } else{
                 window.alert('已取消下單');

@@ -20,7 +20,10 @@ from . import views
 
 urlpatterns = [
     path('', views.wash1, name='wash1'),
-    path('', views.wash2, name='wash2'),
+    path('templates/wash4', views.wash4, name='wash4'),
+    path('templates/wash3', views.wash3, name='wash3'),
+    path('templates/wash2', views.wash2, name='wash2'),
     path('../home/', views.index, name='index'),
+    path('../../home/', views.index, name='index2'),
 
 ]
