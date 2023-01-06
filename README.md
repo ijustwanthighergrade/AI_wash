@@ -66,6 +66,10 @@ wash下方的settings.py要設定東西
 import sqlite3
 import requests
 
+pip install django-filter
+pip install djangorestframework
+
+
 # 資料庫 
 db的位置以wash資料夾為準
 # 參考資料
