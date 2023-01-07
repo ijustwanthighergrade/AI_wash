@@ -1,16 +1,20 @@
 import requests
-import json
 
-https://access.line.me/oauth2/v2.1/login?returnUri=%2Foauth2%2Fv2.1%2Fauthorize%2Fconsent%3Fresponse_type%3Dcode%26client_id%3D1657781063%26redirect_uri%3Dd9a6-1-34-54-152.jp.ngrok.io%252FLineLoginApp%252Fcallback%26state%3DState-3cf0b526-e36c-4e99-ab58-2ad973a86cc5%26scope%3Dprofile%2Bopenid%2Bemail%26promot%3Dconsent%26ui_locales%3Dzh-TW&loginChannelId=1657781063&loginState=s4ADmfbafCsCOcBbkKzmEA
+#全部都用back傳
+# 第一次傳送網址 在rebackurl後面加上?fk=123 隨機碼 
+# 要自己存state 
+# 可以用一個登入就好
+
+# https://access.line.me/oauth2/v2.1/login?returnUri=%2Foauth2%2Fv2.1%2Fauthorize%2Fconsent%3Fresponse_type%3Dcode%26client_id%3D1657781063%26redirect_uri%3Dd9a6-1-34-54-152.jp.ngrok.io%252FLineLoginApp%252Fcallback%26state%3DState-3cf0b526-e36c-4e99-ab58-2ad973a86cc5%26scope%3Dprofile%2Bopenid%2Bemail%26promot%3Dconsent%26ui_locales%3Dzh-TW&loginChannelId=1657781063&loginState=s4ADmfbafCsCOcBbkKzmEA
 
 
-#{'Authorization': 'Token 84d880fe428b979e089e05847c5a3c7b20e3d2d0'} 類似密鑰的東西 之後會變
+#{'Authorization': 'Token 84d880fe428b979e089e05847c5a3c7b20e3d2d0'} 類似密鑰的東西 從dbmanageapp 後台新增
 
 # Line_1的功能是：跳轉回頁面
 # 你發送Rbackurl
-# 伺服器會傳送Rstate回來
+# 伺服器會傳送Rstate回來 state是一次性的如果失敗要從line1再開一次
 
-url="https://d9a6-1-34-54-152.jp.ngrok.io/RESTapiApp/Line_1/"
+url="https://e024-1-34-54-152.jp.ngrok.io/RESTapiApp/Line_1/"
 data={
     'Rbackurl': '我的網址'
 }
