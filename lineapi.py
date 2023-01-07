@@ -1,33 +1,16 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-import requests
-from django.db import models
-# https://ithelp.ithome.com.tw/articles/10158250
-
-def index(request):
-   return render(request,"index.html",locals())
-def wash1(request):
-   return render(request,"wash1.html",locals())
-def map(request):
-   return render(request,"map.html",locals())
-def feedback(request):
-   return render(request,"return.html",locals())
-def faq(request):
-   return render(request,"faq.html",locals())
-def friend(request):
-   return render(request,"friend.html",locals())
-def member(request):
-   return render(request,"member.html",locals())
-def teach(request):
-   return render(request,"teaching.html",locals())
-
-
 #請在model建立以下資料表 記得最上面些寫這個 UUIDrand function 
+import uuid
+def UUIDrand():
+    return str(uuid.uuid4())
+
+class LOGIN(models.Model):
+    FKcheck=models.CharField(max_length=36,default=UUIDrand)
+    Rstate=models.CharField(max_length=42)
+    Raccesscode=models.CharField(max_length=43)
 
 #進入view
 #建立SACCngrok及自己的serverngrok
-SACCngrok=""
-serverngrok=""
+
 #第一步 登入介面的view，每次重整都會run一次
 def login2_view(request):
     sum=""
@@ -35,7 +18,7 @@ def login2_view(request):
     # print(rand.FKcheck)
     # print(type(rand.FKcheck))
     url = SACCngrok+'/RESTapiApp/Line_1/?Rbackurl='+serverngrok+'/api2/?fk='+rand.FKcheck
-    req=requests.get(url,headers = {'Authorization': 'Token 84d880fe428b979e089e05847c5a3c7b20e3d2d0','ngrok-skip-browser-warning': '7414'})
+    req=requests.get(url,headers = {'Authorization': 'Token fc350dd19927a48ed595b15586c7ea616c88a280','ngrok-skip-browser-warning': '7414'})
     print(req.json())
     req_read = req.json()
     print(req_read["Rstate"])
@@ -54,7 +37,7 @@ def api2(request):
         for i in nomatter:
             sum=i.Rstate
     url = SACCngrok+'/RESTapiApp/Line_2/?Rstate='+sum
-    req=requests.get(url,headers = {'Authorization': 'Token 84d880fe428b979e089e05847c5a3c7b20e3d2d0','ngrok-skip-browser-warning': '7414'})
+    req=requests.get(url,headers = {'Authorization': 'Token fc350dd19927a48ed595b15586c7ea616c88a280','ngrok-skip-browser-warning': '7414'})
     req_read = req.json()
     print(req_read)
     userUID=req_read["RuserID"]
@@ -70,7 +53,7 @@ def access(request):
     for result in results:
         ac_code = result.AC_CODE
     url2=SACCngrok+'/RESTapiApp/Access/?Raccess_code='+ac_code
-    req2=requests.get(url2,headers = {'Authorization': 'Token 84d880fe428b979e089e05847c5a3c7b20e3d2d0','ngrok-skip-browser-warning': '7414'})
+    req2=requests.get(url2,headers = {'Authorization': 'Token fc350dd19927a48ed595b15586c7ea616c88a280','ngrok-skip-browser-warning': '7414'})
     
     req_read2 = req2.json()
     print(type(req2.status_code))
