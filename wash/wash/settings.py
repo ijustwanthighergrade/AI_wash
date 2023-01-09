@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'order',
     'detail',
     'showfeedback',
+    'login',
 
 ]
 

@@ -31,6 +31,7 @@ urlpatterns = [
     path('complain/', include('complain.urls')),
     path('detail/', include('detail.urls')),
     path('showfeedback/', include('showfeedback.urls')),
+    path('login/', include('login.urls')),
 
     
 ]

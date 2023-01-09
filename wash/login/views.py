@@ -2,7 +2,7 @@ from pyexpat.errors import messages
 from django.shortcuts import render
 import requests
 
-from wash.login.models import LOGIN
+from login.models import LOGIN
 
 # Create your views here.
 
@@ -10,9 +10,12 @@ from wash.login.models import LOGIN
 #進入view
 #建立SACCngrok及自己的serverngrok
 SACCngrok="https://10eb-1-34-54-152.jp.ngrok.io"
-serverngrok=""
+serverngrok="http://127.0.0.1:8000/login/"
 #第一步 登入介面的view，每次重整都會run一次
-def login2_view(request):
+def login(request):
+    return render(request, 'login.html', locals())
+
+def login2(request):
     sum=""
     rand=LOGIN.objects.create()
     # print(rand.FKcheck)

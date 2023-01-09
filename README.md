@@ -1,6 +1,17 @@
 ## AI_wash
 系統分析期末專案 麻煩各位看完注意事項，若不懂再來找我 - 吳岱芸
 
+
+# 必須install的東西
+pip install requests
+pip install django-filter
+pip install djangorestframework
+
+#import
+import sqlite3
+import requests
+
+
 ## 前端注意事項(請直接在templates的html中更改)
 1.請幫我在每個頁面的開頭都加上{% load static %}
 2.css的部份請改成下列這種形式
@@ -62,12 +73,6 @@ wash下方的settings.py要設定東西
 2.https://yanwei-liu.medium.com/python-django%E5%AD%B8%E7%BF%92%E7%AD%86%E8%A8%98-%E4%B8%80-%E5%9F%BA%E6%9C%AC%E7%92%B0%E5%A2%83-c3d5d1727d53
 3.https://www.twblogs.net/a/5d845cf2bd9eee532700039f
 
-# 必須import的東西
-import sqlite3
-import requests
-
-pip install django-filter
-pip install djangorestframework
 
 
 # 資料庫 
