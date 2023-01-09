@@ -1,12 +1,30 @@
 .imgfade
-{}
+{
+    display: flex;
+    justify-content: center;    
+    align-items: center;    
+}
 .img
-{}
-.fadelogo
-{}
-
+{
+    width: 200px;
+    height: 200px;
+    opacity:0;
+    animation: fade 3s;
+}
+@keyframes fade{
+    from{
+        opacity:1;
+    }
+    to{
+        opacity:0;
+    } 
+    
+ }
 @media screen and (max-width: 768px)
 {
-
+    .imgfade
+    {
+    height: 600px; 
+    }
     
 }

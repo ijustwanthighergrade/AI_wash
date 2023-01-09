@@ -6,12 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>index</title>
-    <link href="{% static "css/add.css" %}" rel="stylesheet">
-    <link href="{% static "css/index.css" %}" rel="stylesheet">
+    <link href="css/add.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="css/fadelogo.css" rel="stylesheet">
 </head>
 
 <body>
-
+    <div class="imgfade"><div><img src="image/AIWASH.jpg" class="img"></div></div>
+    <div class="b">
     <table class="ta1">
     <tr>
         <td><img class ="logo" src="{% static "images/logo.jpg" %}"></td>
@@ -37,8 +39,7 @@
             <a href="{% url 'faq' %}"><div  class="text3">常見問題</div></a>                
             <a href="{% url 'friend' %}"><div  class="text3">友站連結</div></a>                
         </div>       
-
-
+    </div>
 </body>
 <footer >
     Copyright@2022 By AIwash Rights Reseved
