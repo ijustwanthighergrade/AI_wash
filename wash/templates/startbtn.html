@@ -11,14 +11,12 @@
 </head>
 
 <body>
-
-    <form>
+    {%  csrf_token  %}
         <div class="start">
-            <button><a href="{% url '' %}"><img src="{% static "image/start.jpg" %}" class="startbtn"></a></button>
+            <button><a href="{{ firstLogin }}"><img src="{% static "images/start.jpg" %}" class="startbtn"></a></button>
         </div>
 
 
-    </form>
 
 
 </body>

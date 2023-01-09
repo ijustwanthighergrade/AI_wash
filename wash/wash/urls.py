@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from login import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,6 +33,7 @@ urlpatterns = [
     path('detail/', include('detail.urls')),
     path('showfeedback/', include('showfeedback.urls')),
     path('login/', include('login.urls')),
-
+    path('api2/', views.api2, name='api2'),
+  
     
 ]

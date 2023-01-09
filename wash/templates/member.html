@@ -26,11 +26,12 @@
                     <a href="{% url 'index' %}">
                 返回</a>
                 </div>
-                <img class="img" src="{% static "images/logo.jpg" %}">
+                {% comment %} {% static "images/logo.jpg" %} {% endcomment %}
+                <img class="img" src="{{pic}}">
             </div>
             <div class="text1">
                 <p class="m">您好，尊貴的會員</p>
-                <p class="m" id="n">XXX</p>
+                <p class="m" id="n">{{nickname}}</p>
             </div>
             <div class="btn">
                 <div class="text2"><a href="{% url 'memSet' %}">
