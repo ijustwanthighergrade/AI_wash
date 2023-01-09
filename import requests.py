@@ -1,9 +1,25 @@
 import requests
+import json
+
+# with open("r.json") as f:
+#     # 讀取 JSON 檔案
+#     p = json.load(f)
+#     # 查看整個 JSON 資料解析後的結果
+#     print("p =", p)
+#     # 取得 name 的值
+#     print("name =", p["name"])
+#     # 取得 skill 的值
+#     print("skill =", p["skill"])
+
+# myDict = {
+#     "fk":123,
+#     "Rstate": "",
+#     "RuserID": "",
+#     "Raccess_code": ""
+# }
 
 # 資料庫要存的東西有fkcheck每組不可重複 最一開始 Rstate
 # 用session做登入註冊 這樣就可以處理他要登入多久
-# 
-# 我們有需要把GITHUB檔案丟進去五們的專案中嗎 
 
 #全部都用back傳
 # 第一次傳送網址 在rebackurl後面加上?fk=123 隨機碼 

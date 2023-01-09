@@ -75,6 +75,9 @@ db的位置以wash資料夾為準
 # 參考資料
 https://docs.python.org/zh-tw/3/library/sqlite3.html
 
+# session
+https://ithelp.ithome.com.tw/articles/10212461
+
 # flask
 @app.route('/get_dir/<path>')
 
