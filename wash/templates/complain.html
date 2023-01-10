@@ -26,96 +26,42 @@
             <div class="text4">
                 <a href="{% url 'member' %}">返回</a>
             </div>
+            {% for i in prob_list %}
             <div class="text1">
-                
                     <table class="ta3">
                         <tr>
                             <td class="td2">回饋單編號</td>
-                            <td class="text5">:</td>
+                            <td class="text5">{{i.PID}}</td>
                         </tr>
                         
                         <tr>
                             <td class="td2">類型</td>
-                            <td class="text5">衣物毀損問題</td>
+                            <td class="text5">{{i.PTYPE}}</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="td2">訂單</td>
+                            <td class="text5">{{i.ORDID}}</td>
                         </tr>
                     
                         <tr>
-                            <td class="td2">標題</br></td>
-                            <td class="text5">:</td>
+                            <td class="td2">時間</br></td>
+                            <td class="text5">{{i.PTIME}}</td>
                         </tr>
                         
                         <tr>
                             <td class="td2">內容</br></td>
-                            <td class="text5">:</td>
+                            <td class="text5">{{i.PDISC}}</td>
                         </tr>
                        
                         <tr>
                             <td class="td2">客服回覆</br></td>
-                            <td class="text5">:</td>
+                            <td class="text5">{{i.PRE}}</td>
                         </tr>
                     
                         </table>
             </div>
-            <div class="text1">
-                
-                    <table class="ta3">
-                        <tr>
-                            <td class="td2">回饋單編號</td>
-                            <td class="text5">:</td>
-                        </tr>
-                        
-                        <tr>
-                            <td class="td2">類型</td>
-                            <td class="text5">衣物毀損問題</td>
-                        </tr>
-                    
-                        <tr>
-                            <td class="td2">標題</br></td>
-                            <td class="text5">:</td>
-                        </tr>
-                        
-                        <tr>
-                            <td class="td2">內容</br></td>
-                            <td class="text5">:</td>
-                        </tr>
-                       
-                        <tr>
-                            <td class="td2">客服回覆</br></td>
-                            <td class="text5">:</td>
-                        </tr>
-                    
-                        </table>
-            </div>
-            <div class="text1">
-                
-                <table class="ta3">
-                    <tr>
-                        <td class="td2">回饋單編號</td>
-                        <td class="text5">:</td>
-                    </tr>
-                    
-                    <tr>
-                        <td class="td2">類型</td>
-                        <td class="text5">衣物毀損問題</td>
-                    </tr>
-                
-                    <tr>
-                        <td class="td2">標題</br></td>
-                        <td class="text5">:</td>
-                    </tr>
-                    
-                    <tr>
-                        <td class="td2">內容</br></td>
-                        <td class="text5">:</td>
-                    </tr>
-                   
-                    <tr>
-                        <td class="td2">客服回覆</br></td>
-                        <td class="text5">:</td>
-                    </tr>
-                
-                    </table>
-        </div>
+            {% endfor %}
             <div class="text3">
             </div>
         </div>

@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class REPROBLEMS(models.Model):
     PID = models.CharField('回報序號',max_length=43, editable=False,primary_key=True,default="001")
-    MEMID=models.CharField('會員序號',max_length=43, editable=False,default="")
+    MEMID=models.CharField('會員序號',max_length=43,default="")
     ORDID =models.CharField('訂單序號',max_length=43,null=True)
     PTYPE=models.CharField('回報類型',max_length=43,null=True)
     PTIME=models.DateField ('回報時間',null=True, blank=True)
