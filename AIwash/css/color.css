@@ -1,0 +1,147 @@
+.ta2{
+    display: flex;
+    justify-content: center;
+}
+.td1{
+    display: flex;
+    justify-content: space-around;
+    margin: 2% 0%;
+    width: 80%;
+    border: #c7fffc 2px solid;
+    background-color: #2fcfc6;
+    color: azure;
+}
+.img{
+    width: 200px;
+    height: 200px;
+    margin: 8% 8% 5% 25%;
+    border: #c7fffc 2px solid;
+}
+.btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 2% 3%;
+}
+.text1{
+    margin: 2% auto;
+    background-color: #e8fefd;
+    color:black;
+    width: 60%;
+    margin-left: 8%;
+}
+.text3{
+    margin: 2% auto;
+}
+#n{
+    font-size: 60px;
+    padding-left: 10%;
+}
+.m{
+    margin:5% 10%;
+}
+.set{
+    text-align: right;
+    margin-right: 5%;
+}
+.text2{
+    width: 40vh;
+    height: 10vh;
+    text-align: center;
+    line-height: 10vh;
+    font-weight: bold;
+    font-size: 35px;
+    border: #2fcfc6 2px solid;
+    color: #2fcfc6;
+    background-color: #e8fefd;
+}
+.text4{
+    width: 10vh;
+    height: 5vh;
+    text-align: center;
+    line-height: 5vh;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 2%;
+    border:#e8fefd 2px solid;
+    color: #e8fefd;
+    background-color: #2fcfc6;
+}
+
+@media screen and (max-width: 980px)
+{
+    .img{
+        width: 150px;
+        height: 150px;
+    }   
+    #n{
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 768px)
+{
+
+    .ta1{
+        margin-bottom: 3%;
+    }
+    .td1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0%;
+        width: 80%;
+        border: #c7fffc 2px solid;
+        background-color: #2fcfc6;
+        color: azure;
+    }
+    #img{
+        margin-top: 10%;
+    }
+    .img{
+        width: 100px;
+        height: 100px;
+        display: block;
+        margin: 10% auto;
+    }
+    .btn{
+        justify-content: center;
+        margin: 10% auto;
+
+    }
+    .text1{
+        margin: 0% auto;
+        background-color: #e8fefd;
+        color:black;
+        width: 60%;
+    }
+    .text3{
+        margin: 0% auto;
+        background-color: #e8fefd;
+        color:black;
+        width: 60%;
+    }
+    #n{
+        padding-left: 10%;
+    }
+    .m{
+        margin:5% 10%;
+    }
+    .set{
+        text-align: right;
+        margin-right: 5%;
+    }
+    .text2{
+        width: 28vh;
+        height: 10vh;
+        font-size: 25px;
+    }
+    .text4{
+        border: #2fcfc6 2px solid;
+        color: #2fcfc6;
+        background-color: #e8fefd;
+        margin-left: 0%;
+        font-size: 15px;
+    }
+    
+
+}
