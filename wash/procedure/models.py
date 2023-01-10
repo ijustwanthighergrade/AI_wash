@@ -1,3 +1,4 @@
+
 from django.db import models
 
 # Create your models here.
@@ -77,7 +78,7 @@ class CLIST(models.Model):
         order = order.objects.create(
             ORDID=self.ORDID,
             # 其他欄位
-            APPID=7,
+            APPID=5,
             AMOUNT=self.PRICE,
             GPOINT=self.WMODE.POINTS + self.LMODE.POINTS + self.FMODE.POINTS+ self.BAGNUM * 20,
             C_AMOUNT=self.WMODE.MEMISSIONS * 3 + self.LMODE.MEMISSIONS * 3 + self.FMODE.MEMISSIONS * 3,

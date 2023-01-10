@@ -119,6 +119,8 @@ def dealorder(request):
    
    ord=CLIST.objects.latest('id')
    ORD=ord.ORDID
+   
+   order.objects.filter(ORDID=ORD).update(MEMID=request.session['mem_session'])
    shops=shop.objects.get(id=1)
    SHOPS=shops.SHOPID
    delivery.objects.create(ORDID=ORD,SHOPID=SHOPS,PHONE=orderdata['mphone'], ADDRESS=orderdata['addr'])
