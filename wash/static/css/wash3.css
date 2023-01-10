@@ -66,14 +66,17 @@
 }
 
 .next{
-    font-size: 18;
+    font-size: 18px;
     color: #c7fffc;
     font-weight: bolder;
     background-color: #2fcfc6;
     border-radius: 10px;
     padding: 3% 10%;
     margin: auto;
+    border: 0px;
+    width: 45%;
 }
+
 
 .confirm{
     font-size: 16px;
@@ -82,10 +85,10 @@
     color: #c7fffc;
     font-weight: bold;
     border: 0ch;
-    width: 100%;
+    width: 45%;
+    height: 5.5vh;
     margin-bottom: -20%;
 }
-
 @media screen and (max-width: 768px)
 {
 

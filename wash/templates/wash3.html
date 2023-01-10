@@ -12,6 +12,8 @@
 </head>
 
 <script>
+    var date = new Date();
+  document.getElementById('date1').value = date;
 </script>
 
 <body>
@@ -35,7 +37,7 @@
                     預定頂取時間<br><br>
                     日期
                     <input type="date" class="num"><br><br>
-                    時間
+                                        時間
                     <input type="time" class="num">
 
                 </div>
@@ -64,7 +66,7 @@
                         </tr>
                         <tr>
                             <td class="td1"   colspan="3">
-                                <a href="{% url 'wash2' %}" class="next">上一步 </a>
+                                <input type="button" class="next" onclick="history.back();" value="上一步"> </a>
                                 <input type="submit" class="confirm" value="下一步">
                             </td>
                         </tr>                 
