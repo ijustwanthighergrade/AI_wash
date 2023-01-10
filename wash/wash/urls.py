@@ -16,7 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from login import viewslogin
-from feedback import views
+from feedback import addviews
+from procedure import views
 
 
 urlpatterns = [
@@ -37,6 +38,7 @@ urlpatterns = [
     path('login/', include('login.urls')),
     path('api2/', viewslogin.api2, name='api2'),
     # path('api1/', views.api1, name='api1'),
-    path('addproblems', views.addproblems, name='addproblems'), #新增問題
+    path('addproblems', addviews.addproblems, name='addproblems'), #新增問題
+    path('dealorder', views.dealorder, name='dealorder'), #新增問題
     
 ]

@@ -26,6 +26,7 @@ class WMODE(models.Model):
 
     def __str__(self):
         return self.WMODE
+    
 
 class LMODE(models.Model):
     LMODE = models.CharField('模式名稱',max_length=20, null=False)

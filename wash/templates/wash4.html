@@ -49,18 +49,21 @@
 
         <tr>
             <td>
-                <form  method="post">
+                <form  method="post" action="/dealorder">
+                    {% csrf_token %}
                     <table class="ta3" >
                         <tr class="div2">
                             <td colspan="2">
                                 
                                 電話
-                                <input type="text"><br>
+                                <input type="checkbox" id="re2" name="usephone">是否用預設<br>
+                                <input type="phone" name="phone"><br>
+                                <input type="checkbox" name="rememberphone" value="1">記住電話<br>
                                 付款方式<br>
                                 <input type="radio" id="re2" name="receive" >信用卡
-                                <input type="checkbox" >是否用預設<br>
-                                <input type="text"><br>
-                                <input type="checkbox" >記住卡<br>
+                                <input type="checkbox" name="usecard" >是否用預設<br>
+                                <input type="text" name="card"><br>
+                                <input type="checkbox" name="remembercard" value="1">記住卡<br>
                             </td>
                         </tr>
                         <tr>
