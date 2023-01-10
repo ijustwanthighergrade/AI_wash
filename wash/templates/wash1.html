@@ -11,8 +11,7 @@
     <link href="{% static "css/wash1.css" %}" rel="stylesheet">
 </head>
 
-<script>
-    </script>
+
 
 <body>
 
@@ -29,7 +28,7 @@
         </tr>
         <tr>
             <td>
-                <form  method="post" target="_self" action="{% url 'wash2' %}">
+                <form  method="post" target="_self" action="{% url 'wash2' %}" id="form1"> 
                     {% csrf_token %}
                     <table class="ta3" >
                         <tr>
@@ -39,7 +38,7 @@
                         </tr>
                         <tr class="tr1">
                             <td class="t3">
-                               <input type="radio" name="r1" id="r1_1" checked>自取
+                               <input type="radio" name="r1" id="r1_1" value="1"checked>自取
                             </td>
                         </tr>
                         <tr>
@@ -51,7 +50,7 @@
                             <td  colspan="2">
                                 <div id="w1" style="display:block;" class="t3">
                                     地址
-                                    <input type="text" required="required">
+                                    <input type="text" required="required" id="address">
                                 </div>
                                
                             </td>
@@ -70,7 +69,8 @@
     </table>
 
 </body>
-
+<script>
+  </script>
 <footer >
     Copyright@2022 By AIwash Rights Reseved
 </footer>
