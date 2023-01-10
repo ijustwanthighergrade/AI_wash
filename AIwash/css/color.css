@@ -11,17 +11,11 @@
     background-color: #2fcfc6;
     color: azure;
 }
-.img{
-    width: 200px;
-    height: 200px;
-    margin: 8% 8% 5% 25%;
-    border: #c7fffc 2px solid;
-}
-.btn{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin: 2% 3%;
+.text2{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #e8fefd;
 }
 .text1{
     margin: 2% auto;
@@ -33,28 +27,7 @@
 .text3{
     margin: 2% auto;
 }
-#n{
-    font-size: 60px;
-    padding-left: 10%;
-}
-.m{
-    margin:5% 10%;
-}
-.set{
-    text-align: right;
-    margin-right: 5%;
-}
-.text2{
-    width: 40vh;
-    height: 10vh;
-    text-align: center;
-    line-height: 10vh;
-    font-weight: bold;
-    font-size: 35px;
-    border: #2fcfc6 2px solid;
-    color: #2fcfc6;
-    background-color: #e8fefd;
-}
+
 .text4{
     width: 10vh;
     height: 5vh;
@@ -68,15 +41,41 @@
     background-color: #2fcfc6;
 }
 
-@media screen and (max-width: 980px)
+.btn{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 80%;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+.theme{
+    display:flex;
+    flex-direction: row ;
+    margin-left: 100px;
+    margin-top: 50px;
+    border:#2fcfc6 solid 1px;
+}
+.btn2{
+    background-color: #2fcfc700;
+    border: 0px;
+}
+.A{
+    background-color: #cf2f2f;
+    width: 100px;
+    height: 100px;
+}
+.B{
+    background-color: aliceblue;
+    width: 50px;
+    height: 100px;
+}
+@media screen and (max-width: 795px)
 {
-    .img{
-        width: 150px;
-        height: 150px;
-    }   
-    #n{
-        font-size: 40px;
-    }
+.btn{
+    margin-left: 130px;
+}
+
 }
 @media screen and (max-width: 768px)
 {
@@ -94,47 +93,13 @@
         background-color: #2fcfc6;
         color: azure;
     }
-    #img{
-        margin-top: 10%;
-    }
-    .img{
-        width: 100px;
-        height: 100px;
-        display: block;
-        margin: 10% auto;
-    }
-    .btn{
-        justify-content: center;
-        margin: 10% auto;
-
-    }
-    .text1{
-        margin: 0% auto;
-        background-color: #e8fefd;
-        color:black;
-        width: 60%;
-    }
     .text3{
         margin: 0% auto;
         background-color: #e8fefd;
         color:black;
         width: 60%;
     }
-    #n{
-        padding-left: 10%;
-    }
-    .m{
-        margin:5% 10%;
-    }
-    .set{
-        text-align: right;
-        margin-right: 5%;
-    }
-    .text2{
-        width: 28vh;
-        height: 10vh;
-        font-size: 25px;
-    }
+
     .text4{
         border: #2fcfc6 2px solid;
         color: #2fcfc6;
@@ -142,6 +107,24 @@
         margin-left: 0%;
         font-size: 15px;
     }
-    
-
+    .btn{
+        margin-left: 0px;
+    }
+    .text2{
+        font-size: 35px;
+        color: #2fcfc6;
+    }
+    .A{
+        width: 50px;
+        height: 50px;
+    }
+    .B{
+        width: 25px;
+        height: 50px;
+    }
+    .theme{
+        margin-left: 50px;
+        margin-top: 25px;
+        margin-bottom: 50px;
+    }
 }
