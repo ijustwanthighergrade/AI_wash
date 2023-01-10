@@ -12,39 +12,6 @@
 </head>
 
 <script>
-    
-    function listBtn() {
-        var wash = document.getElementById('wash');
-        var w1 = document.getElementById('w1');
-        var wash1 = document.getElementById('wash1');
-        var w2 = document.getElementById('w2');
-        if (w1.style.display === 'none') {
-            w1.style.display = 'block';
-            w2.style.display = 'none';
-            wash.innerText = "外送";
-            wash1.innerText = "自取";
-            document.getElementById("wash1").style.color = "#c7fffc";
-            document.getElementById("wash").style.color = "#2fcfc6";
-            document.getElementById("wash").style.backgroundColor = "#c7fffc";
-            document.getElementById("wash1").style.backgroundColor = "#2fcfc6";
-        } 
-    }
-    function listBtn1() {
-        var wash = document.getElementById('wash');
-        var w1 = document.getElementById('w1');
-        var wash1 = document.getElementById('wash1');
-        var w2 = document.getElementById('w2');
-        if (w2.style.display === 'none') {
-            w2.style.display = 'block';
-            w1.style.display = 'none';
-            wash.innerText = "外送";
-            wash1.innerText = "自取";
-            document.getElementById("wash").style.color = "#c7fffc";
-            document.getElementById("wash1").style.color = "#2fcfc6";
-            document.getElementById("wash1").style.backgroundColor = "#c7fffc";
-            document.getElementById("wash").style.backgroundColor = "#2fcfc6";
-    }
-}
     </script>
 
 <body>
@@ -62,35 +29,36 @@
         </tr>
         <tr>
             <td>
-                <form  method="post">
+                <form  method="post" target="_self" action="{% url 'wash2' %}">
+                    {% csrf_token %}
                     <table class="ta3" >
-                        <tr class="tr1">
-                            <td>
-                                <div id="wash" onclick="listBtn()" class="t1">外送</div>
+                        <tr>
+                            <td class="text1">
+                                選擇送洗/回方式
                             </td>
-                            <td>
-                                <div id="wash1" onclick="listBtn1()" class="t2">自取</div>
+                        </tr>
+                        <tr class="tr1">
+                            <td class="t3">
+                               <input type="radio" name="r1" id="r1_1" checked>自取
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="t3">
+                                <input type="radio" name="r1" id="r1_2">外送
                             </td>
                         </tr>
                         <tr>
                             <td  colspan="2">
                                 <div id="w1" style="display:block;" class="t3">
                                     地址
-                                    <input type="text">
+                                    <input type="text" required="required">
                                 </div>
-                                <div id="w2" style="display:none;" class="t3">
-                                    店家<br>
-                                    <select name="store" style="width: 80%;">
-                                        <option value="store1">1號店</option>
-                                        <option value="store2" >2號店</option>
-                                        <option value="store3">3號店</option>
-                                    </select>
-                                </div>
+                               
                             </td>
                         </tr>
                         <tr>
                             <td class="td1"   colspan="2">
-                                <a href="{% url 'wash2' %}" class="next">下一步 </a>
+                            <input type="submit" class="confirm" value="下一步">
                             </td>
                         </tr>
                    

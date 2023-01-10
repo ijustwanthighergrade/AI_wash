@@ -11,28 +11,28 @@ def wash1(request):
       return login2(request)
 
 def wash2(request):
-   if 'mem_session' in request.session:
-      if request.method == 'GET':
+  # if 'mem_session' in request.session:
+      #if request.method == 'GET':
    
          return render(request,"wash2.html",locals())
-   else:
-      return login2(request)
+   #else:
+      #return login2(request)
 
 def wash3(request):
-   if 'mem_session' in request.session:
-      if request.method == 'GET':
+   #if 'mem_session' in request.session:
+      #if request.method == 'GET':
    
          return render(request,"wash3.html",locals())
-   else:
-      return login2(request)
+   #else:
+     # return login2(request)
 
 def wash4(request):
-   if 'mem_session' in request.session:
-      if request.method == 'GET':
+   #if 'mem_session' in request.session:
+      #if request.method == 'GET':
    
-         return render(request,"wash4.html",locals())
-   else:
-      return login2(request)
+         #return render(request,"wash4.html",locals())
+   #else:
+      #return login2(request)
 
 def index(request):
    if 'mem_session' in request.session:

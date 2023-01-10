@@ -22,7 +22,8 @@
             <td><a href="{% url 'member' %}"><div class ="log_in">會員</div></a></td>
         </tr>
     </table>
-
+    <form  method="post"  target="_self" action="{% url 'wash4' %}">
+        {% csrf_token %}
     <table class="ta2" >
         <tr class="tr1">
             <td class="td3"><div><a href="{% url 'index' %}"  class="back"><返回首頁</a></div></td>
@@ -44,7 +45,7 @@
 
         <tr>
             <td>
-                <form  method="post">
+                
                     <table class="ta3" >
                         <tr class="div2">
                             <td colspan="2">
@@ -58,23 +59,20 @@
                         </tr>
                         <tr>
                             <td >
-                            <input type="checkbox">同意
+                            <input type="checkbox" required="required">同意
                             </td>
                         </tr>
                         <tr>
                             <td class="td1"   colspan="3">
                                 <a href="{% url 'wash2' %}" class="next">上一步 </a>
-                                <a href="{% url 'wash4' %}" class="next">下一步 </a>
+                                <input type="submit" class="confirm" value="下一步">
                             </td>
-                        </tr>
-                   
+                        </tr>                 
                     </table>
-                </form>
-            </td>
-        </tr>
-        
+        </tr>  
     </table>
-
+</form>
+</td>
 </body>
 
 <footer >
