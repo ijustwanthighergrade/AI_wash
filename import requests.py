@@ -1,5 +1,4 @@
 import requests
-import json
 
 # with open("r.json") as f:
 #     # 讀取 JSON 檔案
@@ -25,6 +24,7 @@ import json
 # 第一次傳送網址 在rebackurl後面加上?fk=123 隨機碼 
 # 要自己存state 
 # 可以選一個登入就好
+SACCngrok="https://10eb-1-34-54-152.jp.ngrok.io"
 
 # https://access.line.me/oauth2/v2.1/authorize/consent?
 # response_type=code&
@@ -88,12 +88,12 @@ import json
 # 傳送電話號碼Rphone
 # 回傳RSMSis
 
-# url1="https://e024-1-34-54-152.jp.ngrok.io/RESTapiApp/SMS_1/"
-# data={
-#     'Rphone': '0908155665'
-# }
-# r = requests.get(url1,data,headers={'Authorization':'Token e747f053f1e4ecf0228195b5652e27060e0937bd'})
-# print(r.json()) 
+url1=SACCngrok+"/RESTapiApp/SMS_1/"
+data={
+    'Rphone': '0908098950'
+}
+r = requests.get(url1,data,headers={'Authorization':'Token e747f053f1e4ecf0228195b5652e27060e0937bd'})
+print(r.json()) 
 
 # 簡訊第2步驟
 

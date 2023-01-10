@@ -4,6 +4,7 @@ from pyexpat.errors import messages
 import requests
 
 from login.models import MEMBER
+from login.views import login2
 
 SACCngrok="https://10eb-1-34-54-152.jp.ngrok.io"
 serverngrok="http://127.0.0.1:8000/"
@@ -12,7 +13,7 @@ def index(request):
    return render(request,"index.html",locals())
 
 def member(request):
-   if(request.session['mem_session']!=""):
+   if 'mem_session' in request.session:
       print(request.session['mem_session'])
       results=MEMBER.objects.filter(MEMID = request.session['mem_session'])
       ac_code=''
@@ -33,7 +34,7 @@ def member(request):
          print(pic)
       return render(request,"member.html",locals())
    else:
-      return render(request,"startbtn.html",locals())
+      return login2(request)
        
     
  

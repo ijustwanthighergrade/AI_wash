@@ -34,6 +34,7 @@ urlpatterns = [
     path('showfeedback/', include('showfeedback.urls')),
     path('login/', include('login.urls')),
     path('api2/', views.api2, name='api2'),
+    # path('api1/', views.api1, name='api1'),
   
     
 ]

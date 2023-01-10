@@ -3,9 +3,13 @@ from django.http import HttpResponse
 import requests
 import json
 # https://ithelp.ithome.com.tw/articles/10158250
+from login.views import login2
 
 def index(request):
-   return render(request,"index.html",locals())
+   if 'mem_session' in request.session:
+      return render(request,"index.html",locals())
+   else:
+      return login2(request)
 def wash1(request):
    return render(request,"wash1.html",locals())
 def map(request):

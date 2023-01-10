@@ -11,10 +11,13 @@
 </head>
 
 <body>
-        <form action="{{ to }}" method="GET">
+        <div>{{r1_r}}</div>
+        <form action="{{ url1 }}" method="GET">
             <div class="start">
-                <input type="input" name="Rphone">
-                <button type="submit"><a href=""><img src="image/start.jpg" class="startbtn"></a></button>
+                <input type="input" name="Rphone" value="{{fknum}}" readOnly="true" >
+                <a href="{{ firstLogin }}">點擊取得驗證碼</a>
+                <input type="input" name="check">
+                <button type="submit"></button>
             </div>
         <form>
 
