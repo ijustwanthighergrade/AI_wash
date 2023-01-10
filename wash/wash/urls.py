@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from login import views
+from login import viewslogin
+from feedback import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -33,8 +35,8 @@ urlpatterns = [
     path('detail/', include('detail.urls')),
     path('showfeedback/', include('showfeedback.urls')),
     path('login/', include('login.urls')),
-    path('api2/', views.api2, name='api2'),
+    path('api2/', viewslogin.api2, name='api2'),
     # path('api1/', views.api1, name='api1'),
-  
+    path('addproblems', views.addproblems, name='addproblems'), #新增問題
     
 ]
