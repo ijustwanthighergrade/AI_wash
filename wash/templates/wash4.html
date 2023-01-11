@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {% load static %}
     <meta charset="UTF-8">
@@ -7,59 +8,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>wash</title>
-    <link href="{% static "css/add.css" %}" rel="stylesheet">
-    <link href="{% static "css/wash4 copy.css" %}" rel="stylesheet">
+    <link href="{% static " css/add.css" %}" rel="stylesheet">
+    <link href="{% static " css/wash4 copy.css" %}" rel="stylesheet">
 </head>
 
 <script>
-    @app.route("{ url 'wash4' }",methods=['POST'])
-    type:'post',
-    data:{'cname':cname,'continent':continent},
+    @app.route("{ url 'wash4' }", methods = ['POST'])
+        type: 'post',
+            data: { 'cname': cname, 'continent': continent },
 </script>
 
 <body>
 
     <table class="ta1">
         <tr>
-            <td><img class ="logo" src="{% static "images/logo.jpg" %}"></td>
-            <td><a href="{% url 'member' %}"><div class ="log_in">會員</div></a></td>
+            <td><img class="logo" src="{% static " images/logo.jpg" %}"></td>
+            <td><a href="{% url 'member' %}">
+                    <div class="log_in">會員</div>
+                </a></td>
         </tr>
     </table>
 
-    <table class="ta2" >
+    <table class="ta2">
         <tr class="tr1">
-            <td class="td3"><div><a href="{% url 'index' %}"  class="back"><返回首頁</a></div></td>
-        </tr>
-
-        <tr >
-            <td>
-                <div class="div1">訂單明細
-                    <p class="p1">
-                    衣服袋數：{{orderamount}}<br>
-                    洗滌方式：{{washway}}<br>
-                    乾燥方式：{{dryway}}<br>
-                    摺衣方式：{{flodway}}<br>
-                    特殊衣物：{{specialitem}}<br>
-                    獲得點數：{{tpoint}}<br>
-                    領取時間：{{date}} {{time}}<br>
-                    送達方式：{{takeway}}<br>
-                    送達地址：{{t}}<hr>
-                    </p>
-                    <p class="p2">
-                    總金額：{{tprice}} (含碳稅：{{tax}})
-                    </p>
-                </div>              
+            <td class="td3">
+                <div><a href="{% url 'index' %}" class="back">
+                        <返回首頁< /a>
+                </div>
             </td>
         </tr>
 
         <tr>
             <td>
-                <form  method="post" action="/dealorder">
+                <div class="div1">訂單明細
+                    <p class="p1">
+                        衣服袋數：{{orderamount}}<br>
+                        洗滌方式：{{washway}}<br>
+                        乾燥方式：{{dryway}}<br>
+                        摺衣方式：{{flodway}}<br>
+                        特殊衣物：{{specialitem}}<br>
+                        獲得點數：{{tpoint}}<br>
+                        領取時間：{{date}} {{time}}<br>
+                        送達方式：{{takeway}}<br>
+                        送達地址：{{t}}
+                        <hr>
+                    </p>
+                    <p class="p2">
+                        總金額：{{tprice}} (含碳稅：{{tax}})
+                    </p>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <form method="post" action="/dealorder">
                     {% csrf_token %}
-                    <table class="ta3" >
+                    <table class="ta3">
                         <tr class="div2">
                             <td colspan="2">
-                                
+
                                 電話
                                 <input type="phone" value="{{phone}}" name="phone"><br>
                                 <input type="checkbox" name="rememberphone" value="1">記住電話<br>
@@ -72,38 +80,39 @@
                         <tr>
                             <td>
                                 <input type="button" class="next" onclick="history.back();" value="上一步">
-                                    <input class='confirm' type="submit" value="確認下單">
-                                   <p class='show'></p>
+                                <input class='confirm' type="submit" value="確認下單">
+                                <p class='show'></p>
                             </td>
                         </tr>
-                   
+
                     </table>
                 </form>
             </td>
         </tr>
-        
+
     </table>
 
 </body>
 
-<footer >
+<footer>
     Copyright@2022 By AIwash Rights Reseved
 </footer>
 
 <script>
     var button = document.querySelector('.confirm');
-           var showtxt = document.querySelector('.show');
-   
-           function popup2(e) {
-               
-               if (confirm('是否確認下單') == true) {
-                window.location.href='{% url 'index2' %}';
-                window.alert('已下單');
-               } else{
-                window.alert('已取消下單');
-               }
-           };
-           button.addEventListener('click', popup2);
-   
-       </script>
+    var showtxt = document.querySelector('.show');
+
+    function popup2(e) {
+
+        if (confirm('是否確認下單') == true) {
+            window.location.href = '{% url 'index2' %}';
+            window.alert('已下單');
+        } else {
+            window.alert('已取消下單');
+        }
+    };
+    button.addEventListener('click', popup2);
+
+</script>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {% load static %}
     <meta charset="UTF-8">
@@ -7,80 +8,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>wash</title>
-    <link href="{% static "css/add.css" %}" rel="stylesheet">
-    <link href="{% static "css/wash3.css" %}" rel="stylesheet">
+    <link href="{% static " css/add.css" %}" rel="stylesheet">
+    <link href="{% static " css/wash3.css" %}" rel="stylesheet">
 </head>
 
-
-
 <body>
-
     <table class="ta1">
         <tr>
-            <td><img class ="logo" src="{% static "images/logo.jpg" %}"></td>
-            <td><a href="{% url 'member' %}"><div class ="log_in">會員</div></a></td>
+            <td><img class="logo" src="{% static " images/logo.jpg" %}"></td>
+            <td><a href="{% url 'member' %}">
+                    <div class="log_in">會員</div>
+                </a></td>
         </tr>
     </table>
-    <form  method="post"  target="_self" action="{% url 'wash4' %}">
+    <form method="post" target="_self" action="{% url 'wash4' %}">
         {% csrf_token %}
-    <table class="ta2" >
-        <tr class="tr1">
-            <td class="td3"><div><a href="{% url 'index' %}"  class="back"><返回首頁</a></div></td>
-        </tr>
-
-        <tr>
-            <td>
-                <div class="div1">
-                    預定頂取時間<br><br>
-                    日期
-                    <input name="day" type="date" class="num" id="date1"><br><br>
-                                        時間
-                    <input name="day" type="time" class="num" id="time1"><br><br>
-
-                </div>
-                
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                
-                    <table class="ta3" >
+        <table class="ta2">
+            <tr class="tr1">
+                <td class="td3">
+                    <div>
+                        <a href="{% url 'index' %}" class="back">
+                            <返回首頁 < /a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="div1">
+                        預定頂取時間<br><br>
+                        日期
+                        <input name="day" type="date" class="num" id="date1"><br><br>
+                        時間
+                        <input name="day" type="time" class="num" id="time1"><br><br>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="ta3">
                         <tr class="div2">
                             <td colspan="2">
-                            服務條款
+                                服務條款
                             </td>
                         </tr>
-                        <tr  class="div3">
-                            <td  colspan="2">
+                        <tr class="div3">
+                            <td colspan="2">
                                 來拿衣服,不然燒掉
                             </td>
                         </tr>
                         <tr>
-                            <td >
-                            <input type="checkbox" required="required">同意
+                            <td>
+                                <input type="checkbox" required="required">同意
                             </td>
                         </tr>
                         <tr>
-                            <td class="td1"   colspan="3">
+                            <td class="td1" colspan="3">
                                 <input type="button" class="next" onclick="history.back();" value="上一步"> </a>
                                 <input type="submit" class="confirm" value="下一步">
                             </td>
-                        </tr>                 
+                        </tr>
                     </table>
-        </tr>  
-    </table>
-</form>
-</td>
-<script>
-    document.getElementById('date1').value = new Date(new Date().getTime()  - new Date().getTimezoneOffset() * 60000 * 4).toISOString().split("T")[0];
-    document.getElementById('date1').min = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 4).toISOString().split("T")[0];
-    document.getElementById('time1').value = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 4 ).toISOString().slice(11).slice(0, -8);
-    document.getElementById('time1').max = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 4 ).toISOString().slice(11).slice(0, -8);
-</script>
+            </tr>
+        </table>
+    </form>
+    </td>
+    <script>
+        document.getElementById('date1').value = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 4).toISOString().split("T")[0];
+        document.getElementById('date1').min = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 4).toISOString().split("T")[0];
+        document.getElementById('time1').value = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 4).toISOString().slice(11).slice(0, -8);
+        document.getElementById('time1').max = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 4).toISOString().slice(11).slice(0, -8);
+    </script>
 </body>
-
-<footer >
+<footer>
     Copyright@2022 By AIwash Rights Reseved
 </footer>
+
 </html>

@@ -68,6 +68,25 @@
     padding: 5% 10%;
 }
 
+.text1{
+    color: #2fcfc6;
+    font-size: 22px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+
+.confirm{
+    font-size: 16px;
+    background-color: #2fcfc6;
+    border-radius: 10px;
+    color: #c7fffc;
+    font-weight: bold;
+    border: 0ch;
+    width: 50%;
+    margin-bottom: -20%;
+}
+
 @media screen and (max-width: 768px)
 {
 

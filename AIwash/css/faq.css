@@ -42,7 +42,9 @@
 .td2{
     width: 200vh;
 }
-
+.td3{
+    width: 560px;
+}
 @media screen and (max-width: 768px)
 {
     .ta1{
@@ -59,5 +61,10 @@
         color: azure;
     }
     
-
+    footer{
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        margin-top: 7.2%;
+    }
 }

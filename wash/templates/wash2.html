@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {% load static %}
     <meta charset="UTF-8">
@@ -7,12 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>wash</title>
-    <link href="{% static "css/add.css" %}" rel="stylesheet">
-    <link href="{% static "css/wash2.css" %}" rel="stylesheet">
+    <link href="{% static " css/add.css" %}" rel="stylesheet">
+    <link href="{% static " css/wash2.css" %}" rel="stylesheet">
 </head>
 
 <script>
-    
+
     function listBtn1() {
         var wash1 = document.getElementById('wash1');
         var w1 = document.getElementById('w1');
@@ -30,7 +31,7 @@
             document.getElementById("wash1").style.backgroundColor = "#c7fffc";
             document.getElementById("wash2").style.backgroundColor = "#2fcfc6";
             document.getElementById("wash3").style.backgroundColor = "#2fcfc6";
-        } 
+        }
     }
     function listBtn2() {
         var wash1 = document.getElementById('wash1');
@@ -49,7 +50,7 @@
             document.getElementById("wash1").style.backgroundColor = "#2fcfc6";
             document.getElementById("wash2").style.backgroundColor = "#c7fffc";
             document.getElementById("wash3").style.backgroundColor = "#2fcfc6";
-        } 
+        }
     }
     function listBtn3() {
         var wash1 = document.getElementById('wash1');
@@ -68,36 +69,42 @@
             document.getElementById("wash1").style.backgroundColor = "#2fcfc6";
             document.getElementById("wash2").style.backgroundColor = "#2fcfc6";
             document.getElementById("wash3").style.backgroundColor = "#c7fffc";
-        } 
+        }
     }
-    </script>
+</script>
 
 <body>
 
     <table class="ta1">
         <tr>
-            <td><img class ="logo" src="{% static "images/logo.jpg" %}"></td>
-            <td><a href="{% url 'member' %}"><div class ="log_in">會員</div></a></td>
+            <td><img class="logo" src="{% static " images/logo.jpg" %}"></td>
+            <td><a href="{% url 'member' %}">
+                    <div class="log_in">會員</div>
+                </a></td>
         </tr>
     </table>
-    <form  method="post" target="_self" action="{% url 'wash3' %}">
+    <form method="post" target="_self" action="{% url 'wash3' %}">
         {% csrf_token %}
-    <table class="ta2" >
-        <tr class="tr1">
-            <td class="td3"><div><a href="{% url 'index' %}"  class="back"><返回首頁</a></div></td>
-        </tr>
-        <tr>
-            <td>
-                <div class="div1">
-                    衣服袋數
-                    <input type="number" name="bagamount" class="num" required="required" min="1">
-                </div>
-                
-            </td>
-        </tr>
-        <tr>
-            <td>               
-                    <table class="ta3" >
+        <table class="ta2">
+            <tr class="tr1">
+                <td class="td3">
+                    <div><a href="{% url 'index' %}" class="back">
+                            <返回首頁< /a>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="div1">
+                        衣服袋數
+                        <input type="number" name="bagamount" class="num" required="required" min="1">
+                    </div>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table class="ta3">
                         <tr class="tr1">
                             <td>
                                 <div id="wash1" onclick="listBtn1()" class="t1">建議</div>
@@ -110,50 +117,50 @@
                             </td>
                         </tr>
                         <tr class="tr2">
-                            <td  colspan="3">
+                            <td colspan="3">
                                 <div id="w1" style="display:block;" class="t3">
                                     洗滌
                                     <select name="washing" style="width: 50%;">
                                         <option value="標準">標準</option>
-                                        <option value="精緻洗" >精緻洗</option>
+                                        <option value="精緻洗">精緻洗</option>
                                         <option value="柔洗">柔洗</option>
                                         <option value="快洗">快洗</option>
                                     </select><br>
-                                    
-                                    <div class="div2"  style="width: 80%;">
-                                        x 分鐘 x 元 x 點數 x 碳稅                                
+
+                                    <div class="div2" style="width: 80%;">
+                                        x 分鐘 x 元 x 點數 x 碳稅
                                     </div><br>
 
                                     乾燥
                                     <select name="drying" style="width: 50%;">
                                         <option value="日曬">日曬</option>
-                                        <option value="低溫烘乾" >低溫烘乾</option>
+                                        <option value="低溫烘乾">低溫烘乾</option>
                                         <option value="中溫烘乾">中溫烘乾</option>
                                         <option value="高溫烘乾">高溫烘乾</option>
                                     </select><br>
 
-                                    <div class="div2"  style="width: 80%;">
-                                        x 分鐘 x 元 x 點數 x 碳稅                                
+                                    <div class="div2" style="width: 80%;">
+                                        x 分鐘 x 元 x 點數 x 碳稅
                                     </div><br>
 
                                     摺衣
                                     <select name="store" style="width: 50%;">
                                         <option value="不折">不折</option>
-                                        <option value="機器人" >機器人(20MIN)</option>
+                                        <option value="機器人">機器人(20MIN)</option>
                                     </select><br><br>
-                                   
+
                                     <div class="">
                                         特殊衣物
                                         <select name="special" style="width: 40%;">
                                             <option value="special0">無</option>
                                             <option value="special1">毛毯類</option>
-                                            <option value="special2" >皮革類</option>
+                                            <option value="special2">皮革類</option>
                                         </select>
                                     </div><br>
 
-                                    <div >
+                                    <div>
                                         總點數：０總金額：０
-                                      
+
                                     </div>
 
                                 </div>
@@ -161,31 +168,31 @@
                                     洗滌
                                     <select name="washing" style="width: 50%;">
                                         <option value="標準">標準</option>
-                                        <option value="精緻洗" >精緻洗</option>
+                                        <option value="精緻洗">精緻洗</option>
                                         <option value="柔洗">柔洗</option>
                                         <option value="快洗">快洗</option>
                                     </select><br>
-                                    
-                                    <div class="div2"  style="width: 80%;">
-                                        x 分鐘 x 元 x 點數 x 碳稅                                
+
+                                    <div class="div2" style="width: 80%;">
+                                        x 分鐘 x 元 x 點數 x 碳稅
                                     </div><br>
 
                                     乾燥
                                     <select name="drying" style="width: 50%;">
                                         <option value="日曬">日曬</option>
-                                        <option value="低溫烘乾" >低溫烘乾</option>
+                                        <option value="低溫烘乾">低溫烘乾</option>
                                         <option value="中溫烘乾">中溫烘乾</option>
                                         <option value="高溫烘乾">高溫烘乾</option>
                                     </select><br>
 
-                                    <div class="div2"  style="width: 80%;">
-                                        x 分鐘 x 元 x 點數 x 碳稅                                
+                                    <div class="div2" style="width: 80%;">
+                                        x 分鐘 x 元 x 點數 x 碳稅
                                     </div><br>
 
                                     摺衣
                                     <select name="store" style="width: 50%;">
                                         <option value="不折">不折</option>
-                                        <option value="機器人" >機器人(20MIN)</option>
+                                        <option value="機器人">機器人(20MIN)</option>
                                     </select><br><br>
 
                                     <div class="">
@@ -193,46 +200,46 @@
                                         <select name="special" style="width: 40%;">
                                             <option value="special1">無</option>
                                             <option value="special1">毛毯類</option>
-                                            <option value="special2" >皮革類</option>
+                                            <option value="special2">皮革類</option>
                                         </select>
                                     </div><br>
 
-                                    <div >
+                                    <div>
                                         總點數：０總金額：０
-                                      
+
                                     </div>
 
                                 </div>
-                                
+
                                 <div id="w3" style="display:none;" class="t3">
                                     洗滌
                                     <select name="washing" style="width: 50%;">
                                         <option value="標準">標準</option>
-                                        <option value="精緻洗" >精緻洗</option>
+                                        <option value="精緻洗">精緻洗</option>
                                         <option value="柔洗">柔洗</option>
                                         <option value="快洗">快洗</option>
                                     </select><br>
-                                    
-                                    <div class="div2"  style="width: 80%;">
-                                        x 分鐘 x 元 x 點數 x 碳稅                                
+
+                                    <div class="div2" style="width: 80%;">
+                                        x 分鐘 x 元 x 點數 x 碳稅
                                     </div><br>
 
                                     乾燥
                                     <select name="drying" style="width: 50%;">
                                         <option value="日曬">日曬</option>
-                                        <option value="低溫烘乾" >低溫烘乾</option>
+                                        <option value="低溫烘乾">低溫烘乾</option>
                                         <option value="中溫烘乾">中溫烘乾</option>
                                         <option value="高溫烘乾">高溫烘乾</option>
                                     </select><br>
 
-                                    <div class="div2"  style="width: 80%;">
-                                        x 分鐘 x 元 x 點數 x 碳稅                                
+                                    <div class="div2" style="width: 80%;">
+                                        x 分鐘 x 元 x 點數 x 碳稅
                                     </div><br>
 
                                     摺衣
                                     <select name="store" style="width: 50%;">
                                         <option value="不折">不折</option>
-                                        <option value="機器人" >機器人(20MIN)</option>
+                                        <option value="機器人">機器人(20MIN)</option>
                                     </select><br><br>
 
                                     <div class="">
@@ -240,34 +247,35 @@
                                         <select name="special" style="width: 40%;">
                                             <option value="special1">無</option>
                                             <option value="special1">毛毯類</option>
-                                            <option value="special2" >皮革類</option>
+                                            <option value="special2">皮革類</option>
                                         </select>
                                     </div><br>
-                                    
-                                    <div >
+
+                                    <div>
                                         總點數：０總金額：０
-                                      
+
                                     </div>
 
                                 </div>
                             </td>
                         </tr>
                         <tr>
-                            <td class="td1"   colspan="3">
+                            <td class="td1" colspan="3">
                                 <input type="button" class="next" onclick="history.back();" value="上一步"> </a>
                                 <input type="submit" class="confirm" value="下一步">
                             </td>
                         </tr>
-                   
-                    </table>               
-            </td>
-        </tr>
-        
-    </table>
-</form>
+
+                    </table>
+                </td>
+            </tr>
+
+        </table>
+    </form>
 </body>
 
-<footer >
+<footer>
     Copyright@2022 By AIwash Rights Reseved
 </footer>
+
 </html>
