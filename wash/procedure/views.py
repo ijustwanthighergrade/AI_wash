@@ -53,6 +53,9 @@ def wash1(request):
          FMODE.objects.create(FMODE="機器人",MONEY=5,POINTS=0,MEMISSIONS=1,TIME=20)
       else:
          pass
+      
+      mem=MEMBER.objects.get(MEMID=request.session['mem_session'])
+      memaddr=mem.MEMADDR
       return render(request,"wash1.html",locals())
    else:
       return login2(request)

@@ -18,6 +18,7 @@ from django.urls import path, include
 from login import viewslogin
 from feedback import addviews
 from procedure import views
+from memSet import changeinfo_view
 
 
 urlpatterns = [
@@ -37,6 +38,7 @@ urlpatterns = [
     path('showfeedback/', include('showfeedback.urls')),
     path('login/', include('login.urls')),
     path('api2/', viewslogin.api2, name='api2'),
+    path('changeinfo/', changeinfo_view.changeinfo, name='changeinfo'),
     # path('api1/', views.api1, name='api1'),
     path('addproblems', addviews.addproblems, name='addproblems'), #新增問題
     path('dealorder', views.dealorder, name='dealorder'), #新增問題
