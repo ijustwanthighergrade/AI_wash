@@ -37,7 +37,10 @@ footer {
     top: 99%;
     margin-top: -25px;
 }
-
+a{
+    text-decoration: none;
+    margin: auto;
+}
 @media screen and (max-width: 768px) {
     .logo {
         width: 50%;
