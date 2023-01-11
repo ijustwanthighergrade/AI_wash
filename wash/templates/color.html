@@ -29,6 +29,7 @@
             <div class="text2">
                 主題選擇
              </div>
+             {% if howmuch > 1 %}
              <div class="btn">
                  <button class="btn2">
                  <div class="theme">
@@ -36,25 +37,30 @@
                      <div class="B"></div>
                  </div>
              </button>
+             {% elif howmuch > 10 %}
              <button class="btn2">
                  <div class="theme">
                      <div class="A"></div>
                      <div class="B"></div>
                  </div>
              </button>
+             {% elif howmuch > 20 %}
              <button class="btn2">
                  <div class="theme">
                      <div class="A"></div>
                      <div class="B"></div>
                  </div>
              </button>
+             
+            {% else %}
              <button class="btn2">
                  <div class="theme">
                      <div class="A"></div>
                      <div class="B"></div>
                  </div>
              </button>
-                 
+            
+            {% endif %} 
                  
              </div>
         </div>

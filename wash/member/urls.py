@@ -22,5 +22,6 @@ urlpatterns = [
     
     path('', views.member, name='member'),
     path('../home/', views.index, name='index'),
+    path('templates/color', views.color, name='color'),
 
 ]
