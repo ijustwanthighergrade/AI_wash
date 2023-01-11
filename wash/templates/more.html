@@ -28,45 +28,42 @@
             </div>
             <div class="text1">
                 <form>
+                    
                 <table class="ta3">
                 <tr>
                     <td class="td2 td22" rowspan="5">QRcode產生中</td>
                     <td class="td2">訂單編號</td>
                 </tr>
                 <tr>
-                    <td class="td2"> 　</td>
+                    <td class="td2">{{ORDID}}</td>
                 </tr>
                 <tr>
-                    <td class="td2">會員編號</td>
+                    <td class="td2">成立時間</td>
                 </tr>
                 <tr>
-                    <td class="td2">　</td>
+                    <td class="td2">{{CDATE}}</td>
                 </tr>
                 <tr>
-                    <td class="td2">預計完成時間</td>
+                    <td class="td2">袋數：{{BAGNUM}}</td>
                 </tr>
                 <tr>
-                    <td class="td2 td22">　</td>
-                    <td class="td2">細節</td>
+                    <td class="td2 td22">金額：{{AMOUNT}}</td>
+                    <td class="td2">獲得點數：{{GPOINT}}</td>
                 </tr>
                 <tr>
-                    <td class="td2 td22">細節</td>
-                    <td class="td2">細節</td>
+                    <td class="td2 td22">{{WMODE}}</td>
+                    <td class="td2">{{LMODE}}</td>
                 </tr>
                 <tr>
-                    <td class="td2 td22">細節</td>
-                    <td class="td2">細節</td>
-                </tr>
-                <tr>
-                    <td class="td2 td22">細節</td>
-                    <td class="td2">細節</td>
+                    <td class="td2 td22">{{FMODE}}</td>
+                    <td class="td2">花費時長：{{TIME}}</td>
                 </tr>
                 <tr>
                     <td class="td2" colspan="2">處理狀態</td>
                 </tr>
                 <tr>
                     <td class="td2" colspan="2">
-                        <input type="radio" name="wash" disabled>處理中
+                        <input type="radio" name="wash" checked="checked" disabled>處理中
                         <input type="radio" name="wash" disabled>可取貨
                         <input type="radio" name="wash" disabled>已完成
                     </td>
