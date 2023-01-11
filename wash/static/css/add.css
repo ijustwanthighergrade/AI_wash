@@ -33,7 +33,7 @@ footer {
     height: 5vh;
     width: 100%;
     line-height: 5vh;
-    position: fixed;
+    position: relative;
     top: 99%;
     margin-top: -25px;
 }
