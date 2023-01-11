@@ -1,3 +1,7 @@
+    
+    footer{
+        position: relative;
+    }
 .ta2{
     display: flex;
     justify-content: center;
@@ -64,10 +68,4 @@
         font-weight: bold;
     }
 
-    footer{
-        position: absolute;
-        right: 0px;
-        bottom: 0px;
-        margin-top: 7.2%;
-    }
 }
