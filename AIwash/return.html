@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    {% load static %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>return</title>
-    <link href="{% static "css/add.css" %}" rel="stylesheet">
-    <link href="{% static "css/return.css" %}" rel="stylesheet">
+    <link href="css/add.css" rel="stylesheet">
+    <link href="css/return.css" rel="stylesheet">
 </head>
 
-
-
 <body>
-
-    <table class="ta1">
+    <table class="manu">
         <tr>
-            <td><img class ="logo" src="{% static "images/logo.jpg" %}"></td>
-            <td><a href="{% url 'member' %}"><div class ="log_in">會員</div></a></td>
+            <td><img class="logo" src="image/logo.jpg"></td>
+            <td>
+                <div class="mem">會員</div>
+            </td>
         </tr>
     </table>
 
-    <table class="ta2" >
+    <table class="ta2">
         <tr class="tr1">
-            <td class="td3"><div><a href="{% url 'index' %}"  class="back"><返回首頁</a></div></td>
+            <td class="td3">
+                <div><a href="{% url 'index' %}" class="back">
+                        <返回首頁< /a>
+                </div>
+            </td>
         </tr>
         <tr>
             <td>
-                <form  method="post">
-                    <table class="ta3" >
+                <form method="post">
+                    <table class="ta3">
                         <tr>
                             <td class="return">
                                 問題回饋
@@ -38,62 +41,65 @@
                         <tr class="tr1">
                             <td>
                                 <div class="type">
-                                類型
-                                <select name="type" style="width: 80%;">
-                                    <option value="type1">衣服毀損問題</option>
-                                    <option value="type2">遺失問題</option>
-                                    <option value="type3">洗衣袋相關問題</option>
-                                </select>
+                                    類型
+                                    <select name="type" style="width: 80%;">
+                                        <option value="type1">衣服毀損問題</option>
+                                        <option value="type2">遺失問題</option>
+                                        <option value="type3">洗衣袋相關問題</option>
+                                    </select>
                                 </div>
-                            </td>                           
+                            </td>
                         </tr>
                         <tr>
-                            <td  class="type">
+                            <td class="type">
                                 標題
                                 <input type="text" style="width: 70%;">
                             </td>
                         </tr>
                         <tr>
-                            <td  class="type">
+                            <td class="type">
                                 內容<br>
                                 <textarea name="comments" rows="5" cols="20">您的內容</textarea>
                             </td>
                         </tr>
-                        <tr><td>
-                            <div class="confirm">
-                            <input class='confirm' type="button" value="確認送出">
-                             <p class='show'></p></div>
-                        </td>
+                        <tr>
+                            <td>
+                                <div class="confirm">
+                                    <input class='confirm' type="button" value="確認送出">
+                                    <p class='show'></p>
+                                </div>
+                            </td>
                         </tr>
-                   
+
                     </table>
                 </form>
             </td>
         </tr>
-        
+
     </table>
 
 </body>
 
-<footer >
+<footer>
     Copyright@2022 By AIwash Rights Reseved
 </footer>
 
 
 <script>
     var button = document.querySelector('.confirm');
-           var showtxt = document.querySelector('.show');
-   
-           function popup2(e) {
-               
-               if (confirm('是否確定要送出') == true) {
-                window.location.href='index.html';
-                window.alert('已送出');
-               } else{
-                window.alert('已取消送出');
-               }
-           };
-           button.addEventListener('click', popup2);
-   
-       </script>
+    var showtxt = document.querySelector('.show');
+
+    function popup2(e) {
+
+        if (confirm('是否確定要送出') == true) {
+            window.location.href = 'index.html';
+            window.alert('已送出');
+        } else {
+            window.alert('已取消送出');
+        }
+    };
+    button.addEventListener('click', popup2);
+
+</script>
+
 </html>

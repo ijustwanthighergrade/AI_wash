@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    {% load static %}
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>member</title>
-    <link href="{% static "css/add.css" %}" rel="stylesheet">
-    <link href="{% static "css/member.css" %}" rel="stylesheet">
+    <link href="css/add.css" rel="stylesheet">
+    <link href="css/member.css" rel="stylesheet">
 </head>
 
 <body>
-
-    <table class="ta1">
+    <table class="manu">
         <tr>
-            <td><img class ="logo" src="{% static "images/logo.jpg" %}"></td>
-            <td><a href="{% url 'member' %}"><div class ="log_in">會員</div></a></td>
+            <td><img class="logo" src="image/logo.jpg"></td>
+            <td>
+                <div class="mem">會員</div>
+            </td>
         </tr>
-        </table>
-    
+    </table>
+
     <div class="ta2">
         <div class="td1">
             <div class="text3" id="img">
                 <div class="text4">
                     <a href="{% url 'index' %}">
-                返回</a>
+                        返回</a>
                 </div>
-                <img class="img" src="{% static "images/logo.jpg" %}">
+                <img class="img" src="{% static " images/logo.jpg" %}">
             </div>
             <div class="text1">
                 <p class="m">您好，尊貴的會員</p>
@@ -35,13 +37,13 @@
             </div>
             <div class="btn">
                 <div class="text2"><a href="{% url 'memSet' %}">
-                    個人設定</a>
+                        個人設定</a>
                 </div>
                 <div class="text2"><a href="{% url 'order' %}">
-                    訂單查詢</a>
+                        訂單查詢</a>
                 </div>
                 <div class="text2"><a href="{% url 'complain' %}">
-                    客服紀錄</a>
+                        客服紀錄</a>
                 </div>
             </div>
         </div>
@@ -49,7 +51,8 @@
 
 
 </body>
-<footer >
+<footer>
     Copyright@2022 By AIwash Rights Reseved
 </footer>
+
 </html>

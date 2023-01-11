@@ -2,7 +2,10 @@ hr{
     width: 90%;
     border:1px solid #2fcfc6;
 }
-
+    
+footer{
+    position: relative;
+}
 .ta2{
     margin: auto;
     background-color: #2fcfc6;
@@ -117,10 +120,4 @@ hr{
         font-size: 20px;
     }
 
-    footer{
-        position: absolute;
-        right: 0px;
-        margin-top: 7.2%;
-    }
-    
 }

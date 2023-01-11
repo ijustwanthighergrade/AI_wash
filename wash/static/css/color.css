@@ -79,7 +79,10 @@
 }
 @media screen and (max-width: 768px)
 {
-
+    
+    footer{
+        position: relative;
+    }
     .ta1{
         margin-bottom: 3%;
     }
