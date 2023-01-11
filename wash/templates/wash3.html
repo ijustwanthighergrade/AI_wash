@@ -11,10 +11,7 @@
     <link href="{% static "css/wash3.css" %}" rel="stylesheet">
 </head>
 
-<script>
-    var date = new Date();
-  document.getElementById('date1').value = date;
-</script>
+
 
 <body>
 
@@ -36,9 +33,9 @@
                 <div class="div1">
                     預定頂取時間<br><br>
                     日期
-                    <input name="day" type="date" class="num"><br><br>
+                    <input name="day" type="date" class="num" id="date1"><br><br>
                                         時間
-                    <input name="time" type="time" class="num">
+                    <input name="day" type="time" class="num" id="time1"><br><br>
 
                 </div>
                 
@@ -75,6 +72,12 @@
     </table>
 </form>
 </td>
+<script>
+    document.getElementById('date1').value = new Date(new Date().getTime()  - new Date().getTimezoneOffset() * 60000 * 4).toISOString().split("T")[0];
+    document.getElementById('date1').min = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 4).toISOString().split("T")[0];
+    document.getElementById('time1').value = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 4 ).toISOString().slice(11).slice(0, -8);
+    document.getElementById('time1').max = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 4 ).toISOString().slice(11).slice(0, -8);
+</script>
 </body>
 
 <footer >
