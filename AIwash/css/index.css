@@ -1,28 +1,27 @@
-
-.ta2{
+.ta2 {
     width: 80%;
     margin: auto;
     height: 3vh;
-    border: 5px solid  #2fcfc6;
+    border: 5px solid #2fcfc6;
     border-radius: 10px;
     background-color: #404040;
     margin-bottom: 1%;
 }
 
-.ta3{
+.ta3 {
     display: flex;
     justify-content: center;
     margin: auto;
-    height: 35vh; 
+    height: 35vh;
     margin-bottom: 1%;
     width: 80%;
 }
 
-.td1{
+.td1 {
     width: 10%;
 }
 
-.new{
+.new {
     text-align: center;
     width: 5%;
     margin-left: 90%;
@@ -30,24 +29,25 @@
     animation: move 10s linear infinite;
 }
 
-@keyframes move{
-  0%{
-    transform: rotate(0deg);
-  }
-  100%{
-    transform: rotate(360deg);
-  }
+@keyframes move {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
-.teaching{
+.teaching {
     width: 110%;
 
 }
 
-.text1{
+.text1 {
     font-size: 24px;
     font-weight: bold;
-    border-right: 3px solid  #2fcfc6;
+    border-right: 3px solid #2fcfc6;
     text-align: center;
     width: 100%;
     color: #2fcfc6;
@@ -55,83 +55,86 @@
 
 }
 
-.text2{
+.text2 {
     font-size: 20px;
-    padding-left:1% ;
+    padding-left: 1%;
     color: #d9fbf8;
 }
 
-.text3{
+.text3 {
     color: #d9fbf8;
     font-weight: bold;
     text-align: center;
     font-size: 34px;
-    border: 5px solid  #2fcfc6;
+    border: 5px solid #2fcfc6;
     border-radius: 10px;
     background-color: #454b4a;
     margin-right: 0%;
-    padding: 10% 30px;    
+    padding: 10% 30px;
     height: 30vh;
     line-height: 30vh;
 }
 
-@media screen and (max-width: 900px)
-{
-    .text3{
+@media screen and (max-width: 900px) {
+    .text3 {
         font-size: 30px;
         padding: 13% 8px 0%;
     }
 }
-@media screen and (max-width: 768px)
-{
-    
-    .ta2{
+
+@media screen and (max-width: 768px) {
+
+    .ta2 {
         margin-bottom: 3%;
     }
-    .btn{
+
+    .btn {
         display: block;
         height: auto;
     }
-    .ta3{
+
+    .ta3 {
         flex-direction: column;
         width: 80%;
         margin: auto auto 1%;
-        height: 20%; 
+        height: 20%;
     }
 
-    .td1{
+    .td1 {
         width: 25%;
     }
 
-    .text1{
+    .text1 {
         font-size: 14px;
     }
 
-    .text2{
+    .text2 {
         font-size: 12px;
     }
 
-    .text3{
+    .text3 {
         font-size: 30px;
         margin-left: -50%;
         margin-top: 20%;
         padding: 5% 20%;
         height: 100%;
         width: 130%;
-        line-height:100%;
+        line-height: 100%;
     }
-    #small{
+
+    #small {
         margin-top: 5%;
     }
-    .new{
+
+    .new {
         margin-left: 80%;
         font-size: 28px;
         width: 10%;
         margin-bottom: 1%;
-}
-  
+    }
 
-    footer{
+
+    footer {
         position: absolute;
         right: 0px;
         bottom: 0px;
