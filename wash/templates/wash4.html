@@ -12,6 +12,9 @@
 </head>
 
 <script>
+    @app.route("{ url 'wash4' }",methods=['POST'])
+    type:'post',
+    data:{'cname':cname,'continent':continent},
 </script>
 
 <body>
@@ -32,16 +35,18 @@
             <td>
                 <div class="div1">訂單明細
                     <p class="p1">
-                    衣服袋數：<br>
-                    洗滌：<br>
-                    乾燥：<br>
-                    摺衣：<br>
-                    特殊衣物：<br>
-                    獲得點數：<br>
-                    扣除點數：<br><hr>
+                    衣服袋數：{{orderamount}}<br>
+                    洗滌方式：{{washway}}<br>
+                    乾燥方式：{{dryway}}<br>
+                    摺衣方式：{{flodway}}<br>
+                    特殊衣物：{{specialitem}}<br>
+                    獲得點數：{{tpoint}}<br>
+                    領取時間：{{date}} {{time}}<br>
+                    送達方式：{{takeway}}<br>
+                    送達地址：{{t}}<hr>
                     </p>
                     <p class="p2">
-                    總金額：　總點數：　總碳稅：　
+                    總金額：{{tprice}} (含碳稅：{{tax}})
                     </p>
                 </div>              
             </td>
@@ -56,13 +61,11 @@
                             <td colspan="2">
                                 
                                 電話
-                                <input type="checkbox" id="re2" name="usephone">是否用預設<br>
-                                <input type="phone" name="phone"><br>
+                                <input type="phone" value="{{phone}}" name="phone"><br>
                                 <input type="checkbox" name="rememberphone" value="1">記住電話<br>
                                 付款方式<br>
-                                <input type="radio" id="re2" name="receive" >信用卡
-                                <input type="checkbox" name="usecard" >是否用預設<br>
-                                <input type="text" name="card"><br>
+                                <input type="radio" id="re2" name="receive" checked>信用卡
+                                <input type="text" value="{{card}}" name="card"><br>
                                 <input type="checkbox" name="remembercard" value="1">記住卡<br>
                             </td>
                         </tr>
