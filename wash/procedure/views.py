@@ -1,3 +1,4 @@
+from datetime import datetime
 from django.shortcuts import render
 from django.http import HttpResponse
 import sqlite3
@@ -87,7 +88,7 @@ def wash3(request):
          orderdata['flodway']=store
          orderdata['specialitem']=special
          
-         
+      
       wmode=WMODE.objects.get(WMODE=orderdata['washway'])
       lmode=LMODE.objects.get(LMODE=orderdata['dryway'])
       fmode=FMODE.objects.get(FMODE=orderdata['flodway'])
@@ -129,6 +130,7 @@ def wash4(request):
       date=orderdata['getdate']
       time=orderdata['gettime']
       takeway=orderdata['Take']
+      
       t=""
       if takeway=='外送':
          t=orderdata['addr']
@@ -179,8 +181,11 @@ def dealorder(request):
    shops=shop.objects.get(id=1)
    SHOPS=shops.SHOPID
    
+   datechange=orderdata['getdate']+" "+orderdata['gettime']
+   datetime.strptime(datechange,'%Y-%m-%d %H:%S')
    if(orderdata['Take']=="外送"):
-      delivery.objects.create(ORDID=ORD,SHOPID=SHOPS,PHONE=orderdata['mphone'], ADDRESS=orderdata['addr'])
+      delivery.objects.create(ORDID=ORD,SHOPID=SHOPS,PHONE=orderdata['mphone'], ADDRESS=orderdata['addr'],GDATE=datechange)
+      
    
    
    print(orderdata)
