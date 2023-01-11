@@ -13,13 +13,12 @@
 </head>
 
 <body>
-    <table class="ta1">
+    <table class="manu">
         <tr>
             <td><img class="logo" src="{% static " images/logo.jpg" %}"></td>
-            <td><a href="{% url 'member' %}">
-                    <div class="log_in">會員</div>
-                </a></td>
+            <td><a href="{% url 'member' %}"><div class="log_in">會員</div></a></td>
         </tr>
+    </table>
     </table>
     <form method="post" target="_self" action="{% url 'wash4' %}">
         {% csrf_token %}
