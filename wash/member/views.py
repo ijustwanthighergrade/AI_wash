@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from pyexpat.errors import messages
 import requests
-
+from procedure.models import order
 from login.models import MEMBER
 from login.views import login2
 
@@ -37,7 +37,15 @@ def member(request):
       return login2(request)
        
     
- 
+def color(request):
+   if 'mem_session' in request.session:
+      howmuch=order.objects.filter(MEMID=request.session['mem_session']).count()
+      print(howmuch)
+      
+      return render(request,"color.html",locals())
+   else:
+      return login2(request)
+   
 def logout(request):
    
    del request.session['mem_session']
