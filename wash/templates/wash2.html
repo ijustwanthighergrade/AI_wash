@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     {% load static %}
     <meta charset="UTF-8">
@@ -8,11 +7,243 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>wash</title>
-    <link href="{% static " css/add.css" %}" rel="stylesheet">
-    <link href="{% static " css/wash2.css" %}" rel="stylesheet">
+    <link href="{% static "css/add.css" %}" rel="stylesheet">
+    <link href="{% static "css/wash2.css" %}" rel="stylesheet">
 </head>
 
 <script>
+    
+</script>
+
+<body>
+
+    <table class="ta1">
+        <tr>
+            <td><img class ="logo" src="{% static "images/logo.jpg" %}"></td>
+            <td><a href="{% url 'member' %}"><div class ="log_in">會員</div></a></td>
+        </tr>
+    </table>
+    <form  method="post" target="_self" action="{% url 'wash3' %}">
+        {% csrf_token %}
+    <table class="ta2" >
+        <tr class="tr1">
+            <td class="td3"><div><a href="{% url 'index' %}"  class="back"><返回首頁</a></div></td>
+        </tr>
+        <tr>
+            <td>
+                <div class="div1">
+                    衣服袋數
+                    <input type="number" name="bagamount" class="num" required="required" min="1">
+                </div>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>               
+                    <table class="ta3" >
+                        <tr class="tr1">
+                            <td>
+                                <div id="wash1" onclick="listBtn1()" class="t1">建議</div>
+                            </td>
+                            <td>
+                                <div id="wash2" onclick="listBtn2()" class="t2">偏好</div>
+                            </td>
+                            <td>
+                                <div id="wash3" onclick="listBtn3()" class="t2">自訂</div>
+                            </td>
+                        </tr>
+                        <tr class="tr2">
+                            <td  colspan="3">
+                                <div id="w1" style="display:block;" class="t3">
+                                    洗滌
+                                    <select name="washing" style="width: 50%;" id="washing1" onclick="wash1()">
+                                        <option value="標準">標準</option>
+                                        <option value="精緻洗" >精緻洗</option>
+                                        <option value="柔洗">柔洗</option>
+                                        <option value="快洗">快洗</option>
+                                    </select><br>
+                                    
+                                    <div class="div2"  style="width: 80%;">
+                                        <div id="wash_1">30 分鐘 0 元 5 點數 1 碳稅</div>      
+                                    </div><br>
+
+                                    乾燥
+                                    <select name="drying" style="width: 50%;" id="drying1" onclick="dry1()">
+                                        <option value="日曬">日曬</option>
+                                        <option value="低溫烘乾" >低溫烘乾</option>
+                                        <option value="中溫烘乾">中溫烘乾</option>
+                                        <option value="高溫烘乾">高溫烘乾</option>
+                                    </select><br>
+
+                                    <div class="div2"  style="width: 100%; " >
+                                        <div id="dry_1">1440 分鐘 0 元 5 點數  0 碳稅</div>                                 
+                                    </div><br>
+
+                                    摺衣
+                                    <select name="store" style="width: 50%;" id="store1" onclick="sto1()">
+                                        <option value="不折">不折</option>
+                                        <option value="機器人" >機器人(20MIN)</option>
+                                    </select><br>
+
+                                    <div class="div2"  style="width: 80%;" >
+                                        <div id="store_1">0 分鐘 0 元 5 點數 0 碳稅</div>                                
+                                    </div><br>
+                                   
+                                    <div class="">
+                                        特殊衣物
+                                        <select name="special" style="width: 40%;" id="special1">
+                                            <option value="special0">無</option>
+                                            <option value="special1">毛毯類</option>
+                                            <option value="special2" >皮革類</option>
+                                        </select>
+                                    </div><br>
+
+                                    <div id="total1">
+                                        &emsp;總金額：0  總點數：0                                      
+                                    </div>
+
+                                </div>
+                                <div id="w2" style="display:none;" class="t3">
+                                    洗滌
+                                    <select name="washing" style="width: 50%;" id="washing2" onclick="wash2()">
+                                        <option value="標準">標準</option>
+                                        <option value="精緻洗" >精緻洗</option>
+                                        <option value="柔洗">柔洗</option>
+                                        <option value="快洗">快洗</option>
+                                    </select><br>
+                                    
+                                    <div class="div2"  style="width: 80%;">
+                                        <div id="wash_2">30 分鐘 0 元 5 點數 1 碳稅</div>                                
+                                    </div><br>
+
+                                    乾燥
+                                    <select name="drying" style="width: 50%;" id="drying2" onclick="dry2()">
+                                        <option value="日曬">日曬</option>
+                                        <option value="低溫烘乾" >低溫烘乾</option>
+                                        <option value="中溫烘乾">中溫烘乾</option>
+                                        <option value="高溫烘乾">高溫烘乾</option>
+                                    </select><br>
+
+                                    <div class="div2"  style="width: 80%;">
+                                        <div id="dry_2">1440 分鐘 0 元 5 點數  0 碳稅</div>                                
+                                    </div><br>
+
+                                    摺衣
+                                    <select name="store" style="width: 50%;" id="store2" onclick="sto2()">
+                                        <option value="不折">不折</option>
+                                        <option value="機器人" >機器人(20MIN)</option>
+                                    </select><br>
+
+                                    <div class="div2"  style="width: 80%;" >
+                                        <div id="store_2">0 分鐘 0 元 5 點數 0 碳稅</div>                                
+                                    </div><br>
+
+                                    <div class="">
+                                        特殊衣物
+                                        <select name="special" style="width: 40%;" id="special2">
+                                            <option value="special1">無</option>
+                                            <option value="special1">毛毯類</option>
+                                            <option value="special2" >皮革類</option>
+                                        </select>
+                                    </div><br>
+
+                                    <div id="total2">
+                                        &emsp;總金額：0  總點數：0                                      
+                                    </div>
+
+                                </div>
+                                
+                                <div id="w3" style="display:none;" class="t3">
+                                    洗滌
+                                    <select name="washing" style="width: 50%;" id="washing3" onclick="wash3()">
+                                        <option value="標準">標準</option>
+                                        <option value="精緻洗" >精緻洗</option>
+                                        <option value="柔洗">柔洗</option>
+                                        <option value="快洗">快洗</option>
+                                    </select><br>
+                                    
+                                    <div class="div2"  style="width: 80%;">
+                                        <div id="wash_3">30 分鐘 0 元 5 點數 1 碳稅</div>                                
+                                    </div><br>
+
+                                    乾燥
+                                    <select name="drying" style="width: 50%;" id="drying3" onclick="dry3()">
+                                        <option value="日曬">日曬</option>
+                                        <option value="低溫烘乾" >低溫烘乾</option>
+                                        <option value="中溫烘乾">中溫烘乾</option>
+                                        <option value="高溫烘乾">高溫烘乾</option>
+                                    </select><br>
+
+                                    <div class="div2"  style="width: 80%;" >
+                                        <div id="dry_3">1440 分鐘 0 元 5 點數  0 碳稅</div>                                
+                                    </div><br>
+
+                                    摺衣
+                                    <select name="store" style="width: 50%;" id="store3" onclick="sto3()">
+                                        <option value="不折">不折</option>
+                                        <option value="機器人" >機器人(20MIN)</option>
+                                    </select><br>
+                                    
+                                    <div class="div2"  style="width: 80%;" >
+                                        <div id="store_3">0 分鐘 0 元 5 點數 0 碳稅</div>                                
+                                    </div><br>
+
+                                    <div class="">
+                                        特殊衣物
+                                        <select name="special" style="width: 40%;" id="special3">
+                                            <option value="special1">無</option>
+                                            <option value="special1">毛毯類</option>
+                                            <option value="special2" >皮革類</option>
+                                        </select>
+                                    </div><br>
+                                    
+                                    <div id="total3">
+                                        &emsp;總金額：0  總點數：0                                      
+                                    </div>
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="td1"   colspan="3">
+                                <input type="button" class="next" onclick="history.back();" value="上一步"> </a>
+                                <input type="submit" class="confirm" value="下一步">
+                            </td>
+                        </tr>
+                   
+                    </table>               
+            </td>
+        </tr>
+        
+    </table>
+</form>
+</body>
+<script>
+    var washing1 = document.getElementById("washing1");
+    var washing2 = document.getElementById("washing2");
+    var washing3 = document.getElementById("washing3");
+    var drying1 = document.getElementById("drying1");
+    var drying2 = document.getElementById("drying2");
+    var drying3 = document.getElementById("drying3");
+    var store1 = document.getElementById("store1");
+    var store2 = document.getElementById("store2");
+    var store3 = document.getElementById("store3");
+    var special1 = document.getElementById("special1");
+    var special2 = document.getElementById("special2");
+    var special3 = document.getElementById("special3");
+    var point1_1 = 0 , point1_2 = 0 , point1_3 = 0 , point2_1 = 0 , point2_2 = 0 , point2_3 = 0 , point3_1 = 0 , point3_2 = 0 , point3_3 = 0;
+    var price1_1 = 0 , price1_2 = 0 , price1_3 = 0 , price2_1 = 0 , price2_2 = 0 , price2_3 = 0 , price3_1 = 0 , price3_2 = 0 , price3_3 = 0;
+    
+
+    
+    washing2.setAttribute("disabled", "disabled");
+    washing3.setAttribute("disabled", "disabled");
+    drying2.setAttribute("disabled", "disabled");
+    drying3.setAttribute("disabled", "disabled");
+    store2.setAttribute("disabled", "disabled");
+    store3.setAttribute("disabled", "disabled");
+    special2.setAttribute("disabled", "disabled");
+    special3.setAttribute("disabled", "disabled");
 
     function listBtn1() {
         var wash1 = document.getElementById('wash1');
@@ -25,12 +256,26 @@
             w1.style.display = 'block';
             w2.style.display = 'none';
             w3.style.display = 'none';
-            document.getElementById("wash1").style.color = "#2fcfc6";
-            document.getElementById("wash2").style.color = "#c7fffc";
-            document.getElementById("wash3").style.color = "#c7fffc";
-            document.getElementById("wash1").style.backgroundColor = "#c7fffc";
-            document.getElementById("wash2").style.backgroundColor = "#2fcfc6";
-            document.getElementById("wash3").style.backgroundColor = "#2fcfc6";
+            wash1.style.color = "#2fcfc6";
+            wash2.style.color = "#c7fffc";
+            wash3.style.color = "#c7fffc";
+            wash1.style.backgroundColor = "#c7fffc";
+            wash2.style.backgroundColor = "#2fcfc6";
+            wash3.style.backgroundColor = "#2fcfc6";
+
+            document.getElementById("washing1").removeAttribute("disabled");
+            document.getElementById("washing2").setAttribute("disabled", "disabled");
+            document.getElementById("washing3").setAttribute("disabled", "disabled");
+            document.getElementById("drying1").removeAttribute("disabled");
+            document.getElementById("drying2").setAttribute("disabled", "disabled");
+            document.getElementById("drying3").setAttribute("disabled", "disabled");
+            document.getElementById("store1").removeAttribute("disabled");
+            document.getElementById("store2").setAttribute("disabled", "disabled");
+            document.getElementById("store3").setAttribute("disabled", "disabled");
+            document.getElementById("special1").removeAttribute("disabled");
+            document.getElementById("special2").setAttribute("disabled", "disabled");
+            document.getElementById("special3").setAttribute("disabled", "disabled");
+
         }
     }
     function listBtn2() {
@@ -44,13 +289,26 @@
             w1.style.display = 'none';
             w2.style.display = 'block';
             w3.style.display = 'none';
-            document.getElementById("wash1").style.color = "#c7fffc";
-            document.getElementById("wash2").style.color = "#2fcfc6";
-            document.getElementById("wash3").style.color = "#c7fffc";
-            document.getElementById("wash1").style.backgroundColor = "#2fcfc6";
-            document.getElementById("wash2").style.backgroundColor = "#c7fffc";
-            document.getElementById("wash3").style.backgroundColor = "#2fcfc6";
-        }
+            wash1.style.color = "#c7fffc";
+            wash2.style.color = "#2fcfc6";
+            wash3.style.color = "#c7fffc";
+            wash1.style.backgroundColor = "#2fcfc6";
+            wash2.style.backgroundColor = "#c7fffc";
+            wash3.style.backgroundColor = "#2fcfc6";
+
+            document.getElementById("washing2").removeAttribute("disabled");
+            document.getElementById("washing1").setAttribute("disabled", "disabled");
+            document.getElementById("washing3").setAttribute("disabled", "disabled");
+            document.getElementById("drying2").removeAttribute("disabled");
+            document.getElementById("drying1").setAttribute("disabled", "disabled");
+            document.getElementById("drying3").setAttribute("disabled", "disabled");
+            document.getElementById("store2").removeAttribute("disabled");
+            document.getElementById("store1").setAttribute("disabled", "disabled");
+            document.getElementById("store3").setAttribute("disabled", "disabled");
+            document.getElementById("special2").removeAttribute("disabled");
+            document.getElementById("special1").setAttribute("disabled", "disabled");
+            document.getElementById("special3").setAttribute("disabled", "disabled");
+        } 
     }
     function listBtn3() {
         var wash1 = document.getElementById('wash1');
@@ -63,216 +321,192 @@
             w1.style.display = 'none';
             w2.style.display = 'none';
             w3.style.display = 'block';
-            document.getElementById("wash1").style.color = "#c7fffc";
-            document.getElementById("wash2").style.color = "#c7fffc";
-            document.getElementById("wash3").style.color = "#2fcfc6";
-            document.getElementById("wash1").style.backgroundColor = "#2fcfc6";
-            document.getElementById("wash2").style.backgroundColor = "#2fcfc6";
-            document.getElementById("wash3").style.backgroundColor = "#c7fffc";
-        }
+            wash1.style.color = "#c7fffc";
+            wash2.style.color = "#c7fffc";
+            wash3.style.color = "#2fcfc6";
+            wash1.style.backgroundColor = "#2fcfc6";
+            wash2.style.backgroundColor = "#2fcfc6";
+            wash3.style.backgroundColor = "#c7fffc";
+
+            document.getElementById("washing3").removeAttribute("disabled");
+            document.getElementById("washing2").setAttribute("disabled", "disabled");
+            document.getElementById("washing1").setAttribute("disabled", "disabled");
+            document.getElementById("drying3").removeAttribute("disabled");
+            document.getElementById("drying2").setAttribute("disabled", "disabled");
+            document.getElementById("drying1").setAttribute("disabled", "disabled");
+            document.getElementById("store3").removeAttribute("disabled");
+            document.getElementById("store2").setAttribute("disabled", "disabled");
+            document.getElementById("store1").setAttribute("disabled", "disabled");
+            document.getElementById("special3").removeAttribute("disabled");
+            document.getElementById("special2").setAttribute("disabled", "disabled");
+            document.getElementById("special1").setAttribute("disabled", "disabled");
+        } 
     }
-</script>
 
-<body>
-    <table class="manu">
-        <tr>
-            <td><img class="logo" src="{% static "images/logo.jpg" %}"></td>
-            <td><a href="{% url 'member' %}"><div class="log_in">會員</div></a></td>
-        </tr>
-    </table>
-    <form method="post" target="_self" action="{% url 'wash3' %}">
-        {% csrf_token %}
-        <table class="ta2">
-            <tr class="tr1">
-                <td class="td3">
-                    <div><a href="{% url 'index' %}" class="back">
-                            <返回首頁< /a>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="div1">
-                        衣服袋數
-                        <input type="number" name="bagamount" class="num" required="required" min="1">
-                    </div>
+    function wash1(){
+                if(washing1.value =="標準"){
+                    document.getElementById("wash_1").innerHTML = "30 分鐘 0 元 5 點數 1 碳稅";
+                    price1_1 = 0;
+                    point1_1 = 5;
+                }else if(washing1.value =="精緻洗"){
+                    document.getElementById("wash_1").innerHTML = "50 分鐘 5 元 0 點數 2 碳稅";
+                    price1_1 = 5;
+                    point1_1 = 0;
+                }else if(washing1.value =="柔洗"){
+                    document.getElementById("wash_1").innerHTML = "50 分鐘 5 元 0 點數 2 碳稅";
+                    price1_1 = 5;
+                    point1_1 = 0;
+                }else if(washing1.value =="快洗"){
+                    document.getElementById("wash_1").innerHTML = "20 分鐘 0 元 5 點數 2 碳稅";
+                    price1_1 = 0;
+                    point1_1 = 5;
+                }
+                document.getElementById("total1").innerHTML = "&emsp;總點數：" + (price1_1 + price1_2 + price1_3) + " 總點數：" + (point1_1 + point1_2 + point1_3);
+            }
+    function wash2(){
+                if(washing2.value =="標準"){
+                    document.getElementById("wash_2").innerHTML = "30 分鐘 0 元 5 點數 1 碳稅";
+                    price2_1 = 0;
+                    point2_1 = 5;
+                }else if(washing2.value =="精緻洗"){
+                    document.getElementById("wash_2").innerHTML = "50 分鐘 5 元 0 點數 2 碳稅";
+                    price2_1 = 5;
+                    point2_1 = 0;
+                }else if(washing2.value =="柔洗"){
+                    document.getElementById("wash_2").innerHTML = "50 分鐘 5 元 0 點數 2 碳稅";
+                    price2_1 = 5;
+                    point2_1 = 0;
+                }else if(washing2.value =="快洗"){
+                    document.getElementById("wash_2").innerHTML = "20 分鐘 0 元 5 點數 2 碳稅";
+                    price2_1 = 0;
+                    point2_1 = 5;
+                }
+                document.getElementById("total2").innerHTML = "&emsp;總點數：" + (price2_1 + price2_2 + price2_3) + " 總點數：" + (point2_1 + point2_2 + point2_3);
+            }
 
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <table class="ta3">
-                        <tr class="tr1">
-                            <td>
-                                <div id="wash1" onclick="listBtn1()" class="t1">建議</div>
-                            </td>
-                            <td>
-                                <div id="wash2" onclick="listBtn2()" class="t2">偏好</div>
-                            </td>
-                            <td>
-                                <div id="wash3" onclick="listBtn3()" class="t2">自訂</div>
-                            </td>
-                        </tr>
-                        <tr class="tr2">
-                            <td colspan="3">
-                                <div id="w1" style="display:block;" class="t3">
-                                    洗滌
-                                    <select name="washing" style="width: 50%;">
-                                        <option value="標準">標準</option>
-                                        <option value="精緻洗">精緻洗</option>
-                                        <option value="柔洗">柔洗</option>
-                                        <option value="快洗">快洗</option>
-                                    </select><br>
+     function wash3(){
+                if(washing3.value =="標準"){
+                    document.getElementById("wash_3").innerHTML = "30 分鐘 0 元 5 點數 1 碳稅";
+                    price3_1 = 0;
+                    point3_1 = 5;
+                }else if(washing3.value =="精緻洗"){
+                    document.getElementById("wash_3").innerHTML = "50 分鐘 5 元 0 點數 2 碳稅";
+                    price3_1 = 5;
+                    point3_1 = 0;
+                }else if(washing3.value =="柔洗"){
+                    document.getElementById("wash_3").innerHTML = "50 分鐘 5 元 0 點數 2 碳稅";
+                    price3_1 = 5;
+                    point3_1 = 0;
+                }else if(washing3.value =="快洗"){
+                    document.getElementById("wash_3").innerHTML = "20 分鐘 0 元 5 點數 2 碳稅";
+                    price3_1 = 0;
+                    point3_1 = 5;
+                }
+                document.getElementById("total3").innerHTML = "&emsp;總點數：" + (price3_1 + price3_2 + price3_3) + " 總點數：" + (point3_1 + point3_2 + point3_3);
+            }
+    function dry1(){
+                if(drying1.value =="日曬"){
+                    document.getElementById("dry_1").innerHTML = "1440 分鐘 0 元 5 點數 0 碳稅";
+                    price1_2 = 0;
+                    point1_2 = 5;
+                }else if(drying1.value =="低溫烘乾"){
+                    document.getElementById("dry_1").innerHTML = "180 分鐘 5 元 0 點數 3 碳稅";
+                    price1_2 = 5;
+                    point1_2 = 0;
+                }else if(drying1.value =="中溫烘乾"){
+                    document.getElementById("dry_1").innerHTML = "120 分鐘 5 元 0 點數 3 碳稅";
+                    price1_2 = 5;
+                    point1_2 = 0;
+                }else if(drying1.value =="高溫烘乾"){
+                    document.getElementById("dry_1").innerHTML = "60 分鐘 5 元 0 點數 3 碳稅";
+                    price1_2 = 5;
+                    point1_2 = 0;
+                }
+                document.getElementById("total1").innerHTML = "&emsp;總點數：" + (price1_1 + price1_2 + price1_3) + " 總點數：" + (point1_1 + point1_2 + point1_3);
+            }
+    function dry2(){
+                if(drying2.value =="日曬"){
+                    document.getElementById("dry_2").innerHTML = "1440 分鐘 0 元 5 點數 1 碳稅";
+                    price2_2 = 0;
+                    point2_2 = 5;
+                }else if(drying2.value =="低溫烘乾"){
+                    document.getElementById("dry_2").innerHTML = "180 分鐘 5 元 0 點數 3 碳稅";
+                    price2_2 = 5;
+                    point2_2 = 0;
+                }else if(drying2.value =="中溫烘乾"){
+                    document.getElementById("dry_2").innerHTML = "120 分鐘 5 元 0 點數 3 碳稅";
+                    price2_2 = 5;
+                    point2_2 = 0;
+                }else if(drying2.value =="高溫烘乾"){
+                    document.getElementById("dry_2").innerHTML = "60 分鐘 5 元 0 點數 3 碳稅";
+                    price2_2 = 5;
+                    point2_2 = 0;
+                }
+                document.getElementById("total2").innerHTML = "&emsp;總點數：" + (price2_1 + price2_2 + price2_3) + " 總點數：" + (point2_1 + point2_2 + point2_3);
+            }
 
-                                    <div class="div2" style="width: 80%;">
-                                        x 分鐘 x 元 x 點數 x 碳稅
-                                    </div><br>
+     function dry3(){
+                if(drying3.value =="日曬"){
+                    document.getElementById("dry_3").innerHTML = "1440 分鐘 0 元 5 點數 1 碳稅";
+                    price3_2 = 0;
+                    point3_2 = 5;
+                }else if(drying3.value =="低溫烘乾"){
+                    document.getElementById("dry_3").innerHTML = "180 分鐘 5 元 0 點數 3 碳稅";
+                    price3_2 = 5;
+                    point3_2 = 0;
+                }else if(drying3.value =="中溫烘乾"){
+                    document.getElementById("dry_3").innerHTML = "120 分鐘 5 元 0 點數 3 碳稅";
+                    price3_2 = 5;
+                    point3_2 = 0;
+                }else if(drying3.value =="高溫烘乾"){
+                    document.getElementById("dry_3").innerHTML = "60 分鐘 5 元 0 點數 3 碳稅";
+                    price3_2 = 5;
+                    point3_2 = 0;
+                }
+                document.getElementById("total3").innerHTML = "&emsp;總點數：" + (price3_1 + price3_2 + price3_3) + " 總點數：" + (point3_1 + point3_2 + point3_3);
+            }
 
-                                    乾燥
-                                    <select name="drying" style="width: 50%;">
-                                        <option value="日曬">日曬</option>
-                                        <option value="低溫烘乾">低溫烘乾</option>
-                                        <option value="中溫烘乾">中溫烘乾</option>
-                                        <option value="高溫烘乾">高溫烘乾</option>
-                                    </select><br>
+     function sto1(){
+                if(store1.value =="不折"){
+                    document.getElementById("store_1").innerHTML = "0 分鐘 0 元 5 點數 0 碳稅";
+                    price1_3 = 0;
+                    point1_3 = 5;
+                }else if(store1.value =="機器人"){
+                    document.getElementById("store_1").innerHTML = "20 分鐘 5 元 0 點數 1 碳稅";
+                    price1_3 = 5;
+                    point1_3 = 0;
+                }
+                document.getElementById("total1").innerHTML = "&emsp;總點數：" + (price1_1 + price1_2 + price1_3) + " 總點數：" + (point1_1 + point1_2 + point1_3);
+            }
 
-                                    <div class="div2" style="width: 80%;">
-                                        x 分鐘 x 元 x 點數 x 碳稅
-                                    </div><br>
+    function sto2(){
+                if(store2.value =="不折"){
+                    document.getElementById("store_2").innerHTML = "0 分鐘 0 元 5 點數 0 碳稅";
+                    price2_3 = 0;
+                    point2_3 = 5;
+                }else if(store2.value =="機器人"){
+                    document.getElementById("store_2").innerHTML = "20 分鐘 5 元 0 點數 1 碳稅";
+                    price2_3 = 5;
+                    point2_3 = 0;
+                }
+                document.getElementById("total2").innerHTML = "&emsp;總點數：" + (price2_1 + price2_2 + price2_3) + " 總點數：" + (point2_1 + point2_2 + point2_3);
+            }
 
-                                    摺衣
-                                    <select name="store" style="width: 50%;">
-                                        <option value="不折">不折</option>
-                                        <option value="機器人">機器人(20MIN)</option>
-                                    </select><br><br>
-
-                                    <div class="">
-                                        特殊衣物
-                                        <select name="special" style="width: 40%;">
-                                            <option value="special0">無</option>
-                                            <option value="special1">毛毯類</option>
-                                            <option value="special2">皮革類</option>
-                                        </select>
-                                    </div><br>
-
-                                    <div>
-                                        總點數：０總金額：０
-
-                                    </div>
-
-                                </div>
-                                <div id="w2" style="display:none;" class="t3">
-                                    洗滌
-                                    <select name="washing" style="width: 50%;">
-                                        <option value="標準">標準</option>
-                                        <option value="精緻洗">精緻洗</option>
-                                        <option value="柔洗">柔洗</option>
-                                        <option value="快洗">快洗</option>
-                                    </select><br>
-
-                                    <div class="div2" style="width: 80%;">
-                                        x 分鐘 x 元 x 點數 x 碳稅
-                                    </div><br>
-
-                                    乾燥
-                                    <select name="drying" style="width: 50%;">
-                                        <option value="日曬">日曬</option>
-                                        <option value="低溫烘乾">低溫烘乾</option>
-                                        <option value="中溫烘乾">中溫烘乾</option>
-                                        <option value="高溫烘乾">高溫烘乾</option>
-                                    </select><br>
-
-                                    <div class="div2" style="width: 80%;">
-                                        x 分鐘 x 元 x 點數 x 碳稅
-                                    </div><br>
-
-                                    摺衣
-                                    <select name="store" style="width: 50%;">
-                                        <option value="不折">不折</option>
-                                        <option value="機器人">機器人(20MIN)</option>
-                                    </select><br><br>
-
-                                    <div class="">
-                                        特殊衣物
-                                        <select name="special" style="width: 40%;">
-                                            <option value="special1">無</option>
-                                            <option value="special1">毛毯類</option>
-                                            <option value="special2">皮革類</option>
-                                        </select>
-                                    </div><br>
-
-                                    <div>
-                                        總點數：０總金額：０
-
-                                    </div>
-
-                                </div>
-
-                                <div id="w3" style="display:none;" class="t3">
-                                    洗滌
-                                    <select name="washing" style="width: 50%;">
-                                        <option value="標準">標準</option>
-                                        <option value="精緻洗">精緻洗</option>
-                                        <option value="柔洗">柔洗</option>
-                                        <option value="快洗">快洗</option>
-                                    </select><br>
-
-                                    <div class="div2" style="width: 80%;">
-                                        x 分鐘 x 元 x 點數 x 碳稅
-                                    </div><br>
-
-                                    乾燥
-                                    <select name="drying" style="width: 50%;">
-                                        <option value="日曬">日曬</option>
-                                        <option value="低溫烘乾">低溫烘乾</option>
-                                        <option value="中溫烘乾">中溫烘乾</option>
-                                        <option value="高溫烘乾">高溫烘乾</option>
-                                    </select><br>
-
-                                    <div class="div2" style="width: 80%;">
-                                        x 分鐘 x 元 x 點數 x 碳稅
-                                    </div><br>
-
-                                    摺衣
-                                    <select name="store" style="width: 50%;">
-                                        <option value="不折">不折</option>
-                                        <option value="機器人">機器人(20MIN)</option>
-                                    </select><br><br>
-
-                                    <div class="">
-                                        特殊衣物
-                                        <select name="special" style="width: 40%;">
-                                            <option value="special1">無</option>
-                                            <option value="special1">毛毯類</option>
-                                            <option value="special2">皮革類</option>
-                                        </select>
-                                    </div><br>
-
-                                    <div>
-                                        總點數：０總金額：０
-
-                                    </div>
-
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="td1" colspan="3">
-                                <input type="button" class="next" onclick="history.back();" value="上一步"> </a>
-                                <input type="submit" class="confirm" value="下一步">
-                            </td>
-                        </tr>
-
-                    </table>
-                </td>
-            </tr>
-
-        </table>
-    </form>
-</body>
-
-<footer>
+    function sto3(){
+                if(store3.value =="不折"){
+                    document.getElementById("store_3").innerHTML = "0 分鐘 0 元 5 點數 0 碳稅";
+                    price3_3 = 0;
+                    point3_3 = 5;
+                }else if(store3.value =="機器人"){
+                    document.getElementById("store_3").innerHTML = "20 分鐘 5 元 0 點數 1 碳稅";
+                    price3_3 = 5;
+                    point3_3 = 0;
+                }
+                document.getElementById("total3").innerHTML = "&emsp;總點數：" + (price3_1 + price3_2 + price3_3) + " 總點數：" + (point3_1 + point3_2 + point3_3);
+            }
+    
+    </script>
+<footer >
     Copyright@2022 By AIwash Rights Reseved
 </footer>
-
 </html>
