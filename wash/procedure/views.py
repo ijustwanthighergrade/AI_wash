@@ -39,9 +39,12 @@ orderdata = {
 
 def wash1(request):
    if 'mem_session' in request.session:
+      
       if not prefermode.objects.filter(MEMID=request.session['mem_session']).exists():
          prefermode.objects.create(MEMID=request.session['mem_session'],WMODE="標準",LMODE="日曬",FMODE="不折")
-
+      else:
+         pass
+      
       if not WMODE.objects.exists():
          WMODE.objects.create(WMODE="標準",MONEY=0,POINTS=5,MEMISSIONS=1,TIME=30)
          WMODE.objects.create(WMODE="精緻洗",MONEY=5,POINTS=0,MEMISSIONS=2,TIME=50)
@@ -75,7 +78,11 @@ def wash2(request):
       orderdata['Take'] = take
       orderdata['addr']= addr
       
-         
+      prefer=prefermode.objects.get(MEMID=request.session['mem_session'])
+      FMODE=prefer.FMODE
+      LMODE=prefer.LMODE
+      WMODE=prefer.WMODE
+      print(FMODE)
       return render(request,"wash2.html",locals())
    else:
       return login2(request)
@@ -99,7 +106,8 @@ def wash3(request):
          orderdata['dryway']=drying
          orderdata['flodway']=store
          orderdata['specialitem']=special
-      
+         
+      print(preset)
       if preset !="":
          prefermode.objects.filter(MEMID=request.session['mem_session']).update(WMODE=orderdata['washway'],LMODE=orderdata['dryway'],FMODE=orderdata['flodway'])
          
