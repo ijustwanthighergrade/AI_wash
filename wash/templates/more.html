@@ -8,7 +8,13 @@
     <title>more</title>
     <link href="{% static "css/nadd.css" %}" rel="stylesheet">
     <link href="{% static "css/nmore.css" %}" rel="stylesheet">
+    {% if mycolor == 0 %}
     <link href="{% static "css/theme.css" %}" rel="stylesheet">
+    {% elif mycolor == 1 %}
+    <link href="{% static "css/theme2.css" %}" rel="stylesheet">
+    {%else%}
+    <link href="{% static "css/theme3.css" %}" rel="stylesheet">
+    {% endif %}
 </head>
 <body class="bgdark">
 
