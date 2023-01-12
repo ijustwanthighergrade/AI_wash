@@ -1,32 +1,44 @@
-.ta2{
+footer {
+    position: relative;
+    margin-top: 5%;
+}
+
+.content {
     display: flex;
     justify-content: center;
 }
-.td1{
+
+.td1 {
     display: flex;
     justify-content: space-around;
     margin: 2% 0%;
     width: 80%;
     border: #c7fffc 2px solid;
-    background-color: #2fcfc6;
+    background-color: #c7fffc;
     color: azure;
+    height:160vh;
+    border-radius: 10px;
 }
-.img{
+
+.img {
     width: 200px;
     height: 200px;
     margin: 2% 3%;
     border: #c7fffc 2px solid;
 }
-.text2{
+
+.text2 {
     text-align: center;
     font-size: 100px;
     font-weight: bold;
-    color: #e8fefd;
+    color: #343837;
 }
-.text3{
+
+.text3 {
     margin: 2% auto;
 }
-.text4{
+
+.text4 {
     width: 10vh;
     height: 5vh;
     text-align: center;
@@ -34,57 +46,59 @@
     font-weight: bold;
     font-size: 20px;
     margin-left: 2%;
-    border:#e8fefd 2px solid;
-    color: #e8fefd;
-    background-color: #2fcfc6;
+    border: #343837 2px solid;
+    color: #c7fffc;
+    background-color: #343837;
+}
+a{
+ color: #c7fffc;
+
 }
 
-@media screen and (max-width: 768px)
-{
+@media screen and (max-width: 768px) {
 
-    .ta1{
+    .ta1 {
         margin-bottom: 3%;
     }
-    .td1{
+
+    .td1 {
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin: 0%;
         width: 80%;
         border: #c7fffc 2px solid;
-        background-color: #2fcfc6;
-        color: azure;
+        background-color: #c7fffc;
+        color: #343837;
     }
-    #img{
+
+    #img {
         margin-top: 10%;
     }
-    .img{
+
+    .img {
         width: 120px;
         height: 120px;
         display: block;
         margin: 10% auto;
     }
-    .text2{
+
+    .text2 {
         font-size: 40px;
-        color: #2fcfc6;
+        color: #c7fffc;
     }
-    .text3{
+
+    .text3 {
         margin: 0% auto;
-        background-color: #e8fefd;
-        color:black;
+        background-color: #343837;
+        color: c7fffc;
         width: 80%;
     }
 
-    .text4{
-        border: #2fcfc6 2px solid;
-        color: #2fcfc6;
-        background-color: #e8fefd;
+    .text4 {
+        border: #343837 2px solid;
         margin-left: 0%;
-        font-size: 15px;
+        font-size: 20px;
     }
-    
-    footer{
-        position: absolute;
-        right: 0px;
-    }
+
 }
