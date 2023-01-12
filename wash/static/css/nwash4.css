@@ -3,8 +3,9 @@ hr{
     border:1px solid #2fcfc6;
 }
     
-footer{
+footer {
     position: relative;
+    margin-top: 10px;
 }
 .ta2{
     margin: auto;
@@ -41,7 +42,6 @@ footer{
     color: #2fcfc6;
     font-weight: bold;
     font-size: 18px;
-    height: 30vh;
     margin-top: 1%;
 }
 
