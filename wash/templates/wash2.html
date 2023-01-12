@@ -33,7 +33,7 @@
             <td>
                 <div class="div1">
                     衣服袋數
-                    <input type="number" name="bagamount" class="num" required="required" min="1" value="1" id="bagamount"  onclick="bagamount3()" onkeydown="return false">
+                    <input type="number" name="bagamount" class="num" required="required" min="1" value="1" id="bagamount" onkeydown="return false">
                     <div class="add1"  onclick="bagamount1()">+</div>
                     <div class="add2"  onclick="bagamount2()">-</div>
                 </div>
@@ -546,18 +546,15 @@
         document.getElementById("total3").innerHTML = "&emsp;總金額：" + ((price3_1 + price3_2 + price3_3 + bag_1*50)+(tax3_1 + tax3_2 + tax3_3)*3) + "(含碳稅：" + (tax3_1 + tax3_2 + tax3_3)*3 + ") 總點數：" + (point3_1 + point3_2 + point3_3 + 20*bag_1);
     }
     function bagamount2(){
+        if(document.getElementById("bagamount").value >= 2){
         bag_1 =bag_1-1;
         document.getElementById("bagamount").value =bag_1;
         document.getElementById("total1").innerHTML = "&emsp;總金額：" + ((price1_1 + price1_2 + price1_3 + bag_1*50)+(tax1_1 + tax1_2 + tax1_3)*3) + "(含碳稅：" + (tax1_1 + tax1_2 + tax1_3)*3 + ") 總點數：" + (point1_1 + point1_2 + point1_3 + 20*bag_1);
         document.getElementById("total2").innerHTML = "&emsp;總金額：" + ((price2_1 + price2_2 + price2_3 + bag_1*50)+(tax2_1 + tax2_2 + tax2_3)*3) + "(含碳稅：" + (tax2_1 + tax2_2 + tax2_3)*3 + ") 總點數：" + (point2_1 + point2_2 + point2_3 + 20*bag_1);
         document.getElementById("total3").innerHTML = "&emsp;總金額：" + ((price3_1 + price3_2 + price3_3 + bag_1*50)+(tax3_1 + tax3_2 + tax3_3)*3) + "(含碳稅：" + (tax3_1 + tax3_2 + tax3_3)*3 + ") 總點數：" + (point3_1 + point3_2 + point3_3 + 20*bag_1);
-    }
-    function bagamount3(){
-        bag_1 =document.getElementById("bagamount").value;
-        document.getElementById("total1").innerHTML = "&emsp;總金額：" + ((price1_1 + price1_2 + price1_3 + bag_1*50)+(tax1_1 + tax1_2 + tax1_3)*3) + "(含碳稅：" + (tax1_1 + tax1_2 + tax1_3)*3 + ") 總點數：" + (point1_1 + point1_2 + point1_3 + 20*bag_1);
-        document.getElementById("total2").innerHTML = "&emsp;總金額：" + ((price2_1 + price2_2 + price2_3 + bag_1*50)+(tax2_1 + tax2_2 + tax2_3)*3) + "(含碳稅：" + (tax2_1 + tax2_2 + tax2_3)*3 + ") 總點數：" + (point2_1 + point2_2 + point2_3 + 20*bag_1);
-        document.getElementById("total3").innerHTML = "&emsp;總金額：" + ((price3_1 + price3_2 + price3_3 + bag_1*50)+(tax3_1 + tax3_2 + tax3_3)*3) + "(含碳稅：" + (tax3_1 + tax3_2 + tax3_3)*3 + ") 總點數：" + (point3_1 + point3_2 + point3_3 + 20*bag_1);
-    }
+        }
+         }
+
     </script>
 <footer >
     Copyright@2022 By AIwash Rights Reseved
