@@ -24,6 +24,7 @@ footer {
     border:10px solid #2fcfc6;
     border-radius: 15px;
     margin-bottom: 2%;
+    text-align: center;
 }
 
 .td1{
@@ -41,12 +42,13 @@ footer {
     color: #2fcfc6;
     font-weight: bold;
     font-size: 18px;
-    margin-top: 1%;
+    margin-top: 2%;
 }
 
 .div2{
     font-size: 14px;
     color: #2fcfc6;
+    text-align: left;
 }
 
 .p1{
@@ -56,10 +58,13 @@ footer {
 }
 
 .p2{
-    margin-left: 3%;
+    margin-left: 2%;
     font-size: 14px;
     font-weight: bold;
-    text-align: right;
+    text-align: left;
+    margin-top: -8%;
+    padding-bottom:5%;
+    
 }
 
 .tr1{

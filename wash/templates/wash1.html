@@ -42,19 +42,19 @@
                         </tr>
                         <tr class="tr1">
                             <td class="t3">
-                                <input type="radio" name="r1" id="r1_1" value="自取" checked>自取
+                                <input type="radio" name="r1" id="r1_1" value="自取" checked onclick="rad1()">自取
                             </td>
                         </tr>
                         <tr>
                             <td class="t3">
-                                <input type="radio" name="r1" value="外送" id="r1_2">外送
+                                <input type="radio" name="r1" value="外送" id="r1_2"  onclick="rad2()">外送
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2">
                                 <div id="w1" style="display:block;" class="t3">
                                     地址
-                                    <input type="text" name="addr" value="{{memaddr}}" required="required" id="address">
+                                    <input type="text" id="addr" value="{{memaddr}}" required="required" disabled>
                                 </div>
 
                             </td>
@@ -74,6 +74,18 @@
 
 </body>
 <script>
+    var addr = document.getElementById('addr');
+
+    function rad1(){
+        var addr = document.getElementById('addr');
+
+        addr.setAttribute("disabled", "disabled");
+    }
+    function rad2(){
+        var addr = document.getElementById('addr');
+
+        addr.removeAttribute("disabled");
+    }
 </script>
 <footer>
     Copyright@2022 By AIwash Rights Reseved
