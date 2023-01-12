@@ -1,6 +1,8 @@
-    footer {
+       footer {
         position: relative;
+        margin-top: 5%;
     }
+
 
     .ta2 {
         display: flex;
@@ -54,6 +56,10 @@
 
     .td3 {
         width: 560px;
+    }
+
+    a{
+        color:#c7fffc
     }
 
     @media screen and (max-width: 768px) {
