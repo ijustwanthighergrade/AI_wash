@@ -21,50 +21,76 @@
     </table>
     
     <div class="content bglight bdark">
-        <div class="td1 blight bgdark fontlight">
+        <div class="td1 blight fontdark">
             <div class="text3" id="img">
                 <div class="text4 blight fontlight bgdark">
-                    <a href="{% url 'index' %}">
+                    <a href="{% url 'index' %}" class="fontlight">
                 返回</a>
                 </div>
             </div>
-            <div class="text2 fontlight">
-                主題選擇
-             </div>
-             {% if howmuch > 1 %}
-             <div class="btn">
-                 <button class="btn2">
-                 <div class="theme bdark">
-                     <div class="A bgdark"></div>
-                     <div class="B bglight"></div>
-                 </div>
-             </button>
-             {% elif howmuch > 10 %}
-             <button class="btn2">
-                 <div class="theme">
-                     <div class="A"></div>
-                     <div class="B"></div>
-                 </div>
-             </button>
-             {% elif howmuch > 20 %}
-             <button class="btn2">
-                 <div class="theme">
-                     <div class="A"></div>
-                     <div class="B"></div>
-                 </div>
-             </button>
-             
-            {% else %}
-             <button class="btn2">
-                 <div class="theme">
-                     <div class="A"></div>
-                     <div class="B"></div>
-                 </div>
-             </button>
-            
-            {% endif %} 
-                 
-             </div>
+            <form>
+                <table class="table1">
+                    <tr class="text2 fontdark">
+                        <td class="btn bottom">主題選擇</td>
+                    </tr>
+                    <tr class="text2 fontdark">
+                        <td>
+                            <button class="btn2">
+                                <div class="theme bdark">
+                                    <div class="A bgdark"></div>
+                                    <div class="B bglight"></div>
+                                </div>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="c fontdark">
+                        <td class="bottom">經典綠白</td>
+                    </tr>
+                    <tr class="text2 fontdark">
+                        <td class="btn">
+                            {% if howmuch > 1 %}
+                            <button class="btn2">
+                                <div class="theme bdark">
+                                    <div class="A bgdark"></div>
+                                    <div class="B bglight"></div>
+                                </div>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="c fontdark">
+                        <td class="btn">深色模式</td>
+                    </tr>
+                    <tr class="text2 fontdark">
+                        <td class="btn">
+                            {% elif howmuch > 10 %}
+                            <button class="btn2">
+                                <div class="theme bdark">
+                                    <div class="A bgdark"></div>
+                                    <div class="B bglight"></div>
+                                </div>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="c fontdark">
+                        <td class="btn">酷炫紅白</td>
+                    </tr>
+                    <tr class="text2 fontdark">
+                        <td class="btn">
+                            {% else %}
+                            <button class="btn2">
+                                <div class="theme bdark">
+                                    <div class="A bgdark"></div>
+                                    <div class="B bglight"></div>
+                                </div>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="c fontdark">
+                        <td class="btn">溫暖橘白</td>
+                    </tr>
+                    {% endif %} 
+                </table>
+            </form>
         </div>
     </div>
 
