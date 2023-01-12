@@ -1,19 +1,19 @@
 .bglight{
-    background-color: #c7fffc;
+    background-color: #cceab0;
 }
 .bgdark{
-    background-color: #343837;
+    background-color: #cda61a;
 }
 .fontlight{
-    color: #c7fffc;
+    color: #cceab0;
 }
 .fontdark{
-    color:#454b4a;
+    color:#cda61a;
 }
 .blight{
-    border-color:#c7fffc;
+    border-color:#cceab0;
 
 }
 .bdark{
-    border-color:#454b4a;
+    border-color:#cda61a;
 }

@@ -8,14 +8,15 @@
     <title>member</title>
     <link href="{% static "css/nadd.css" %}" rel="stylesheet">
     <link href="{% static "css/ncolor.css" %}" rel="stylesheet">
+    <link href="{% static "css/theme.css" %}" rel="stylesheet">
+    <link href="{% static "css/theme2.css" %}" rel="stylesheet">
     
     {% if mycolor == 0 %}
     <link href="{% static "css/theme.css" %}" rel="stylesheet">
-    {% comment %} 把你的CSS替換掉這個東西 {% endcomment %}
     {% elif mycolor == 1 %}
-    {% comment %} 把你的CSS替換掉這個東西 {% endcomment %}
+    <link href="{% static "css/theme2.css" %}" rel="stylesheet">
     {%else%}
-    {% comment %} 把你的CSS替換掉這個東西 {% endcomment %}
+    <link href="{% static "css/theme3.css" %}" rel="stylesheet">
     {% endif %}
 </head>
 <body class="bgdark">
