@@ -18,6 +18,7 @@
         border: #343837 2px solid;
         background-color: #343837;
         color: azure;
+        border-radius: 10px;
     }
 
     .text1 {
@@ -29,6 +30,7 @@
         font-size: 20px;
         margin: auto auto 1%;
         width: 80%;
+        border-radius: 10px;
     }
 
     .text4 {
