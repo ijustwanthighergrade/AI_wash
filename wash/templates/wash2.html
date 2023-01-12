@@ -58,11 +58,9 @@
                             <td  colspan="3">
                                 <div id="w1" style="display:block;" class="t3">
                                     洗滌
-                                    <select name="washing" style="width: 50%;" id="washing1" onclick="wash1()">
+                                    <select name="washing" style="width: 50%;" id="washing1" onclick="wash1()" >
                                         <option value="標準">標準</option>
-                                        <option value="精緻洗" >精緻洗</option>
-                                        <option value="柔洗">柔洗</option>
-                                        <option value="快洗">快洗</option>
+                                        
                                     </select><br>
                                     
                                     <div class="div2"  style="width: 80%;">
@@ -72,9 +70,7 @@
                                     乾燥
                                     <select name="drying" style="width: 50%;" id="drying1" onclick="dry1()">
                                         <option value="日曬">日曬</option>
-                                        <option value="低溫烘乾" >低溫烘乾</option>
-                                        <option value="中溫烘乾">中溫烘乾</option>
-                                        <option value="高溫烘乾">高溫烘乾</option>
+                                        
                                     </select><br>
 
                                     <div class="div2"  style="width: 100%; " >
@@ -84,7 +80,7 @@
                                     摺衣
                                     <select name="store" style="width: 50%;" id="store1" onclick="sto1()">
                                         <option value="不折">不折</option>
-                                        <option value="機器人" >機器人(20MIN)</option>
+                                        
                                     </select><br>
 
                                     <div class="div2"  style="width: 80%;" >
@@ -95,8 +91,7 @@
                                         特殊衣物
                                         <select name="special" style="width: 40%;" id="special1">
                                             <option value="無">無</option>
-                                            <option value="毛毯類">毛毯類</option>
-                                            <option value="皮革類" >皮革類</option>
+                                            
                                         </select>
                                     </div><br>
 
@@ -108,9 +103,6 @@
                                     洗滌
                                     <select name="washing" style="width: 50%;" id="washing2" onclick="wash2()">
                                         <option value="標準">標準</option>
-                                        <option value="精緻洗" >精緻洗</option>
-                                        <option value="柔洗">柔洗</option>
-                                        <option value="快洗">快洗</option>
                                     </select><br>
                                     
                                     <div class="div2"  style="width: 80%;">
@@ -120,9 +112,6 @@
                                     乾燥
                                     <select name="drying" style="width: 50%;" id="drying2" onclick="dry2()">
                                         <option value="日曬">日曬</option>
-                                        <option value="低溫烘乾" >低溫烘乾</option>
-                                        <option value="中溫烘乾">中溫烘乾</option>
-                                        <option value="高溫烘乾">高溫烘乾</option>
                                     </select><br>
 
                                     <div class="div2"  style="width: 80%;">
@@ -132,7 +121,6 @@
                                     摺衣
                                     <select name="store" style="width: 50%;" id="store2" onclick="sto2()">
                                         <option value="不折">不折</option>
-                                        <option value="機器人" >機器人(20MIN)</option>
                                     </select><br>
 
                                     <div class="div2"  style="width: 80%;" >
@@ -143,11 +131,8 @@
                                         特殊衣物
                                         <select name="special" style="width: 40%;" id="special2">
                                             <option value="無">無</option>
-                                            <option value="毛毯類">毛毯類</option>
-                                            <option value="皮革類" >皮革類</option>
                                         </select>
                                     </div><br>
-
                                     <div id="total2" class="total">
                                     </div>
 
@@ -195,8 +180,9 @@
                                             <option value="毛毯類">毛毯類</option>
                                             <option value="皮革類" >皮革類</option>
                                         </select>
-                                    </div><br>
-                                    
+                                    </div>
+                                    <input type="checkbox" name="preset" value="preset">設為預設
+
                                     <div id="total3" class="total">
                                     </div>
 
