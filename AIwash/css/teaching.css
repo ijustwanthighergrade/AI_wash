@@ -1,37 +1,33 @@
-.ta2{
-    margin: auto;
-    width: 80%;
-    border:10px solid #2fcfc6;
-    border-top:1px solid #2fcfc6;
-    border-radius: 10px;
-}
+
 
 .td2{
     font-size: 30px;
     padding-left: 2%;
     font-weight: bold;
     padding-bottom: 1%;
-    color: #c7fffc;
+    color: #343837;
     padding-top: 1%;
+    
 }
 
 .td3{
     width: 10%;
+    
 }
 
 
 .tr1{
     border:0px;
-    background-color: #2fcfc6;
+    background-color: #c7fffc;
 }
 
 .back{
-    color: #2fcfc6;
+    color: #c7fffc;
     font-weight: bold;
     font-size: 30px;
     text-align: center;
-    background-color: #c7fffc;
-    border:3px solid #2fcfc6;
+    background-color: #343837;
+    border:3px solid #343837;
     border-radius: 10px;
 }
 
@@ -40,18 +36,20 @@
     text-align: center;
     width: 40%;
     height: 40vh;
-    background-color: #2fcfc6;
+    background-color: #c7fffc;
     margin: 3%;
-    color: #c7fffc;
+    color: #343837;
+    font-weight: bold;
 }
 .video2{
-    color: #c7fffc;
+    color: #343837;
     float: right;
     text-align: center;
     width: 40%;
     height: 40vh;
-    background-color: #2fcfc6;
+    background-color: #c7fffc;
     margin: 3%;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 768px)
@@ -70,7 +68,7 @@
         text-align: center;
         width: 80%;
         height: 25vh;
-        background-color: #2fcfc6;
+        background-color: #c7fffc;
         margin: 3% auto ;
     }
     .video2{
@@ -78,14 +76,8 @@
         text-align: center;
         width: 80%;
         height: 25vh;
-        background-color: #2fcfc6;
+        background-color: #c7fffc;
         margin: 3% auto ;
     }
 
-    footer{
-        position: absolute;
-        right: 0px;
-        bottom: 0px;
-        margin-top: 7.2%;
-    }
 }

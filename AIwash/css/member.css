@@ -1,15 +1,21 @@
-.ta2{
+
+footer{
+    position: relative;
+    margin-top: 5%;    
+}
+
+.content{
     display: flex;
     justify-content: center;
 }
 .td1{
     display: flex;
     justify-content: space-around;
-    margin: 2% 0%;
     width: 80%;
     border: #c7fffc 2px solid;
-    background-color: #2fcfc6;
-    color: azure;
+    background-color: #c7fffc;
+    color: c7fffc;
+    border-radius: 10px;
 }
 .img{
     width: 200px;
@@ -25,10 +31,11 @@
 }
 .text1{
     margin: 2% auto;
-    background-color: #e8fefd;
-    color:black;
+    background-color: #343837;
+    color:343837;
     width: 60%;
     margin-left: 8%;
+    color: #c7fffc;
 }
 .text3{
     margin: 2% auto;
@@ -51,9 +58,9 @@
     line-height: 10vh;
     font-weight: bold;
     font-size: 35px;
-    border: #2fcfc6 2px solid;
-    color: #2fcfc6;
-    background-color: #e8fefd;
+    border: #c7fffc 2px solid;
+    color: #c7fffc;
+    background-color: #343837;
 }
 .text4{
     width: 10vh;
@@ -66,6 +73,11 @@
     border:#e8fefd 2px solid;
     color: #e8fefd;
     background-color: #2fcfc6;
+}
+a{
+    color: #c7fffc;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 980px)
@@ -81,18 +93,12 @@
 @media screen and (max-width: 768px)
 {
 
-    .ta1{
-        margin-bottom: 3%;
-    }
     .td1{
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin: 0%;
         width: 80%;
-        border: #c7fffc 2px solid;
-        background-color: #2fcfc6;
-        color: azure;
     }
     #img{
         margin-top: 10%;
@@ -101,7 +107,7 @@
         width: 100px;
         height: 100px;
         display: block;
-        margin: 10% auto;
+        margin: 5% auto;
     }
     .btn{
         justify-content: center;
@@ -110,15 +116,13 @@
     }
     .text1{
         margin: 0% auto;
-        background-color: #e8fefd;
-        color:black;
-        width: 60%;
+        width: 80%;
     }
     .text3{
         margin: 0% auto;
-        background-color: #e8fefd;
+        background-color: #343837;
         color:black;
-        width: 60%;
+        width: 80%;
     }
     #n{
         padding-left: 10%;
@@ -136,9 +140,8 @@
         font-size: 25px;
     }
     .text4{
-        border: #2fcfc6 2px solid;
-        color: #2fcfc6;
-        background-color: #e8fefd;
+        border: #c7fffc 2px solid;
+        background-color: #343837;
         margin-left: 0%;
         font-size: 15px;
     }

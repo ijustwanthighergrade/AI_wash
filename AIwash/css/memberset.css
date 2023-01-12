@@ -1,4 +1,4 @@
-.ta2{
+.content{
     display: flex;
     justify-content: center;
 }
@@ -6,10 +6,10 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin: 2% 0%;
+    margin: 5% 0% 15% 0%;
     width: 80%;
     border: #c7fffc 2px solid;
-    background-color: #2fcfc6;
+    background-color: #343837;
     color: azure;
 }
 .btn{
@@ -17,7 +17,7 @@
     justify-content: space-around;
 }
 .text1{
-    background-color: #e8fefd;
+    background-color: #c7fffc;
     color:black;
     margin: 2% auto;
     width: 80% ;
@@ -29,8 +29,8 @@
     line-height: 10vh;
     font-weight: bold;
     font-size: 35px;
-    border: #2fcfc6 2px solid;
-    color: #2fcfc6;
+    border: #343837 2px solid;
+    color: #343837;
     background-color: #e8fefd;
     margin: 2% auto;
 }
@@ -41,9 +41,9 @@
     line-height: 10vh;
     font-weight: bold;
     font-size: 35px;
-    color: #2fcfc6;
-    border: #2fcfc6;
-    background-color: #e8fefd;
+    color: #c7fffc;
+    border: #c7fffc solid 2px;
+    background-color: #343837;
 }
 .text4{
     margin: 2% auto 2% 12%;
@@ -53,24 +53,29 @@
     line-height: 5vh;
     font-weight: bold;
     font-size: 20px;
-    border:#e8fefd 2px solid;
-    color: #e8fefd;
-    background-color: #2fcfc6;
+    border:#343837 2px solid;
+    color: #343837;
+    background-color: #c7fffc;
 }
 .ta3{
     font-weight: bold;
     font-size: 35px;
-    color: #2fcfc6;
+    color: #c7fffc;
     margin: 2% auto;
 }
 .td2{
     padding-left: 7%;
-    border-bottom: #2fcfc6 2px solid;
+    border-bottom: #c7fffc 2px solid;
     width: 200vh;
 }
 
 .td21{
-    border-bottom: #2fcfc6 0px;
+    border-bottom: #c7fffc 0px;
+}
+
+a{
+    color: #343837;
+
 }
 
 @media screen and (max-width: 768px)
@@ -82,11 +87,11 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: 0%;
+        margin: 5% 0% 15% 0%;
         width: 80%;
         border: #c7fffc 2px solid;
-        background-color: #2fcfc6;
-        color: azure;
+        background-color: #c7fffc;
+        color: #c7fffc;
     }
     .btn{
         justify-content: center;
@@ -95,7 +100,7 @@
     }
     .text1{
         margin: 0% auto;
-        background-color: #e8fefd;
+        background-color: #343837;
         color:black;
         height: auto;
     }
@@ -114,10 +119,4 @@
         font-size: 20px;
     }
     
-    footer{
-        position: absolute;
-        right: 0px;
-        bottom: 0px;
-        margin-top: 7.2%;
-    }
 }
