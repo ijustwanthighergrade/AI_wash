@@ -14,7 +14,7 @@ footer {
     margin: 2% 0%;
     width: 80%;
     border: #c7fffc 2px solid;
-    background-color: #2fcfc6;
+    background-color: #c7fffc;
     color: azure;
     height:160vh;
 
@@ -31,7 +31,7 @@ footer {
     text-align: center;
     font-size: 100px;
     font-weight: bold;
-    color: #e8fefd;
+    color: #343837;
 }
 
 .text3 {
@@ -46,12 +46,12 @@ footer {
     font-weight: bold;
     font-size: 20px;
     margin-left: 2%;
-    border: #e8fefd 2px solid;
-    color: #e8fefd;
-    background-color: #2fcfc6;
+    border: #343837 2px solid;
+    color: #c7fffc;
+    background-color: #343837;
 }
 a{
- color: #2fcfc6;
+ color: #c7fffc;
 
 }
 
@@ -68,8 +68,8 @@ a{
         margin: 0%;
         width: 80%;
         border: #c7fffc 2px solid;
-        background-color: #2fcfc6;
-        color: azure;
+        background-color: #c7fffc;
+        color: #343837;
     }
 
     #img {
@@ -85,19 +85,18 @@ a{
 
     .text2 {
         font-size: 40px;
-        color: #2fcfc6;
+        color: #c7fffc;
     }
 
     .text3 {
         margin: 0% auto;
-        background-color: #e8fefd;
-        color: black;
+        background-color: #343837;
+        color: c7fffc;
         width: 80%;
     }
 
     .text4 {
-        border: #2fcfc6 2px solid;
-        background-color: #e8fefd;
+        border: #343837 2px solid;
         margin-left: 0%;
         font-size: 20px;
     }

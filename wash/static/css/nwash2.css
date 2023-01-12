@@ -1,9 +1,9 @@
 
 .ta2{
     margin: auto;
-    background-color: #2fcfc6;
+    background-color: #c7fffc;
     width: 80%;
-    border:10px solid #2fcfc6;
+    border:10px solid #c7fffc;
     border-radius: 10px;
     margin-bottom: 15%;
     margin-top: 1%;
@@ -11,9 +11,9 @@
 
 .ta3{
     margin: auto;
-    background-color: #c7fffc;
+    background-color: #343837;
     width: 50%;
-    border:10px solid #2fcfc6;
+    border:10px solid #343837;
     border-radius: 15px;
     margin-bottom: 2%;
     height: 50vh;
@@ -28,10 +28,10 @@
 .div1{
     margin:auto;
     text-align: center;
-    background-color: #c7fffc;
+    background-color: #343837;
     width: 75%;
     border-radius: 5px;
-    color: #2fcfc6;
+    color: #c7fffc;
     font-weight: bold;
     font-size: 18px;
     height: 5vh;
@@ -53,7 +53,7 @@
 }
 
 .back{
-    color: #c7fffc;
+    color: #343837;
     font-weight: bold;
     font-size: 30px;
     border-radius: 10px;
@@ -61,20 +61,20 @@
 
 .t1{
     text-align: center;
-    color: #2fcfc6;
+    color: #c7fffc;
     font-size: 20px;
 }
 
 .t2{
-    color: #c7fffc;
+    color: #343837;
     text-align: center;
-    background-color: #2fcfc6;
+    background-color: #c7fffc;
     font-size: 20px;
 }
 
 .t3{
     text-align: center;
-    color: #2fcfc6;
+    color: #c7fffc;
     font-weight: bold;
     font-size: 18px;
     margin-top: -3%;
@@ -87,9 +87,9 @@
 
 .next{
     font-size: 18px;
-    color: #c7fffc;
+    color: #343837;
     font-weight: bolder;
-    background-color: #2fcfc6;
+    background-color: #c7fffc;
     border-radius: 10px;
     padding: 3% 10%;
     margin: auto;
@@ -100,9 +100,9 @@
 
 .confirm{
     font-size: 16px;
-    background-color: #2fcfc6;
+    background-color: #c7fffc;
     border-radius: 10px;
-    color: #c7fffc;
+    color: #343837;
     font-weight: bold;
     border: 0ch;
     width: 45%;
