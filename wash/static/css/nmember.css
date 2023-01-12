@@ -4,7 +4,6 @@ footer{
     margin-top: 5%;    
 }
 
-
 .ta2{
     display: flex;
     justify-content: center;
@@ -73,6 +72,11 @@ footer{
     border:#e8fefd 2px solid;
     color: #e8fefd;
     background-color: #2fcfc6;
+}
+a{
+    color: #2fcfc6;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 980px)
