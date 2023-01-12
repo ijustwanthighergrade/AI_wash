@@ -4,14 +4,13 @@ footer{
     margin-top: 5%;    
 }
 
-.ta2{
+.content{
     display: flex;
     justify-content: center;
 }
 .td1{
     display: flex;
     justify-content: space-around;
-    margin: 2% 0%;
     width: 80%;
     border: #c7fffc 2px solid;
     background-color: #c7fffc;
