@@ -33,7 +33,9 @@
             <td>
                 <div class="div1">
                     衣服袋數
-                    <input type="number" name="bagamount" class="num" required="required" min="1" value="1" id="bagamount" onclick="bagamount1()">
+                    <input type="number" name="bagamount" class="num" required="required" min="1" value="1" id="bagamount" onkeydown="return false">
+                    <div class="add1"  onclick="bagamount1()">+</div>
+                    <div class="add2"  onclick="bagamount2()">-</div>
                 </div>
                 
             </td>
@@ -233,9 +235,9 @@
     var tax1_1 = 1 , tax1_2 = 0 , tax1_3 = 0 , tax2_1 = 1 , tax2_2 = 0 , tax2_3 = 0 , tax3_1 = 1 , tax3_2 = 0 , tax3_3 = 0 ;
     var bag_1 = 1;
 
-    document.getElementById("total1").innerHTML = "&emsp;總金額：" + ((price1_1 + price1_2 + price1_3 + bag_1*50)+(tax1_1 + tax1_2 + tax1_3)*3) + "(含碳稅：" + (tax1_1 + tax1_2 + tax1_3)*3 + ") 總點數：" + (point1_1 + point1_2 + point1_3)*bag_1;
-    document.getElementById("total2").innerHTML = "&emsp;總金額：" + ((price2_1 + price2_2 + price2_3 + bag_1*50)+(tax2_1 + tax2_2 + tax2_3)*3) + "(含碳稅：" + (tax2_1 + tax2_2 + tax2_3)*3 + ") 總點數：" + (point2_1 + point2_2 + point2_3)*bag_1;
-    document.getElementById("total3").innerHTML = "&emsp;總金額：" + ((price3_1 + price3_2 + price3_3 + bag_1*50)+(tax3_1 + tax3_2 + tax3_3)*3) + "(含碳稅：" + (tax3_1 + tax3_2 + tax3_3)*3 + ") 總點數：" + (point3_1 + point3_2 + point3_3)*bag_1;
+    document.getElementById("total1").innerHTML = "&emsp;總金額：" + ((price1_1 + price1_2 + price1_3 + bag_1*50)+(tax1_1 + tax1_2 + tax1_3)*3) + "(含碳稅：" + (tax1_1 + tax1_2 + tax1_3)*3 + ") 總點數：" + (point1_1 + point1_2 + point1_3 + 20*bag_1);
+    document.getElementById("total2").innerHTML = "&emsp;總金額：" + ((price2_1 + price2_2 + price2_3 + bag_1*50)+(tax2_1 + tax2_2 + tax2_3)*3) + "(含碳稅：" + (tax2_1 + tax2_2 + tax2_3)*3 + ") 總點數：" + (point2_1 + point2_2 + point2_3 + 20*bag_1);
+    document.getElementById("total3").innerHTML = "&emsp;總金額：" + ((price3_1 + price3_2 + price3_3 + bag_1*50)+(tax3_1 + tax3_2 + tax3_3)*3) + "(含碳稅：" + (tax3_1 + tax3_2 + tax3_3)*3 + ") 總點數：" + (point3_1 + point3_2 + point3_3 + 20*bag_1);
 
     washing2.setAttribute("disabled", "disabled");
     washing3.setAttribute("disabled", "disabled");
@@ -366,7 +368,7 @@
                     point1_1 = 5;
                     tax1_1 = 2;
                 }
-                document.getElementById("total1").innerHTML = "&emsp;總金額：" + ((price1_1 + price1_2 + price1_3 + bag_1*50)+(tax1_1 + tax1_2 + tax1_3)*3) + "(含碳稅：" + (tax1_1 + tax1_2 + tax1_3)*3 + ") 總點數：" + (point1_1 + point1_2 + point1_3)*bag_1;
+                document.getElementById("total1").innerHTML = "&emsp;總金額：" + ((price1_1 + price1_2 + price1_3 + bag_1*50)+(tax1_1 + tax1_2 + tax1_3)*3) + "(含碳稅：" + (tax1_1 + tax1_2 + tax1_3)*3 + ") 總點數：" + (point1_1 + point1_2 + point1_3 + 20*bag_1);
             }
     function wash2(){
                 if(washing2.value =="標準"){
@@ -390,7 +392,7 @@
                     point2_1 = 5;
                     tax2_1 = 2;
                 }
-                document.getElementById("total2").innerHTML = "&emsp;總金額：" + ((price2_1 + price2_2 + price2_3 + bag_1*50)+(tax2_1 + tax2_2 + tax2_3)*3) + "(含碳稅：" + (tax2_1 + tax2_2 + tax2_3)*3 + ") 總點數：" + (point2_1 + point2_2 + point2_3)*bag_1;
+                document.getElementById("total2").innerHTML = "&emsp;總金額：" + ((price2_1 + price2_2 + price2_3 + bag_1*50)+(tax2_1 + tax2_2 + tax2_3)*3) + "(含碳稅：" + (tax2_1 + tax2_2 + tax2_3)*3 + ") 總點數：" + (point2_1 + point2_2 + point2_3 + 20*bag_1);
             }
 
      function wash3(){
@@ -415,7 +417,7 @@
                     point3_1 = 5;
                     tax3_1 = 2;
                 }
-                document.getElementById("total3").innerHTML = "&emsp;總金額：" + ((price3_1 + price3_2 + price3_3 + bag_1*50)+(tax3_1 + tax3_2 + tax3_3)*3) + "(含碳稅：" + (tax3_1 + tax3_2 + tax3_3)*3 + ") 總點數：" + (point3_1 + point3_2 + point3_3)*bag_1;
+                document.getElementById("total3").innerHTML = "&emsp;總金額：" + ((price3_1 + price3_2 + price3_3 + bag_1*50)+(tax3_1 + tax3_2 + tax3_3)*3) + "(含碳稅：" + (tax3_1 + tax3_2 + tax3_3)*3 + ") 總點數：" + (point3_1 + point3_2 + point3_3 + 20*bag_1);
             }
     function dry1(){
                 if(drying1.value =="日曬"){
@@ -439,7 +441,7 @@
                     point1_2 = 0;
                     tax1_2 = 3;
                 }
-                document.getElementById("total1").innerHTML = "&emsp;總金額：" + ((price1_1 + price1_2 + price1_3 + bag_1*50)+(tax1_1 + tax1_2 + tax1_3)*3) + "(含碳稅：" + (tax1_1 + tax1_2 + tax1_3)*3 + ") 總點數：" + (point1_1 + point1_2 + point1_3)*bag_1;
+                document.getElementById("total1").innerHTML = "&emsp;總金額：" + ((price1_1 + price1_2 + price1_3 + bag_1*50)+(tax1_1 + tax1_2 + tax1_3)*3) + "(含碳稅：" + (tax1_1 + tax1_2 + tax1_3)*3 + ") 總點數：" + (point1_1 + point1_2 + point1_3 + 20*bag_1);
             }
     function dry2(){
                 if(drying2.value =="日曬"){
@@ -463,7 +465,7 @@
                     point2_2 = 0;
                     tax2_2 = 3;
                 }
-                document.getElementById("total2").innerHTML = "&emsp;總金額：" + ((price2_1 + price2_2 + price2_3 + bag_1*50)+(tax2_1 + tax2_2 + tax2_3)*3) + "(含碳稅：" + (tax2_1 + tax2_2 + tax2_3)*3 + ") 總點數：" + (point2_1 + point2_2 + point2_3)*bag_1;
+                document.getElementById("total2").innerHTML = "&emsp;總金額：" + ((price2_1 + price2_2 + price2_3 + bag_1*50)+(tax2_1 + tax2_2 + tax2_3)*3) + "(含碳稅：" + (tax2_1 + tax2_2 + tax2_3)*3 + ") 總點數：" + (point2_1 + point2_2 + point2_3 + 20*bag_1);
             }
 
      function dry3(){
@@ -488,7 +490,7 @@
                     point3_2 = 0;
                     tax3_2 = 3;
                 }
-                document.getElementById("total3").innerHTML = "&emsp;總金額：" + ((price3_1 + price3_2 + price3_3 + bag_1*50)+(tax3_1 + tax3_2 + tax3_3)*3) + "(含碳稅：" + (tax3_1 + tax3_2 + tax3_3)*3 + ") 總點數：" + (point3_1 + point3_2 + point3_3)*bag_1;
+                document.getElementById("total3").innerHTML = "&emsp;總金額：" + ((price3_1 + price3_2 + price3_3 + bag_1*50)+(tax3_1 + tax3_2 + tax3_3)*3) + "(含碳稅：" + (tax3_1 + tax3_2 + tax3_3)*3 + ") 總點數：" + (point3_1 + point3_2 + point3_3 + 20*bag_1);
             }
 
      function sto1(){
@@ -503,7 +505,7 @@
                     point1_3 = 0;
                     tax1_3 = 1;
                 }
-                document.getElementById("total1").innerHTML = "&emsp;總金額：" + ((price1_1 + price1_2 + price1_3 + bag_1*50)+(tax1_1 + tax1_2 + tax1_3)*3) + "(含碳稅：" + (tax1_1 + tax1_2 + tax1_3)*3 + ") 總點數：" + (point1_1 + point1_2 + point1_3)*bag_1;
+                document.getElementById("total1").innerHTML = "&emsp;總金額：" + ((price1_1 + price1_2 + price1_3 + bag_1*50)+(tax1_1 + tax1_2 + tax1_3)*3) + "(含碳稅：" + (tax1_1 + tax1_2 + tax1_3)*3 + ") 總點數：" + (point1_1 + point1_2 + point1_3 + 20*bag_1);
             }
 
     function sto2(){
@@ -518,7 +520,7 @@
                     point2_3 = 0;
                     tax2_3 = 1;
                 }
-                document.getElementById("total2").innerHTML = "&emsp;總金額：" + ((price2_1 + price2_2 + price2_3 + bag_1*50)+(tax2_1 + tax2_2 + tax2_3)*3) + "(含碳稅：" + (tax2_1 + tax2_2 + tax2_3)*3 + ") 總點數：" + (point2_1 + point2_2 + point2_3)*bag_1;
+                document.getElementById("total2").innerHTML = "&emsp;總金額：" + ((price2_1 + price2_2 + price2_3 + bag_1*50)+(tax2_1 + tax2_2 + tax2_3)*3) + "(含碳稅：" + (tax2_1 + tax2_2 + tax2_3)*3 + ") 總點數：" + (point2_1 + point2_2 + point2_3 + 20*bag_1);
             }
 
     function sto3(){
@@ -533,15 +535,25 @@
                     point3_3 = 0;
                     tax3_3 = 1;
                 }
-                document.getElementById("total3").innerHTML = "&emsp;總金額：" + ((price3_1 + price3_2 + price3_3 + bag_1*50)+(tax3_1 + tax3_2 + tax3_3)*3) + "(含碳稅：" + (tax3_1 + tax3_2 + tax3_3)*3 + ") 總點數：" + (point3_1 + point3_2 + point3_3)*bag_1;
+                document.getElementById("total3").innerHTML = "&emsp;總金額：" + ((price3_1 + price3_2 + price3_3 + bag_1*50)+(tax3_1 + tax3_2 + tax3_3)*3) + "(含碳稅：" + (tax3_1 + tax3_2 + tax3_3)*3 + ") 總點數：" + (point3_1 + point3_2 + point3_3 + 20*bag_1);
             }
     
     function bagamount1(){
-        bag_1 =document.getElementById("bagamount").value;
-        document.getElementById("total1").innerHTML = "&emsp;總金額：" + ((price1_1 + price1_2 + price1_3 + bag_1*50)+(tax1_1 + tax1_2 + tax1_3)*3) + "(含碳稅：" + (tax1_1 + tax1_2 + tax1_3)*3 + ") 總點數：" + (point1_1 + point1_2 + point1_3)*bag_1;
-        document.getElementById("total2").innerHTML = "&emsp;總金額：" + ((price2_1 + price2_2 + price2_3 + bag_1*50)+(tax2_1 + tax2_2 + tax2_3)*3) + "(含碳稅：" + (tax2_1 + tax2_2 + tax2_3)*3 + ") 總點數：" + (point2_1 + point2_2 + point2_3)*bag_1;
-        document.getElementById("total3").innerHTML = "&emsp;總金額：" + ((price3_1 + price3_2 + price3_3 + bag_1*50)+(tax3_1 + tax3_2 + tax3_3)*3) + "(含碳稅：" + (tax3_1 + tax3_2 + tax3_3)*3 + ") 總點數：" + (point3_1 + point3_2 + point3_3)*bag_1;
+        bag_1 =bag_1+1;
+        document.getElementById("bagamount").value =bag_1;
+        document.getElementById("total1").innerHTML = "&emsp;總金額：" + ((price1_1 + price1_2 + price1_3 + bag_1*50)+(tax1_1 + tax1_2 + tax1_3)*3) + "(含碳稅：" + (tax1_1 + tax1_2 + tax1_3)*3 + ") 總點數：" + (point1_1 + point1_2 + point1_3 + 20*bag_1);
+        document.getElementById("total2").innerHTML = "&emsp;總金額：" + ((price2_1 + price2_2 + price2_3 + bag_1*50)+(tax2_1 + tax2_2 + tax2_3)*3) + "(含碳稅：" + (tax2_1 + tax2_2 + tax2_3)*3 + ") 總點數：" + (point2_1 + point2_2 + point2_3 + 20*bag_1);
+        document.getElementById("total3").innerHTML = "&emsp;總金額：" + ((price3_1 + price3_2 + price3_3 + bag_1*50)+(tax3_1 + tax3_2 + tax3_3)*3) + "(含碳稅：" + (tax3_1 + tax3_2 + tax3_3)*3 + ") 總點數：" + (point3_1 + point3_2 + point3_3 + 20*bag_1);
     }
+    function bagamount2(){
+        if(document.getElementById("bagamount").value >= 2){
+        bag_1 =bag_1-1;
+        document.getElementById("bagamount").value =bag_1;
+        document.getElementById("total1").innerHTML = "&emsp;總金額：" + ((price1_1 + price1_2 + price1_3 + bag_1*50)+(tax1_1 + tax1_2 + tax1_3)*3) + "(含碳稅：" + (tax1_1 + tax1_2 + tax1_3)*3 + ") 總點數：" + (point1_1 + point1_2 + point1_3 + 20*bag_1);
+        document.getElementById("total2").innerHTML = "&emsp;總金額：" + ((price2_1 + price2_2 + price2_3 + bag_1*50)+(tax2_1 + tax2_2 + tax2_3)*3) + "(含碳稅：" + (tax2_1 + tax2_2 + tax2_3)*3 + ") 總點數：" + (point2_1 + point2_2 + point2_3 + 20*bag_1);
+        document.getElementById("total3").innerHTML = "&emsp;總金額：" + ((price3_1 + price3_2 + price3_3 + bag_1*50)+(tax3_1 + tax3_2 + tax3_3)*3) + "(含碳稅：" + (tax3_1 + tax3_2 + tax3_3)*3 + ") 總點數：" + (point3_1 + point3_2 + point3_3 + 20*bag_1);
+        }
+         }
 
     </script>
 <footer >
