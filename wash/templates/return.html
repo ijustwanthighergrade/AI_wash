@@ -55,8 +55,10 @@
                             <td  class="type">
                                 訂單編號
                                 <select style="width: 70%;" name="orderid">
-                                    <option>訂單1</option>
-                                    <option>訂單2</option>
+                                    <option>非訂單問題</option>
+                                    {%for i in orderlist%}
+                                    <option>{{i.ORDID}}</option>
+                                    {%endfor%}
                                 </select>
                             </td>
                         </tr>

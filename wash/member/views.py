@@ -15,11 +15,9 @@ def index(request):
 def member(request):
    if 'mem_session' in request.session:
       print(request.session['mem_session'])
-      results=MEMBER.objects.filter(MEMID = request.session['mem_session'])
-      ac_code=''
-      for result in results:
-         ac_code = result.ACCESS
-      url2=SACCngrok+'/RESTapiApp/Access/?Raccess_code='+ac_code
+      results=MEMBER.objects.get(MEMID = request.session['mem_session'])
+      ACCESS = results.ACCESS
+      url2=SACCngrok+'/RESTapiApp/Access/?Raccess_code='+ACCESS
       req2=requests.get(url2,headers = {'Authorization': 'Token e747f053f1e4ecf0228195b5652e27060e0937bd','ngrok-skip-browser-warning': '7414'})
       
       req_read2 = req2.json()
