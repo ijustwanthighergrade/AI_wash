@@ -1,7 +1,9 @@
     footer {
         position: relative;
     }
-
+    a:visited{
+        color: aliceblue;
+    }
     .content {
         display: flex;
         justify-content: center;
@@ -11,11 +13,8 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        margin: 5% 0% 15% 0%;
-        width: 80%;
-        border: #c7fffc 2px solid;
-        background-color: #2fcfc6;
-        color: azure;
+        margin: 10% 0% 15% 0%;
+        width: 100%;
     }
 
     .td2 {
@@ -24,13 +23,10 @@
 
     .text1 {
         text-align: center;
-        border: #2fcfc6 2px solid;
-        background-color: #e8fefd;
-        color: #2fcfc6;
         font-weight: bold;
         font-size: 20px;
-        margin: auto auto 1%;
-        width: 80%;
+        margin: 3% auto;
+        width: 90%;
     }
 
     .text4 {
@@ -41,9 +37,6 @@
         line-height: 5vh;
         font-weight: bold;
         font-size: 20px;
-        border: #e8fefd 2px solid;
-        color: #e8fefd;
-        background-color: #2fcfc6;
     }
 
     .text3 {
@@ -53,7 +46,6 @@
 
     .text5 {
         font-size: 14px;
-        color: rgb(137, 195, 246);
     }
 
     .ta3 {
@@ -67,14 +59,4 @@
             margin-bottom: 3%;
         }
 
-        .td1 {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin: 5% 0% 15% 0%;
-            width: 80%;
-            border: #c7fffc 2px solid;
-            background-color: #2fcfc6;
-            color: azure;
-        }
     }

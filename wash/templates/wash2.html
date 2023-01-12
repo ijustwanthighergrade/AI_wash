@@ -27,7 +27,7 @@
     </table>
     <form  method="post" target="_self" action="{% url 'wash3' %}">
         {% csrf_token %}
-    <table class="content" >
+    <table class="content blight bglight" >
         <tr class="tr1">
             <td class="td3"><div><a href="{% url 'index' %}"  class="back"><返回首頁 </a></div></td>
         </tr>
@@ -544,7 +544,7 @@
          }
 
     </script>
-<footer >
+<footer class="bglight fontdark">
     Copyright@2022 By AIwash Rights Reseved
 </footer>
 </html>

@@ -1,15 +1,10 @@
-
-
 .ta3{
     margin: auto;
-    background-color: #343837;
-    width: 50%;
-    border:10px solid #343837;
+    width: 100%;
     border-radius: 15px;
     margin-bottom: 2%;
     height: 40vh;
 }
-
 .tr1{
     text-align:start;
     height: 10%;    
@@ -17,23 +12,26 @@
 }
 
 .back{
-    color: #343837;
+    margin: 2% auto 2% 12%;
+    padding: 2%;
+    width: 10vh;
+    height: 5vh;
+    text-align: center;
+    line-height: 5vh;
     font-weight: bold;
-    font-size: 30px;
-    border-radius: 10px;
-    
+    font-size: 20px;
+    border-width: 2px;
+    border-style: solid;
 }
 
 .return{
     text-align: center;
-    color: #c7fffc;
     font-size: 38px;
     font-weight: bold;
 }
 
 .type{
     text-align: center;
-    color: #c7fffc;
     font-weight: bold;
 }
 
@@ -41,9 +39,7 @@
     margin: auto;
     text-align: center;
     font-size: 20px;
-    background-color: #c7fffc;
     border-radius: 10px;
-    color: #343837;
     font-weight: bold;
     border: 0ch;
     width: 80%;

@@ -1,17 +1,13 @@
 body {
-    background-color: #343837;
     padding: 0;
     margin: 0;
 }
 
 .manu {
     width: 100%;
-    background-color: #c7fffc;
     margin-bottom: 1%;
 }
 .mem {
-    color: #c7fffc;
-    background-color: #343837;
     border-radius: 10px;
     margin-top: 30%;
     margin-right: 10px;
@@ -27,9 +23,7 @@ body {
 
 .content{
     margin:10% auto 15% auto;
-    background-color: #c7fffc;
     width: 80%;
-    border:10px solid #c7fffc;
     border-style: solid;
     border-width: 10px;
     border-radius: 10px;
@@ -37,14 +31,12 @@ body {
 
 footer {
     text-align: center;
-    background-color: #c7fffc;
     height: 5vh;
     width: 100%;
     line-height: 5vh;
     position: fixed;
     top: 99%;
     margin-top: -25px;
-    color:#454b4a;
 }
 a{
     text-decoration: none;
