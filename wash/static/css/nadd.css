@@ -3,19 +3,11 @@ body {
     padding: 0;
     margin: 0;
 }
-.content{
-    margin:10% auto 15% auto;
-    background-color: #c7fffc;
-    width: 80%;
-    border:10px solid #c7fffc;
-    border-radius: 10px;
-}
 .manu {
     width: 100%;
     background-color: #c7fffc;
     margin-bottom: 1%;
 }
-
 .mem {
     color: #c7fffc;
     background-color: #343837;
@@ -27,9 +19,16 @@ body {
     font-weight: bold;
     text-align: center;
 }
-
 .logo {
     width: 20%;
+}
+
+.content{
+    margin:10% auto 15% auto;
+    background-color: #c7fffc;
+    width: 80%;
+    border:10px solid #c7fffc;
+    border-radius: 10px;
 }
 
 footer {
@@ -46,6 +45,9 @@ footer {
 a{
     text-decoration: none;
     margin: auto;
+}
+a:hover{
+    text-decoration:none;
 }
 @media screen and (max-width: 768px) {
     .logo {
