@@ -11,7 +11,7 @@ from login.models import MEMBER
 #進入view
 #建立SACCngrok及自己的serverngrok
 SACCngrok="https://10eb-1-34-54-152.jp.ngrok.io"
-serverngrok="https://81e7-58-115-108-180.jp.ngrok.io"
+serverngrok="http://127.0.0.1:8000/"
 #第一步 登入介面的view，每次重整都會run一次
 
 # def login(request):
