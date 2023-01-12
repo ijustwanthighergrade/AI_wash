@@ -14,8 +14,9 @@ footer{
     margin: 2% 0%;
     width: 80%;
     border: #c7fffc 2px solid;
-    background-color: #2fcfc6;
-    color: azure;
+    background-color: #c7fffc;
+    color: c7fffc;
+    border-radius: 10px;
 }
 .img{
     width: 200px;
@@ -31,10 +32,11 @@ footer{
 }
 .text1{
     margin: 2% auto;
-    background-color: #e8fefd;
-    color:black;
+    background-color: #343837;
+    color:343837;
     width: 60%;
     margin-left: 8%;
+    color: #c7fffc;
 }
 .text3{
     margin: 2% auto;
@@ -57,9 +59,9 @@ footer{
     line-height: 10vh;
     font-weight: bold;
     font-size: 35px;
-    border: #2fcfc6 2px solid;
-    color: #2fcfc6;
-    background-color: #e8fefd;
+    border: #c7fffc 2px solid;
+    color: #c7fffc;
+    background-color: #343837;
 }
 .text4{
     width: 10vh;
@@ -74,7 +76,7 @@ footer{
     background-color: #2fcfc6;
 }
 a{
-    color: #2fcfc6;
+    color: #c7fffc;
     font-size: 20px;
     font-weight: bold;
 }
@@ -101,9 +103,6 @@ a{
         justify-content: center;
         margin: 0%;
         width: 80%;
-        border: #c7fffc 2px solid;
-        background-color: #2fcfc6;
-        color: azure;
     }
     #img{
         margin-top: 10%;
@@ -121,13 +120,11 @@ a{
     }
     .text1{
         margin: 0% auto;
-        background-color: #e8fefd;
-        color:black;
         width: 60%;
     }
     .text3{
         margin: 0% auto;
-        background-color: #e8fefd;
+        background-color: #343837;
         color:black;
         width: 60%;
     }
@@ -147,9 +144,8 @@ a{
         font-size: 25px;
     }
     .text4{
-        border: #2fcfc6 2px solid;
-        color: #2fcfc6;
-        background-color: #e8fefd;
+        border: #c7fffc 2px solid;
+        background-color: #343837;
         margin-left: 0%;
         font-size: 15px;
     }
