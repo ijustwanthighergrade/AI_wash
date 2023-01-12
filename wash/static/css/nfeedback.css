@@ -2,16 +2,6 @@
         position: relative;
     }
 
-    .ta2 {
-        margin: auto;
-        background-color: #2fcfc6;
-        width: 80%;
-        border: 10px solid #2fcfc6;
-        border-radius: 10px;
-        margin-bottom: 15%;
-        margin-top: 1%;
-    }
-
     .ta3 {
         margin: auto;
         background-color: #c7fffc;
@@ -65,7 +55,7 @@
 
     @media screen and (max-width: 768px) {
 
-        .ta2 {
+        .content {
             margin-top: 10%;
         }
 

@@ -93,9 +93,6 @@ a{
 @media screen and (max-width: 768px)
 {
 
-    .ta1{
-        margin-bottom: 3%;
-    }
     .td1{
         display: flex;
         flex-direction: column;
@@ -110,7 +107,7 @@ a{
         width: 100px;
         height: 100px;
         display: block;
-        margin: 10% auto;
+        margin: 5% auto;
     }
     .btn{
         justify-content: center;
@@ -119,13 +116,13 @@ a{
     }
     .text1{
         margin: 0% auto;
-        width: 60%;
+        width: 80%;
     }
     .text3{
         margin: 0% auto;
         background-color: #343837;
         color:black;
-        width: 60%;
+        width: 80%;
     }
     #n{
         padding-left: 10%;
