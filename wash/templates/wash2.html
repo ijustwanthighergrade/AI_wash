@@ -26,13 +26,13 @@
         {% csrf_token %}
     <table class="ta2" >
         <tr class="tr1">
-            <td class="td3"><div><a href="{% url 'index' %}"  class="back"><返回 </a></div></td>
+            <td class="td3"><div><a href="{% url 'index' %}"  class="back"><返回首頁 </a></div></td>
         </tr>
         <tr>
             <td>
                 <div class="div1">
                     衣服袋數
-                    <input type="number" name="bagamount" class="num" required="required" min="1">
+                    <input type="number" name="bagamount" class="num" required="required" min="1" value="1" id="bagamount" onclick="bagamount1()">
                 </div>
                 
             </td>
@@ -230,9 +230,13 @@
     var special1 = document.getElementById("special1");
     var special2 = document.getElementById("special2");
     var special3 = document.getElementById("special3");
-    var point1_1 = 0 , point1_2 = 0 , point1_3 = 0 , point2_1 = 0 , point2_2 = 0 , point2_3 = 0 , point3_1 = 0 , point3_2 = 0 , point3_3 = 0;
+    var point1_1 = 5 , point1_2 = 5 , point1_3 = 5 , point2_1 = 0 , point2_2 = 0 , point2_3 = 0 , point3_1 = 0 , point3_2 = 0 , point3_3 = 0;
     var price1_1 = 0 , price1_2 = 0 , price1_3 = 0 , price2_1 = 0 , price2_2 = 0 , price2_3 = 0 , price3_1 = 0 , price3_2 = 0 , price3_3 = 0;
-    
+    var bag_1 = 1;
+
+    document.getElementById("total1").innerHTML = "&emsp;總金額：" + (price1_1 + price1_2 + price1_3 + bag_1*50) + " 總點數：" + (point1_1 + point1_2 + point1_3);
+    document.getElementById("total2").innerHTML = "&emsp;總金額：" + (price2_1 + price2_2 + price2_3 + bag_1*50) + " 總點數：" + (point2_1 + point2_2 + point2_3);
+    document.getElementById("total3").innerHTML = "&emsp;總金額：" + (price3_1 + price3_2 + price3_3 + bag_1*50) + " 總點數：" + (point3_1 + point3_2 + point3_3);
 
     
     washing2.setAttribute("disabled", "disabled");
@@ -360,7 +364,7 @@
                     price1_1 = 0;
                     point1_1 = 5;
                 }
-                document.getElementById("total1").innerHTML = "&emsp;總金額：" + (price1_1 + price1_2 + price1_3) + " 總點數：" + (point1_1 + point1_2 + point1_3);
+                document.getElementById("total1").innerHTML = "&emsp;總金額：" + (price1_1 + price1_2 + price1_3 + bag_1*50) + " 總點數：" + (point1_1 + point1_2 + point1_3);
             }
     function wash2(){
                 if(washing2.value =="標準"){
@@ -380,7 +384,7 @@
                     price2_1 = 0;
                     point2_1 = 5;
                 }
-                document.getElementById("total2").innerHTML = "&emsp;總金額：" + (price2_1 + price2_2 + price2_3) + " 總點數：" + (point2_1 + point2_2 + point2_3);
+                document.getElementById("total2").innerHTML = "&emsp;總金額：" + (price2_1 + price2_2 + price2_3 + bag_1*50) + " 總點數：" + (point2_1 + point2_2 + point2_3);
             }
 
      function wash3(){
@@ -401,7 +405,7 @@
                     price3_1 = 0;
                     point3_1 = 5;
                 }
-                document.getElementById("total3").innerHTML = "&emsp;總金額：" + (price3_1 + price3_2 + price3_3) + " 總點數：" + (point3_1 + point3_2 + point3_3);
+                document.getElementById("total3").innerHTML = "&emsp;總金額：" + (price3_1 + price3_2 + price3_3 + bag_1*50) + " 總點數：" + (point3_1 + point3_2 + point3_3);
             }
     function dry1(){
                 if(drying1.value =="日曬"){
@@ -421,7 +425,7 @@
                     price1_2 = 5;
                     point1_2 = 0;
                 }
-                document.getElementById("total1").innerHTML = "&emsp;總金額：" + (price1_1 + price1_2 + price1_3) + " 總點數：" + (point1_1 + point1_2 + point1_3);
+                document.getElementById("total1").innerHTML = "&emsp;總金額：" + (price1_1 + price1_2 + price1_3 + bag_1*50) + " 總點數：" + (point1_1 + point1_2 + point1_3);
             }
     function dry2(){
                 if(drying2.value =="日曬"){
@@ -441,7 +445,7 @@
                     price2_2 = 5;
                     point2_2 = 0;
                 }
-                document.getElementById("total2").innerHTML = "&emsp;總金額：" + (price2_1 + price2_2 + price2_3) + " 總點數：" + (point2_1 + point2_2 + point2_3);
+                document.getElementById("total2").innerHTML = "&emsp;總金額：" + (price2_1 + price2_2 + price2_3 + bag_1*50) + " 總點數：" + (point2_1 + point2_2 + point2_3);
             }
 
      function dry3(){
@@ -462,7 +466,7 @@
                     price3_2 = 5;
                     point3_2 = 0;
                 }
-                document.getElementById("total3").innerHTML = "&emsp;總金額：" + (price3_1 + price3_2 + price3_3) + " 總點數：" + (point3_1 + point3_2 + point3_3);
+                document.getElementById("total3").innerHTML = "&emsp;總金額：" + (price3_1 + price3_2 + price3_3 + bag_1*50) + " 總點數：" + (point3_1 + point3_2 + point3_3);
             }
 
      function sto1(){
@@ -475,7 +479,7 @@
                     price1_3 = 5;
                     point1_3 = 0;
                 }
-                document.getElementById("total1").innerHTML = "&emsp;總金額：" + (price1_1 + price1_2 + price1_3) + " 總點數：" + (point1_1 + point1_2 + point1_3);
+                document.getElementById("total1").innerHTML = "&emsp;總金額：" + (price1_1 + price1_2 + price1_3 + bag_1*50) + " 總點數：" + (point1_1 + point1_2 + point1_3);
             }
 
     function sto2(){
@@ -488,7 +492,7 @@
                     price2_3 = 5;
                     point2_3 = 0;
                 }
-                document.getElementById("total2").innerHTML = "&emsp;總金額：" + (price2_1 + price2_2 + price2_3) + " 總點數：" + (point2_1 + point2_2 + point2_3);
+                document.getElementById("total2").innerHTML = "&emsp;總金額：" + (price2_1 + price2_2 + price2_3 + bag_1*50) + " 總點數：" + (point2_1 + point2_2 + point2_3);
             }
 
     function sto3(){
@@ -501,9 +505,16 @@
                     price3_3 = 5;
                     point3_3 = 0;
                 }
-                document.getElementById("total3").innerHTML = "&emsp;總金額：" + (price3_1 + price3_2 + price3_3) + " 總點數：" + (point3_1 + point3_2 + point3_3);
+                document.getElementById("total3").innerHTML = "&emsp;總金額：" + (price3_1 + price3_2 + price3_3 + bag_1*50) + " 總點數：" + (point3_1 + point3_2 + point3_3);
             }
     
+    function bagamount1(){
+        bag_1 =document.getElementById("bagamount").value;
+        document.getElementById("total1").innerHTML = "&emsp;總金額：" + (price1_1 + price1_2 + price1_3 + bag_1*50) + " 總點數：" + (point1_1 + point1_2 + point1_3);
+        document.getElementById("total2").innerHTML = "&emsp;總金額：" + (price2_1 + price2_2 + price2_3 + bag_1*50) + " 總點數：" + (point2_1 + point2_2 + point2_3);
+        document.getElementById("total3").innerHTML = "&emsp;總金額：" + (price3_1 + price3_2 + price3_3 + bag_1*50) + " 總點數：" + (point3_1 + point3_2 + point3_3);
+    }
+
     </script>
 <footer >
     Copyright@2022 By AIwash Rights Reseved
