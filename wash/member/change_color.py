@@ -11,12 +11,9 @@ from member.models import COLOR
 def colorchange(request):
    if 'mem_session' in request.session:
       color=""
-      if not COLOR.objects.filter(MEMID=request.session['mem_session']).exists():
-         COLOR.objects.create(MEMID=request.session['mem_session'],WHICHCOLOR="0")
-      else:
-         pass
+      
       if request.method == 'GET':
-         color=request.POST.get('r1')
+         color=request.GET.get('color')
       
       if color !="":
          COLOR.objects.filter(MEMID=request.session['mem_session']).update(WHICHCOLOR=color)

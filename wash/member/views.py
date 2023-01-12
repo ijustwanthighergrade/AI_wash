@@ -4,6 +4,7 @@ from pyexpat.errors import messages
 import requests
 from procedure.models import order
 from login.models import MEMBER
+from member.models import COLOR
 from login.views import login2
 
 SACCngrok="https://10eb-1-34-54-152.jp.ngrok.io"
@@ -39,7 +40,13 @@ def color(request):
    if 'mem_session' in request.session:
       howmuch=order.objects.filter(MEMID=request.session['mem_session']).count()
       print(howmuch)
+      if not COLOR.objects.filter(MEMID=request.session['mem_session']).exists():
+         COLOR.objects.create(MEMID=request.session['mem_session'],WHICHCOLOR="0")
+      else:
+         pass
       
+      mycolor=COLOR.objects.get(MEMID=request.session['mem_session']).WHICHCOLOR
+      print(mycolor)
       return render(request,"color.html",locals())
    else:
       return login2(request)
