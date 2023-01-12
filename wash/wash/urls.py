@@ -19,6 +19,8 @@ from login import viewslogin
 from feedback import addviews
 from procedure import views
 from memSet import changeinfo_view
+from member import logout_view
+
 
 
 urlpatterns = [
@@ -42,5 +44,6 @@ urlpatterns = [
     # path('api1/', views.api1, name='api1'),
     path('addproblems', addviews.addproblems, name='addproblems'), #新增問題
     path('dealorder', views.dealorder, name='dealorder'), #新增問題
+    path('logout', logout_view.logout, name='logout'), 
     
 ]
