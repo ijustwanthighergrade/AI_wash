@@ -8,10 +8,10 @@
     <title>member</title>
     <link href="{% static "css/nadd.css" %}" rel="stylesheet">
     <link href="{% static "css/ncolor.css" %}" rel="stylesheet">
+    <link href="{% static "css/theme.css" %}" rel="stylesheet">
 </head>
-
-<body>
 <body class="bgdark">
+
     <table class="manu bglight">
         <tr>
             <td><img class="logo" src="{% static "images/logo2.png" %}"></td>
@@ -20,15 +20,15 @@
         </tr>
     </table>
     
-    <div class="content">
-        <div class="td1">
+    <div class="content bglight blight">
+        <div class="td1 blight bglight fontdark">
             <div class="text3" id="img">
                 <div class="text4">
                     <a href="{% url 'index' %}">
                 返回</a>
                 </div>
             </div>
-            <div class="text2">
+            <div class="text2 fontdark">
                 主題選擇
              </div>
              {% if howmuch > 1 %}

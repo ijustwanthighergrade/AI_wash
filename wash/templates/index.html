@@ -11,20 +11,20 @@
     <link href="{% static "css/fadelogo.css" %}" rel="stylesheet">
     <link href="{% static "css/theme.css" %}" rel="stylesheet">
 </head>
-<body>
+<body class="bgdark">
 
-    <table class="manu">
+    <table class="manu bglight">
         <tr>
             <td><img class="logo" src="{% static "images/logo2.png" %}"></td>
-            <td><a href="{% url 'member' %}"><div class="mem">會員</div></a></td>
-            <td><a href="{% url 'logout' %}"><div class="mem">登出</div></a></td>
+            <td><a href="{% url 'member' %}"><div class="mem bgdark fontlight">會員</div></a></td>
+            <td><a href="{% url 'logout' %}"><div class="mem bgdark fontlight">登出</div></a></td>
         </tr>
     </table>
 
-    <table class="ta2">
+    <table class="ta2 blight">
         <tr>
-            <td class="td1"><div  class="text1">最新資訊</div></td>
-            <td class="text2">內容</td>
+            <td class="td1"><div  class="text1 blight fontlight">最新資訊</div></td>
+            <td class="text2 fontlight">內容</td>
             
         </tr>
     </table>
@@ -32,16 +32,16 @@
     <div class = "new"><a href="{% url 'teach' %}"><img class = "teaching" src="{% static "images/1.png" %}"></a></div>
     <div class="btn"></div>
        <div class="ta3">
-            <a href="{% url 'wash1' %}"><div  class="text3" id="small">開始洗衣</div></a>    
-            <a href="{% url 'map' %}"><div  class="text3">商店地圖</div></a>              
-            <a href="{% url 'feedback' %}"><div  class="text3">問題回饋</div></a>                
-            <a href="{% url 'faq' %}"><div  class="text3">常見問題</div></a>                
-            <a href="{% url 'friend' %}"><div  class="text3">友站連結</div></a>                
+            <a href="{% url 'wash1' %}"><div  class="text3 fontlight blight" id="small">開始洗衣</div></a>    
+            <a href="{% url 'map' %}"><div  class="text3 fontlight blight">商店地圖</div></a>              
+            <a href="{% url 'feedback' %}"><div  class="text3 fontlight blight">問題回饋</div></a>                
+            <a href="{% url 'faq' %}"><div  class="text3 fontlight blight">常見問題</div></a>                
+            <a href="{% url 'friend' %}"><div  class="text3 fontlight blight">友站連結</div></a>                
         </div>       
 
 
 </body>
-<footer >
+<footer class="bglight fontdark">
     Copyright@2022 By AIwash Rights Reseved
 </footer>
 </html>

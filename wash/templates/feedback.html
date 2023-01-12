@@ -9,16 +9,15 @@
     <title>return</title>
     <link href="{% static "css/nadd.css" %}" rel="stylesheet">
     <link href="{% static "css/nfeedback.css" %}" rel="stylesheet">
+    <link href="{% static "css/theme.css" %}" rel="stylesheet">
 </head>
+<body class="bgdark">
 
-
-
-<body>
-    <table class="manu">
+    <table class="manu bglight">
         <tr>
-            <td><img class="logo" src="{% static "images/logo.jpg" %}"></td>
-            <td><a href="{% url 'member' %}"><div class="mem">會員</div></a></td>
-            <td><a href="{% url 'logout' %}"><div class="mem">登出</div></a></td>
+            <td><img class="logo" src="{% static "images/logo2.png" %}"></td>
+            <td><a href="{% url 'member' %}"><div class="mem bgdark fontlight">會員</div></a></td>
+            <td><a href="{% url 'logout' %}"><div class="mem bgdark fontlight">登出</div></a></td>
         </tr>
     </table>
 

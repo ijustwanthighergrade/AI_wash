@@ -29,6 +29,8 @@ body {
     background-color: #c7fffc;
     width: 80%;
     border:10px solid #c7fffc;
+    border-right-style: solid;
+    border-right-width: 10px;
     border-radius: 10px;
 }
 
