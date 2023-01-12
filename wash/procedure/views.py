@@ -190,15 +190,15 @@ def dealorder(request):
    if(orderdata['Take']=="外送"):
       delivery.objects.create(ORDID=ORD,SHOPID=SHOPS,PHONE=orderdata['mphone'], ADDRESS=orderdata['addr'],GDATE=datechange)
       
-   # a=order.objects.get(ORDID=ORD)
-   # res = requests.get("http://127.0.0.1:5000/add", json = {
-   #    "ORDID": a.ORDID,
-   #    "MEMID": a.MEMID,
-   #    "CDATE": a.CDATE.strftime("%Y-%m-%d %H:%M"),
-   #    "GPOINT": a.GPOINT,
-   #    "AMOUNT": a.AMOUNT,
-   #    "APPID": a.APPID
-   # })
+   a=order.objects.get(ORDID=ORD)
+   res = requests.get("http://127.0.0.1:5000/add", json = {
+      "ORDID": a.ORDID,
+      "MEMID": a.MEMID,
+      "CDATE": a.CDATE.strftime("%Y-%m-%d %H:%M"),
+      "GPOINT": a.GPOINT,
+      "AMOUNT": a.AMOUNT,
+      "APPID": a.APPID
+   })
    
    print(orderdata)
 
