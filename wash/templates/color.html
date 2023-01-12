@@ -11,11 +11,12 @@
 </head>
 
 <body>
-    <table class="manu">
+<body class="bgdark">
+    <table class="manu bglight">
         <tr>
-            <td><img class="logo" src="{% static "images/logo.jpg" %}"></td>
-            <td><a href="{% url 'member' %}"><div class="mem">會員</div></a></td>
-            <td><a href="{% url 'logout' %}"><div class="mem">登出</div></a></td>
+            <td><img class="logo" src="{% static "images/logo2.png" %}"></td>
+            <td><a href="{% url 'member' %}"><div class="mem bgdark fontlight">會員</div></a></td>
+            <td><a href="{% url 'logout' %}"><div class="mem bgdark fontlight">登出</div></a></td>
         </tr>
     </table>
     
