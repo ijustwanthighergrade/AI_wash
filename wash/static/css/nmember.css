@@ -1,4 +1,10 @@
 
+footer{
+    position: relative;
+    margin-top: 5%;    
+}
+
+
 .ta2{
     display: flex;
     justify-content: center;

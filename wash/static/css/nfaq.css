@@ -56,6 +56,10 @@
         width: 560px;
     }
 
+    a{
+        color:#c7fffc
+    }
+
     @media screen and (max-width: 768px) {
         .ta1 {
             margin-bottom: 3%;
