@@ -17,7 +17,7 @@
 
 .div1{
     margin:auto;
-    text-align: center;
+    text-align: left;
     background-color: #343837;
     width: 75%;
     border-radius: 5px;
@@ -25,6 +25,7 @@
     font-weight: bold;
     font-size: 18px;
     height: 5vh;
+    padding-left: 5%;
 }
 
 .div2{
@@ -103,6 +104,23 @@
 
 .total{
     font-size: 10px;
+}
+
+.add1{
+    color: #c7fffc;
+    text-align: right;
+    margin-top: -10%;
+    margin-right: 15%;
+    font-weight: bold;
+    font-size: 20px;
+}
+.add2{
+    color: #c7fffc;
+    text-align: right;
+    margin-top: -13%;
+    margin-right: 5%;
+    font-weight: bold;
+    font-size: 25px;
 }
 
 @media screen and (max-width: 768px)
