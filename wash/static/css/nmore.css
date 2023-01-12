@@ -12,16 +12,10 @@
         justify-content: center;
         flex-direction: column;
         margin: 5% 0% 15% 0%;
-        border: #c7fffc 2px solid;
-        background-color: #2fcfc6;
-        color: azure;
     }
 
     .text1 {
         text-align: center;
-        border: #2fcfc6 2px solid;
-        background-color: #e8fefd;
-        color: black;
         margin: auto auto 1%;
         width: 90%;
     }
@@ -34,9 +28,8 @@
         line-height: 5vh;
         font-weight: bold;
         font-size: 20px;
-        border: #e8fefd 2px solid;
-        color: #e8fefd;
-        background-color: #2fcfc6;
+        border-style: solid;
+        border-width: 2px;
     }
 
     .text3 {
@@ -47,7 +40,6 @@
     .ta3 {
         font-weight: bold;
         font-size: 35px;
-        color: #2fcfc6;
         margin: 2% auto;
     }
 
@@ -72,25 +64,13 @@
         width: 50%;
     }
 
+    a:visited {
+        color: #c7fffc;
+    }
+
     @media screen and (max-width: 768px) {
         .ta1 {
             margin-bottom: 3%;
-        }
-
-        .td1 {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin: 5% 0% 15% 0%;
-            border: #c7fffc 2px solid;
-            background-color: #2fcfc6;
-            color: azure;
-        }
-
-        .text1 {
-            margin: 0% auto;
-            background-color: #e8fefd;
-            color: black;
         }
 
         .ta3 {

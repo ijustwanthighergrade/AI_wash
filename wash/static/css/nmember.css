@@ -12,16 +12,14 @@ footer{
     display: flex;
     justify-content: space-around;
     width: 80%;
-    border: #c7fffc 2px solid;
-    background-color: #c7fffc;
-    color: c7fffc;
+    border-width: 2px;
+    border-style: solid;
     border-radius: 10px;
 }
 .img{
     width: 200px;
     height: 200px;
     margin: 8% 8% 5% 25%;
-    border: #c7fffc 2px solid;
 }
 .btn{
     display: flex;
@@ -31,11 +29,8 @@ footer{
 }
 .text1{
     margin: 2% auto;
-    background-color: #343837;
-    color:343837;
     width: 60%;
     margin-left: 8%;
-    color: #c7fffc;
 }
 .text3{
     margin: 2% auto;
@@ -58,9 +53,8 @@ footer{
     line-height: 10vh;
     font-weight: bold;
     font-size: 35px;
-    border: #c7fffc 2px solid;
-    color: #c7fffc;
-    background-color: #343837;
+    border-width: 2px;
+    border-style: solid;
 }
 .text4{
     width: 10vh;
@@ -70,14 +64,11 @@ footer{
     font-weight: bold;
     font-size: 20px;
     margin-left: 2%;
-    border:#e8fefd 2px solid;
-    color: #e8fefd;
-    background-color: #2fcfc6;
+    border-width: 2px;
+    border-style: solid;
 }
-a{
+a:visited{
     color: #c7fffc;
-    font-size: 20px;
-    font-weight: bold;
 }
 
 @media screen and (max-width: 980px)
@@ -120,8 +111,6 @@ a{
     }
     .text3{
         margin: 0% auto;
-        background-color: #343837;
-        color:black;
         width: 80%;
     }
     #n{
@@ -140,8 +129,8 @@ a{
         font-size: 25px;
     }
     .text4{
-        border: #c7fffc 2px solid;
-        background-color: #343837;
+        border-width: 2px;
+        border-style: solid;
         margin-left: 0%;
         font-size: 15px;
     }

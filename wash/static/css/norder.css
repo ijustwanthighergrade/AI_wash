@@ -12,17 +12,11 @@
         justify-content: center;
         flex-direction: column;
         margin: 5% 0% 15% 0%;
-        border: #c7fffc 2px solid;
-        background-color: #c7fffc;
-        color: azure;
     }
 
     .text1 {
         text-align: center;
-        border: #c7fffc 10px solid;
-        background-color: #343837;
-        color: black;
-        margin: auto auto 1%;
+        margin: 5% auto ;
         width: 90%;
     }
 
@@ -34,9 +28,6 @@
         line-height: 5vh;
         font-weight: bold;
         font-size: 20px;
-        border: #e8fefd 2px solid;
-        color: #e8fefd;
-        background-color: #343837;
     }
 
     .text3 {
@@ -47,7 +38,6 @@
     .ta3 {
         font-weight: bold;
         font-size: 35px;
-        color: #c7fffc;
         margin: 2% auto;
     }
 
@@ -72,7 +62,7 @@
         width: 50%;
     }
 
-    a{
+    a:visited{
         color: #c7fffc;
     }
 
@@ -87,10 +77,6 @@
             justify-content: center;
             margin: 5% 0% 15% 0%;}
 
-        .text1 {
-            margin: 0% auto;
-
-        }
 
         .ta3 {
             font-size: 20px;

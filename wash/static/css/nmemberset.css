@@ -7,20 +7,17 @@
     justify-content: center;
     flex-direction: column;
     margin: 5% 0% 15% 0%;
-    width: 80%;
-    border: #c7fffc 2px solid;
-    background-color: #343837;
-    color: azure;
+    width: 90%;
+    border-radius: 3%;
 }
 .btn{
     display: flex;
     justify-content: space-around;
 }
 .text1{
-    background-color: #c7fffc;
-    color:black;
     margin: 2% auto;
     width: 80% ;
+    height: auto;
 }
 .text2{
     width: 40vh;
@@ -29,9 +26,8 @@
     line-height: 10vh;
     font-weight: bold;
     font-size: 35px;
-    border: #343837 2px solid;
-    color: #343837;
-    background-color: #e8fefd;
+    border-width: 2px;
+    border-style: solid;
     margin: 2% auto;
 }
 .text3{
@@ -41,9 +37,8 @@
     line-height: 10vh;
     font-weight: bold;
     font-size: 35px;
-    color: #c7fffc;
-    border: #c7fffc solid 2px;
-    background-color: #343837;
+    border-width: 2px;
+    border-style: solid
 }
 .text4{
     margin: 2% auto 2% 12%;
@@ -53,27 +48,26 @@
     line-height: 5vh;
     font-weight: bold;
     font-size: 20px;
-    border:#343837 2px solid;
-    color: #343837;
-    background-color: #c7fffc;
+    border-width: 2px;
+    border-style: solid;
 }
 .ta3{
     font-weight: bold;
     font-size: 35px;
-    color: #c7fffc;
     margin: 2% auto;
 }
+
 .td2{
     padding-left: 7%;
-    border-bottom: #c7fffc 2px solid;
+    border-bottom: #343837 2px solid;
     width: 200vh;
 }
 
 .td21{
-    border-bottom: #c7fffc 0px;
+    border-bottom: #343837 0px;
 }
 
-a{
+a:visited{
     color: #343837;
 
 }
@@ -83,26 +77,10 @@ a{
     .ta1{
         margin-bottom: 3%;
     }
-    .td1{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 5% 0% 15% 0%;
-        width: 80%;
-        border: #c7fffc 2px solid;
-        background-color: #c7fffc;
-        color: #c7fffc;
-    }
     .btn{
         justify-content: center;
         margin: 5% auto;
 
-    }
-    .text1{
-        margin: 0% auto;
-        background-color: #343837;
-        color:black;
-        height: auto;
     }
     .text2{
         margin-left: 2%;

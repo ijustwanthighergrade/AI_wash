@@ -21,14 +21,14 @@
     </table>
     
     <div class="content blight bglight">
-        <div class="td1">
-            <div class="text4">
+        <div class="td1 bglight">
+            <div class="text4 bgdark fontlight">
                 <a href="{% url 'member' %}">返回</a>
             </div>
             {% for i in order_list %}
-            <div class="text1">
+            <div class="text1 bgdark">
                 <form>
-                <table class="ta3">
+                <table class="ta3 fontlight">
                 <tr>
                     <td class="td2 td22" rowspan="5">QRcode產生中</td>
                     <td class="td2">訂單編號</td>
@@ -44,17 +44,6 @@
                 </tr>
                 <tr>
                     <td class="td2 td23"><a href="{% url 'detail' %}?ordid={{i.ORDID}}">查看詳情>>　</a></td>
-                </tr>
-                <tr>
-                    <td class="td2" colspan="2">處理狀態</td>
-                </tr>
-                <tr>
-                    <td class="td2" colspan="2">
-                        <input type="radio" name="wash" checked="checked" disabled>處理中
-                        <input type="radio" name="wash" disabled>可取貨
-                        <input type="radio" name="wash" disabled>已完成
-                    </select>
-                </td>
                 </tr>
                 <tr>
                     <td class="td2 td21 td22">已完成</td>

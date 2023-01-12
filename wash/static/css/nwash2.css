@@ -1,9 +1,7 @@
 
 .ta3{
     margin: auto;
-    background-color: #343837;
     width: 50%;
-    border:10px solid #343837;
     border-radius: 15px;
     margin-bottom: 2%;
     height: 50vh;
@@ -18,10 +16,8 @@
 .div1{
     margin:auto;
     text-align: left;
-    background-color: #343837;
     width: 75%;
     border-radius: 5px;
-    color: #c7fffc;
     font-weight: bold;
     font-size: 18px;
     height: 5vh;
@@ -45,7 +41,6 @@
 }
 
 .back{
-    color: #343837;
     font-weight: bold;
     font-size: 30px;
     border-radius: 10px;
@@ -53,20 +48,11 @@
 
 .t1{
     text-align: center;
-    color: #c7fffc;
-    font-size: 20px;
-}
-
-.t2{
-    color: #343837;
-    text-align: center;
-    background-color: #c7fffc;
     font-size: 20px;
 }
 
 .t3{
     text-align: center;
-    color: #c7fffc;
     font-weight: bold;
     font-size: 18px;
     margin-top: -3%;
@@ -79,9 +65,7 @@
 
 .next{
     font-size: 18px;
-    color: #343837;
     font-weight: bolder;
-    background-color: #c7fffc;
     border-radius: 10px;
     padding: 3% 10%;
     margin: auto;
@@ -92,9 +76,7 @@
 
 .confirm{
     font-size: 16px;
-    background-color: #c7fffc;
     border-radius: 10px;
-    color: #343837;
     font-weight: bold;
     border: 0ch;
     width: 45%;
@@ -107,7 +89,6 @@
 }
 
 .add1{
-    color: #c7fffc;
     text-align: right;
     margin-top: -10%;
     margin-right: 15%;
@@ -115,7 +96,6 @@
     font-size: 20px;
 }
 .add2{
-    color: #c7fffc;
     text-align: right;
     margin-top: -13%;
     margin-right: 5%;

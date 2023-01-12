@@ -27,7 +27,7 @@
     <table class="content blight bglight">
         <tr class="tr1">
             <td class="td3">
-                <div><a href="{% url 'index' %}" class="back">
+                <div><a href="{% url 'index' %}" class="back fontdark">
                         <返回 </a>
                 </div>
             </td>
@@ -36,25 +36,25 @@
             <td>
                 <form method="post" target="_self" action="{% url 'wash2' %}" id="form1">
                     {% csrf_token %}
-                    <table class="ta3">
+                    <table class="ta3 bgdark bdark">
                         <tr>
-                            <td class="text1">
+                            <td class="text1 fontlight">
                                 選擇送洗/回方式
                             </td>
                         </tr>
                         <tr class="tr1">
-                            <td class="t3">
+                            <td class="t3 fontlight">
                                 <input type="radio" name="r1" id="r1_1" value="自取" checked onclick="rad1()">自取
                             </td>
                         </tr>
                         <tr>
-                            <td class="t3">
+                            <td class="t3 fontlight">
                                 <input type="radio" name="r1" value="外送" id="r1_2"  onclick="rad2()">外送
                             </td>
                         </tr>
                         <tr>
                             <td colspan="2">
-                                <div id="w1" style="display:block;" class="t3">
+                                <div id="w1" style="display:block;" class="t3 fontlight">
                                     地址
                                     <input type="text" id="addr" name="addr" value="{{memaddr}}" required="required" disabled>
                                 </div>
@@ -63,7 +63,7 @@
                         </tr>
                         <tr>
                             <td class="td1" colspan="2">
-                                <input type="submit" class="confirm" value="下一步">
+                                <input type="submit" class="confirm fontdark bglight" value="下一步">
                             </td>
                         </tr>
 

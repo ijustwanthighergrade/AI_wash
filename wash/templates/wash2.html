@@ -29,36 +29,36 @@
         {% csrf_token %}
     <table class="content blight bglight" >
         <tr class="tr1">
-            <td class="td3"><div><a href="{% url 'index' %}"  class="back"><返回首頁 </a></div></td>
+            <td class="td3"><div><a href="{% url 'index' %}"  class="back fontdark"><返回首頁 </a></div></td>
         </tr>
         <tr>
             <td>
-                <div class="div1">
+                <div class="div1 bgdark fontlight">
                     衣服袋數
                     <input type="number" name="bagamount" class="num" required="required" min="1" value="1" id="bagamount" onkeydown="return false">
-                    <div class="add1"  onclick="bagamount1()">+</div>
-                    <div class="add2"  onclick="bagamount2()">-</div>
+                    <div class="add1 fontlight"  onclick="bagamount1()">+</div>
+                    <div class="add2 fontlight"  onclick="bagamount2()">-</div>
                 </div>
                 
             </td>
         </tr>
         <tr>
             <td>               
-                    <table class="ta3" >
+                    <table class="ta3 bgdark" >
                         <tr class="tr1">
                             <td>
-                                <div id="wash1" onclick="listBtn1()" class="t1">建議</div>
+                                <div id="wash1" onclick="listBtn1()" class="t1 fontlight">建議</div>
                             </td>
                             <td>
-                                <div id="wash2" onclick="listBtn2()" class="t2">偏好</div>
+                                <div id="wash2" onclick="listBtn2()" class="t1 fontdark bglight">偏好</div>
                             </td>
                             <td>
-                                <div id="wash3" onclick="listBtn3()" class="t2">自訂</div>
+                                <div id="wash3" onclick="listBtn3()" class="t1 fontdark bglight">自訂</div>
                             </td>
                         </tr>
                         <tr class="tr2">
                             <td  colspan="3">
-                                <div id="w1" style="display:block;" class="t3">
+                                <div id="w1" style="display:block;" class="t3 fontlight">
                                     洗滌
                                     <select name="washing" style="width: 50%;" id="washing1" onclick="wash1()" >
                                         <option value="標準">標準</option>
@@ -101,7 +101,7 @@
                                     </div>
 
                                 </div>
-                                <div id="w2" style="display:none;" class="t3">
+                                <div id="w2" style="display:none;" class="t3 fontlight">
                                     洗滌
                                     <select name="washing" style="width: 50%;" id="washing2" onclick="wash2()">
                                         <option value="{{WMODE}}">{{WMODE}}</option>
@@ -140,7 +140,7 @@
 
                                 </div>
                                 
-                                <div id="w3" style="display:none;" class="t3">
+                                <div id="w3" style="display:none;" class="t3 fontlight">
                                     洗滌
                                     <select name="washing" style="width: 50%;" id="washing3" onclick="wash3()">
                                         <option value="標準">標準</option>
@@ -193,8 +193,8 @@
                         </tr>
                         <tr>
                             <td class="td1"   colspan="3">
-                                <input type="button" class="next" onclick="history.back();" value="上一步"> </a>
-                                <input type="submit" class="confirm" value="下一步">
+                                <input type="button" class="next bglight fontdark" onclick="history.back();" value="上一步"> </a>
+                                <input type="submit" class="confirm bglight fontdark" value="下一步">
                             </td>
                         </tr>
                    

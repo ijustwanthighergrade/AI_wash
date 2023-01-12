@@ -2,10 +2,8 @@
 
 .td2{
     font-size: 30px;
-    padding-left: 2%;
     font-weight: bold;
     padding-bottom: 1%;
-    color: #343837;
     padding-top: 1%;
     
 }
@@ -18,37 +16,29 @@
 
 .tr1{
     border:0px;
-    background-color: #c7fffc;
 }
 
 .back{
-    color: #c7fffc;
     font-weight: bold;
     font-size: 30px;
     text-align: center;
-    background-color: #343837;
-    border:3px solid #343837;
+    border-width: 3px;
+    border-style: solid;
     border-radius: 10px;
 }
 
 .video1{
     float: left;
     text-align: center;
-    width: 40%;
+    width: 100%;
     height: 40vh;
-    background-color: #c7fffc;
-    margin: 3%;
-    color: #343837;
     font-weight: bold;
 }
 .video2{
-    color: #343837;
     float: right;
     text-align: center;
-    width: 40%;
+    width: 100%;
     height: 40vh;
-    background-color: #c7fffc;
-    margin: 3%;
     font-weight: bold;
 }
 
@@ -66,17 +56,13 @@
     .video1{
         float: none;
         text-align: center;
-        width: 80%;
         height: 25vh;
-        background-color: #c7fffc;
         margin: 3% auto ;
     }
     .video2{
         float: none;
         text-align: center;
-        width: 80%;
         height: 25vh;
-        background-color: #c7fffc;
         margin: 3% auto ;
     }
 

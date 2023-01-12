@@ -32,7 +32,7 @@
     <table class="content blight bglight">
         <tr class="tr1">
             <td class="td3">
-                <div><a href="{% url 'index' %}" class="back">
+                <div><a href="{% url 'index' %}" class="back fontdark">
                         <返回 </a>
                 </div>
             </td>
@@ -40,7 +40,7 @@
 
         <tr>
             <td>
-                <div class="div1">訂單明細
+                <div class="div1 bgdark fontlight">訂單明細
                     <p class="p1">
                         衣服袋數：{{orderamount}}<br>
                         洗滌方式：{{washway}}<br>
@@ -64,8 +64,8 @@
             <td>
                 <form method="post" action="/dealorder">
                     {% csrf_token %}
-                    <table class="ta3">
-                        <tr class="div2">
+                    <table class="ta3 bgdark bdark">
+                        <tr class="div2 fontlight">
                             <td colspan="2" class="td2">
 
                                 電話
@@ -79,8 +79,8 @@
                         </tr>
                         <tr>
                             <td>
-                                <input type="button" class="next" onclick="history.back();" value="上一步">
-                                <input class='confirm' type="submit" value="確認下單">
+                                <input type="button" class="next bglight fontdark" onclick="history.back();" value="上一步">
+                                <input class='confirm bglight fontdark' type="submit" value="確認下單">
                                 <p class='show'></p>
                             </td>
                         </tr>
