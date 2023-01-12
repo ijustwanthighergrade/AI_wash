@@ -17,3 +17,17 @@
 .bdark{
     border-color:#a5220e;
 }
+.logo {
+    width: 60%;
+    animation: color linear forwards;
+    transform: translateX(-100%);
+    filter: drop-shadow(170px 0 #a5220e);
+}
+@keyframes color {
+    0% {
+        filter: drop-shadow(0 0 #a5220e);
+    }
+    100% {
+        filter: drop-shadow(170px 0 #a5220e);
+    }
+}

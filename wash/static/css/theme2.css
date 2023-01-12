@@ -2,18 +2,32 @@
     background-color: #cceab0;
 }
 .bgdark{
-    background-color: #cda61a;
+    background-color: #119464;
 }
 .fontlight{
     color: #cceab0;
 }
 .fontdark{
-    color:#cda61a;
+    color:#119464;
 }
 .blight{
-    border-color:#cceab0;
+    border-color:#dff9c7;
 
 }
 .bdark{
-    border-color:#cda61a;
+    border-color:#119464;
+}
+.logo {
+    width: 60%;
+    animation: color linear forwards;
+    transform: translateX(-100%);
+    filter: drop-shadow(170px 0 #119464);
+}
+@keyframes color {
+    0% {
+        filter: drop-shadow(0 0 #119464);
+    }
+    100% {
+        filter: drop-shadow(170px 0 #119464);
+    }
 }
