@@ -20,23 +20,23 @@
         </tr>
     </table>
     
-    <div class="content bglight blight">
-        <div class="td1 blight bglight fontdark">
+    <div class="content bglight bdark">
+        <div class="td1 blight bgdark fontlight">
             <div class="text3" id="img">
-                <div class="text4">
+                <div class="text4 blight fontlight bgdark">
                     <a href="{% url 'index' %}">
                 返回</a>
                 </div>
             </div>
-            <div class="text2 fontdark">
+            <div class="text2 fontlight">
                 主題選擇
              </div>
              {% if howmuch > 1 %}
              <div class="btn">
                  <button class="btn2">
-                 <div class="theme">
-                     <div class="A"></div>
-                     <div class="B"></div>
+                 <div class="theme bdark">
+                     <div class="A bgdark"></div>
+                     <div class="B bglight"></div>
                  </div>
              </button>
              {% elif howmuch > 10 %}
