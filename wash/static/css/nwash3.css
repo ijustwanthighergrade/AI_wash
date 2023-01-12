@@ -1,11 +1,13 @@
-
+footer{
+    position: relative;
+}
 .ta2{
     margin: auto;
     background-color: #2fcfc6;
     width: 80%;
     border:10px solid #2fcfc6;
     border-radius: 10px;
-    margin-bottom: 0%;
+    margin-bottom: 15%;
     margin-top: 1%;
 }
 
