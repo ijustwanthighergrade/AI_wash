@@ -8,7 +8,15 @@
     <title>member</title>
     <link href="{% static "css/nadd.css" %}" rel="stylesheet">
     <link href="{% static "css/ncolor.css" %}" rel="stylesheet">
+    
+    {% if mycolor == 0 %}
     <link href="{% static "css/theme.css" %}" rel="stylesheet">
+    {% comment %} 把你的CSS替換掉這個東西 {% endcomment %}
+    {% elif mycolor == 1 %}
+    {% comment %} 把你的CSS替換掉這個東西 {% endcomment %}
+    {%else%}
+    {% comment %} 把你的CSS替換掉這個東西 {% endcomment %}
+    {% endif %}
 </head>
 <body class="bgdark">
 
@@ -35,7 +43,7 @@
                     </tr>
                     <tr class="text2 fontdark">
                         <td class="btn">
-                            <a href="#">
+                            <a href="/colorchange?color=0">
                                 <div class="theme bdark">
                                     <div class="A bgdark"></div>
                                     <div class="B bglight"></div>
@@ -48,8 +56,8 @@
                     </tr>
                     <tr class="text2 fontdark">
                         <td class="btn">
-                            {% if howmuch > 1 %}
-                            <a href="#">
+                            {% if howmuch > 0 %}
+                            <a href="/colorchange?color=1">
                                 <div class="theme bdark">
                                     <div class="A bgdark"></div>
                                     <div class="B bglight"></div>
@@ -62,8 +70,8 @@
                     </tr>
                     <tr class="text2 fontdark">
                         <td class="btn">
-                            {% elif howmuch > 10 %}
-                            <a href="#" >
+                            {% elif howmuch > 50 %}
+                            <a href="/colorchange?color=2" >
                                 <div class="theme bdark">
                                     <div class="A bgdark"></div>
                                     <div class="B bglight"></div>
@@ -77,7 +85,7 @@
                     <tr class="text2 fontdark">
                         <td class="btn">
                             {% else %}
-                            <a href="#">
+                            <a href="/colorchange?color=3">
                                 <div class="theme bdark">
                                     <div class="A bgdark"></div>
                                     <div class="B bglight"></div>
