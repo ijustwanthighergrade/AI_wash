@@ -4,8 +4,14 @@ from django.db import models
 # Create your models here.
 
 from django.utils import timezone
-
-# Create your models here.
+class prefermode(models.Model):
+    MEMID = models.CharField('使用者編號',max_length=20, null=False)
+    FMODE = models.CharField('FMODE',max_length=20, null=False)
+    LMODE = models.CharField('LMODE',max_length=20, null=False)
+    WMODE = models.CharField('WMODE',max_length=20, null=False)
+    def __str__(self):
+        return self.MEMID
+    
 class order(models.Model):
     ORDID = models.CharField('訂單編號',max_length=20, null=False)
     MEMID = models.CharField('使用者編號',max_length=20, null=False)

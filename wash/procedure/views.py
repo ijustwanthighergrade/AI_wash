@@ -7,6 +7,7 @@ from login.views import login2
 from procedure.models import order
 from procedure.models import WMODE
 from procedure.models import LMODE
+from procedure.models import prefermode
 from procedure.models import FMODE
 from procedure.models import CLIST
 from procedure.models import delivery
@@ -38,7 +39,12 @@ orderdata = {
 
 def wash1(request):
    if 'mem_session' in request.session:
-
+      
+      if not prefermode.objects.filter(MEMID=request.session['mem_session']).exists():
+         prefermode.objects.create(MEMID=request.session['mem_session'],WMODE="標準",LMODE="日曬",FMODE="不折")
+      else:
+         pass
+      
       if not WMODE.objects.exists():
          WMODE.objects.create(WMODE="標準",MONEY=0,POINTS=5,MEMISSIONS=1,TIME=30)
          WMODE.objects.create(WMODE="精緻洗",MONEY=5,POINTS=0,MEMISSIONS=2,TIME=50)
@@ -72,12 +78,20 @@ def wash2(request):
       orderdata['Take'] = take
       orderdata['addr']= addr
       
-         
+      prefer=prefermode.objects.get(MEMID=request.session['mem_session'])
+      FMODE=prefer.FMODE
+      LMODE=prefer.LMODE
+      WMODE=prefer.WMODE
+      print(FMODE)
       return render(request,"wash2.html",locals())
    else:
       return login2(request)
-
+   
+def remembermode(request):
+         
+   return
 def wash3(request):
+   preset=""
    if 'mem_session' in request.session:
       if request.method == 'POST':
          bagamount=request.POST.get('bagamount')
@@ -85,12 +99,17 @@ def wash3(request):
          drying=request.POST.get('drying')
          store=request.POST.get('store')
          special=request.POST.get('special')
+         preset=request.POST.get('preset')
          
          orderdata['bagamount']=bagamount
          orderdata['washway']=washing
          orderdata['dryway']=drying
          orderdata['flodway']=store
          orderdata['specialitem']=special
+         
+      print(preset)
+      if preset !="":
+         prefermode.objects.filter(MEMID=request.session['mem_session']).update(WMODE=orderdata['washway'],LMODE=orderdata['dryway'],FMODE=orderdata['flodway'])
          
       
       wmode=WMODE.objects.get(WMODE=orderdata['washway'])
@@ -190,15 +209,15 @@ def dealorder(request):
    if(orderdata['Take']=="外送"):
       delivery.objects.create(ORDID=ORD,SHOPID=SHOPS,PHONE=orderdata['mphone'], ADDRESS=orderdata['addr'],GDATE=datechange)
       
-   a=order.objects.get(ORDID=ORD)
-   res = requests.get("http://127.0.0.1:5000/add", json = {
-      "ORDID": a.ORDID,
-      "MEMID": a.MEMID,
-      "CDATE": a.CDATE.strftime("%Y-%m-%d %H:%M"),
-      "GPOINT": a.GPOINT,
-      "AMOUNT": a.AMOUNT,
-      "APPID": a.APPID
-   })
+   # a=order.objects.get(ORDID=ORD)
+   # res = requests.get("http://127.0.0.1:5000/add", json = {
+   #    "ORDID": a.ORDID,
+   #    "MEMID": a.MEMID,
+   #    "CDATE": a.CDATE.strftime("%Y-%m-%d %H:%M"),
+   #    "GPOINT": a.GPOINT,
+   #    "AMOUNT": a.AMOUNT,
+   #    "APPID": a.APPID
+   # })
    
    print(orderdata)
 
