@@ -7,3 +7,5 @@ admin.site.register(LOGIN)
 
 from login.models import MEMBER
 admin.site.register(MEMBER)
+from login.models import AGREE
+admin.site.register(AGREE)
