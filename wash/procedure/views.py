@@ -74,13 +74,20 @@ def wash1(request):
 def wash2(request):
    take=""
    addr=""
+   maddr=""
    if 'mem_session' in request.session:
       if request.method == 'POST':
          take=request.POST.get('r1')
          addr=request.POST.get('addr')
+         maddr=request.POST.get('maddr')
          
       orderdata['Take'] = take
       orderdata['addr']= addr
+      
+      if maddr!="":
+         MEMBER.objects.filter(MEMID=request.session['mem_session']).update(MEMADDR=addr)
+      
+      
       
       mycolor=COLOR.objects.get(MEMID=request.session['mem_session']).WHICHCOLOR
       print(mycolor)
