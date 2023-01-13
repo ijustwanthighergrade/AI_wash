@@ -17,6 +17,9 @@ def colorchange(request):
       
       if color !="":
          COLOR.objects.filter(MEMID=request.session['mem_session']).update(WHICHCOLOR=color)
+      
+      mycolor=COLOR.objects.get(MEMID=request.session['mem_session']).WHICHCOLOR
+      print(mycolor)
       return render(request,"index.html",locals())
    else:
       return login2(request)

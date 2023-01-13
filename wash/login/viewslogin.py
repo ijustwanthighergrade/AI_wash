@@ -4,6 +4,7 @@ import requests
 
 from login.models import LOGIN
 from login.models import MEMBER
+from member.models import COLOR
 
 # Create your views here.
 
@@ -42,6 +43,8 @@ def api2(request):
         request.session['mem_session'] = userUID
         request.session.modified = True
         request.session.set_expiry(60*30) #存在20分鐘
+    mycolor=COLOR.objects.get(MEMID=request.session['mem_session']).WHICHCOLOR
+    print(mycolor)
         
     MEMBER.objects.filter(MEMID = userUID).update(ACCESS=access_code)
     print(request.session['mem_session'])

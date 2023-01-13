@@ -14,6 +14,7 @@ from procedure.models import delivery
 from procedure.models import shop
 from procedure.models import bag
 from procedure.models import lock
+from member.models import COLOR
 from login.models import MEMBER
 import requests
 
@@ -61,6 +62,9 @@ def wash1(request):
       else:
          pass
       
+      mycolor=COLOR.objects.get(MEMID=request.session['mem_session']).WHICHCOLOR
+      print(mycolor)
+      
       mem=MEMBER.objects.get(MEMID=request.session['mem_session'])
       memaddr=mem.MEMADDR
       return render(request,"wash1.html",locals())
@@ -77,6 +81,9 @@ def wash2(request):
          
       orderdata['Take'] = take
       orderdata['addr']= addr
+      
+      mycolor=COLOR.objects.get(MEMID=request.session['mem_session']).WHICHCOLOR
+      print(mycolor)
       
       prefer=prefermode.objects.get(MEMID=request.session['mem_session'])
       FMODE=prefer.FMODE
@@ -110,7 +117,9 @@ def wash3(request):
       print(preset)
       if preset !="":
          prefermode.objects.filter(MEMID=request.session['mem_session']).update(WMODE=orderdata['washway'],LMODE=orderdata['dryway'],FMODE=orderdata['flodway'])
-         
+      
+      mycolor=COLOR.objects.get(MEMID=request.session['mem_session']).WHICHCOLOR
+      print(mycolor)  
       
       wmode=WMODE.objects.get(WMODE=orderdata['washway'])
       lmode=LMODE.objects.get(LMODE=orderdata['dryway'])
@@ -153,6 +162,9 @@ def wash4(request):
       date=orderdata['getdate']
       time=orderdata['gettime']
       takeway=orderdata['Take']
+      
+      mycolor=COLOR.objects.get(MEMID=request.session['mem_session']).WHICHCOLOR
+      print(mycolor)
       
       t=""
       if takeway=='外送':
@@ -221,11 +233,15 @@ def dealorder(request):
    
    print(orderdata)
 
+   mycolor=COLOR.objects.get(MEMID=request.session['mem_session']).WHICHCOLOR
+   print(mycolor)
    return render(request,"index.html",locals())
 
 def index(request):
    if 'mem_session' in request.session:
-         return render(request,"index.html",locals())
+      mycolor=COLOR.objects.get(MEMID=request.session['mem_session']).WHICHCOLOR
+      print(mycolor)
+      return render(request,"index.html",locals())
    else:
       return login2(request)
    

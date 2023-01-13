@@ -3,10 +3,13 @@ from django.http import HttpResponse
 from login.views import login2
 from procedure.models import CLIST
 from procedure.models import order
+from member.models import COLOR
 
 def index(request):
    if 'mem_session' in request.session:
-         return render(request,"index.html",locals())
+      mycolor=COLOR.objects.get(MEMID=request.session['mem_session']).WHICHCOLOR
+      print(mycolor)
+      return render(request,"index.html",locals())
    else:
       return login2(request)
    
@@ -31,6 +34,8 @@ def detail(request):
       BAGNUM = clist.BAGNUM
       PRICE = clist.PRICE
       TIME = clist.TIME
+      mycolor=COLOR.objects.get(MEMID=request.session['mem_session']).WHICHCOLOR
+      print(mycolor)
       
       return render(request,"more.html",locals())
    else:

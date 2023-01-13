@@ -4,6 +4,7 @@ from login.views import login2
 
 from datetime import datetime
 from feedback.models import REPROBLEMS
+from member.models import COLOR
 
 def addproblems(request):
    if 'mem_session' in request.session:
@@ -36,6 +37,8 @@ def addproblems(request):
                PDISC = comments,
             ).save()
             print(mem)
+      mycolor=COLOR.objects.get(MEMID=request.session['mem_session']).WHICHCOLOR
+      print(mycolor)
             
       return render(request,"index.html",locals())
    else:
