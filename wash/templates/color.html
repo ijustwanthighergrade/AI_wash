@@ -43,6 +43,7 @@
                     </tr>
                     <tr class="text2 fontdark">
                         <td class="btn">
+                            {% if howmuch > 0 %}
                             <a href="/colorchange?color=0">
                                 <div class="theme bdark">
                                     <div class="A bgdark"></div>
@@ -56,7 +57,7 @@
                     </tr>
                     <tr class="text2 fontdark">
                         <td class="btn">
-                            {% if howmuch > 0 %}
+                            {% if howmuch > 50 %}
                             <a href="/colorchange?color=1">
                                 <div class="theme bdark">
                                     <div class="A bgdark"></div>
@@ -70,7 +71,7 @@
                     </tr>
                     <tr class="text2 fontdark">
                         <td class="btn">
-                            {% elif howmuch > 50 %}
+                            {% else %}
                             <a href="/colorchange?color=2" >
                                 <div class="theme bdark">
                                     <div class="A bgdark"></div>
@@ -84,18 +85,7 @@
                     </tr>
                     <tr class="text2 fontdark">
                         <td class="btn">
-                            {% else %}
-                            <a href="/colorchange?color=3">
-                                <div class="theme bdark">
-                                    <div class="A bgdark"></div>
-                                    <div class="B bglight"></div>
-                                </a>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr class="c fontdark">
-                        <td class="btn bottom">溫暖橘白</td>
-                    </tr>
+                        
                     {% endif %} 
                 </table>
             </form>
