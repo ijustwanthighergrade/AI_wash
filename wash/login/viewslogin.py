@@ -14,7 +14,7 @@ from login.views import login2
 #進入view
 #建立SACCngrok及自己的serverngrok
 SACCngrok="https://10eb-1-34-54-152.jp.ngrok.io"
-serverngrok="http://127.0.0.1:8000/"
+serverngrok="https://5d32-58-115-108-180.jp.ngrok.io"
 #第二步
 def api2(request):
     if request.method == 'GET':
@@ -45,6 +45,11 @@ def api2(request):
         request.session['mem_session'] = userUID
         request.session.modified = True
         request.session.set_expiry(60*30) #存在20分鐘
+    
+    if not COLOR.objects.filter(MEMID=request.session['mem_session']).exists():
+        COLOR.objects.create(MEMID=request.session['mem_session'],WHICHCOLOR=0)
+    else:
+        pass
     mycolor=COLOR.objects.get(MEMID=request.session['mem_session']).WHICHCOLOR
     print(mycolor)
         

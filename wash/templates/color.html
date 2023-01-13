@@ -41,6 +41,7 @@
                     <tr class="text2 fontdark">
                         <td class="bottom">主題選擇</td>
                     </tr>
+                    {% if howmuch == 0 %}
                     <tr class="text2 fontdark">
                         <td class="btn">
                             <a href="/colorchange?color=0">
@@ -54,9 +55,11 @@
                     <tr class="c fontdark">
                         <td class="bottom">經典綠白</td>
                     </tr>
+                    {% endif %} 
+                    {% if howmuch > 0 %}
                     <tr class="text2 fontdark">
                         <td class="btn">
-                            {% if howmuch > 0 %}
+                            
                             <a href="/colorchange?color=1">
                                 <div class="theme bdark">
                                     <div class="A bgdark"></div>
@@ -68,9 +71,10 @@
                     <tr class="c fontdark">
                         <td class="bottom">深色模式</td>
                     </tr>
+                    {% endif %} 
+                    {% if howmuch > 5 %}
                     <tr class="text2 fontdark">
                         <td class="btn">
-                            {% elif howmuch > 50 %}
                             <a href="/colorchange?color=2" >
                                 <div class="theme bdark">
                                     <div class="A bgdark"></div>
@@ -80,21 +84,23 @@
                         </td>
                     </tr>
                     <tr class="c fontdark">
-                        <td class="btn bottom">酷炫紅白</td>
+                        <td class="bottom">酷炫紅白</td>
                     </tr>
+                    {% endif %} 
+                    {% if howmuch > 10 %}
                     <tr class="text2 fontdark">
                         <td class="btn">
-                            {% else %}
                             <a href="/colorchange?color=3">
                                 <div class="theme bdark">
                                     <div class="A bgdark"></div>
                                     <div class="B bglight"></div>
+                                </div>
                                 </a>
                             </button>
                         </td>
                     </tr>
                     <tr class="c fontdark">
-                        <td class="btn bottom">溫暖橘白</td>
+                        <td class="bottom">溫暖橘白</td>
                     </tr>
                     {% endif %} 
                 </table>
