@@ -124,7 +124,7 @@ def wash3(request):
       orderdata['tprice']=PRICE
       orderdata['tax']=C_AMOUNT
       
-      
+      way=orderdata['Take']
       
       
       print(orderdata)
