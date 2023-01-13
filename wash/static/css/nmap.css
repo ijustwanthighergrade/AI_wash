@@ -1,6 +1,4 @@
-    footer {
-        position: relative;
-    }
+
 
     .content {
         display: flex;
@@ -34,10 +32,6 @@
 
     .td2 {
         width: 200vh;
-    }
-
-    a {
-        color: #c7fffc;
     }
 
     @media screen and (max-width: 768px) {

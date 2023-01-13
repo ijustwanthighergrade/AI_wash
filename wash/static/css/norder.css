@@ -1,6 +1,3 @@
-    footer {
-        position: relative;
-    }
 
     .content {
         display: flex;
@@ -61,11 +58,6 @@
     .car {
         width: 50%;
     }
-
-    a:visited{
-        color: #c7fffc;
-    }
-
     @media screen and (max-width: 768px) {
         .ta1 {
             margin-bottom: 3%;
