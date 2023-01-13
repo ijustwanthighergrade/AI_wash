@@ -6,6 +6,8 @@ from login.models import LOGIN
 from login.models import MEMBER
 from member.models import COLOR
 
+from login.models import AGREE
+from login.views import login2
 # Create your views here.
 
 
@@ -48,7 +50,14 @@ def api2(request):
         
     MEMBER.objects.filter(MEMID = userUID).update(ACCESS=access_code)
     print(request.session['mem_session'])
-    return render(request, 'index.html', locals())
+    
+    if AGREE.objects.filter(MEMID=request.session['mem_session']).exists():
+        return render(request, 'index.html', locals())
+    else:
+        return render(request, 'signup.html', locals())
+    
+    
+    
     
 def api1(request):
     if request.method == 'GET':
@@ -83,3 +92,18 @@ def api1(request):
     MEMBER.objects.filter(MEMID = userUID).update(ACCESS=access_code)
     print(request.session['mem_session'])
     return render(request, 'index.html', locals())
+
+
+def yesitsignup(request):
+    if 'mem_session' in request.session:
+        
+        mycolor=COLOR.objects.get(MEMID=request.session['mem_session']).WHICHCOLOR
+        print(mycolor)
+        yes=""
+        if request.method == 'GET':
+            yes=request.GET.get('yes')
+        if yes != "":    
+            AGREE.objects.create(MEMID=request.session['mem_session'])
+        return render(request, 'index.html', locals())
+    else:
+        return login2(request)

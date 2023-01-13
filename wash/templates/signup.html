@@ -32,12 +32,12 @@
             <div class="text4">
                 <a href="{% url 'member' %}">返回</a>
             </div>
-            <form>
+            <form action="/yesitsignup">
                 <div class="text1">
                     <table class="ta3">
                         <tr>
                             <td class="td2">服務條款確認：</br>
-                                <input type="checkbox"><a href="">條款</a>
+                                <input name="yes" value="1" type="checkbox"><a href="">條款</a>
                             </td>
                         </tr>
                     </table>
@@ -45,9 +45,6 @@
                 <div class="btn">
                     <div class="text2">
                         <input type="submit" value="確認條款" class="text3">
-                    </div>
-                    <div class="text2">
-                        <input type="reset" value="重新填寫" class="text3">
                     </div>
                 </div>
             </form>
