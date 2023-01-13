@@ -47,5 +47,6 @@ urlpatterns = [
     path('dealorder', views.dealorder, name='dealorder'), #新增問題
     path('logout', logout_view.logout, name='logout'), 
     path('colorchange', change_color.colorchange, name='colorchange'), 
+    path('yesitsignup', viewslogin.yesitsignup, name='yesitsignup'), 
     
 ]

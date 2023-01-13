@@ -21,6 +21,9 @@ class MEMBER(models.Model):
     MEMBAGS=models.CharField(max_length=8,default="")
     MEMCARD=models.CharField(max_length=8,default="")
     
+class AGREE(models.Model):
+    MEMID=models.CharField(max_length=43, primary_key=True, editable=False)
+    
     
 # 會員資料表
 # 會員編號 VAR13 PK MEMID

@@ -4,6 +4,8 @@ import requests
 
 from login.models import LOGIN
 from login.models import MEMBER
+from login.models import AGREE
+from member.models import COLOR
 
 # Create your views here.
 
@@ -122,7 +124,11 @@ def api2(request):
         
     MEMBER.objects.filter(MEMID = userUID).update(ACCESS=access_code)
     print(request.session['mem_session'])
-    return render(request, 'index.html', locals())
+    if AGREE.objects.filiter(MEMID=request.session['mem_session']).exist():
+        return render(request, 'index.html', locals())
+    else:
+        return render(request, 'signup.html', locals())
+
     
 def api1(request):
     if request.method == 'GET':
