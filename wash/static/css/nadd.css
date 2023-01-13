@@ -58,3 +58,18 @@ a:hover{
         margin-bottom: 3%;
     }
 }
+
+.ml6 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .ml6 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+  }
+  
+  .ml6 .letter {
+    display: inline-block;
+  }

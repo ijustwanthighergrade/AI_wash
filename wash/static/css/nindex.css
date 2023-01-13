@@ -127,5 +127,16 @@
         margin-bottom: 1%;
 }
   
-
 }
+
+  .ml14 .line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+    bottom: 0;
+  }
+  
+  .ml14 .letter {
+    display: inline-block;
+  }

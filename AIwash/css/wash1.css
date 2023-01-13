@@ -2,9 +2,9 @@
 
 .ta3{
     margin: auto;
-    background-color: #343837;
     width: 50%;
-    border:10px solid #343837;
+    border-width: 10px;
+    border-style: solid;
     border-radius: 15px;
     margin-bottom: 2%;
     height: 40vh;
@@ -22,44 +22,20 @@
 }
 
 .back{
-    color: #343837;
     font-weight: bold;
     font-size: 30px;
-    border-radius: 10px;
+    border-radius: 2px;
     
-}
-
-.t1{
-    text-align: center;
-    color: #343837;
-    font-size: 20px;
-}
-
-.t2{
-    color: #343837;
-    text-align: center;
-    background-color: #c7fffc;
-    font-size: 20px;
 }
 
 .t3{
     text-align: center;
-    color: #c7fffc;
     font-weight: bold;
     font-size: 18px;
 }
 
-.next{
-    font-size: 18px;
-    color: #c7fffc;
-    font-weight: bolder;
-    border-radius: 10px;
-    width: 50%;
-    padding: 5% 10%;
-}
 
 .text1{
-    color: #c7fffc;
     font-size: 22px;
     font-weight: bolder;
     text-align: center;
@@ -68,9 +44,7 @@
 
 .confirm{
     font-size: 16px;
-    background-color: #c7fffc;
     border-radius: 10px;
-    color: #454b4a;
     font-weight: bold;
     border: 0ch;
     width: 50%;
