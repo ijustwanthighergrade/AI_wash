@@ -41,7 +41,7 @@
                     <tr class="text2 fontdark">
                         <td class="bottom">主題選擇</td>
                     </tr>
-                    {% if howmuch == 0 %}
+                    {% if howmuch >= 0 %}
                     <tr class="text2 fontdark">
                         <td class="btn">
                             
@@ -57,7 +57,7 @@
                         <td class="bottom">經典黑綠</td>
                     </tr>
                     {% endif %} 
-                    {% if howmuch > 0 %}
+                    {% if howmuch > 1 %}
                     <tr class="text2 fontdark">
                         <td class="btn">
                            
@@ -86,7 +86,7 @@
                         </td>
                     </tr>
                     <tr class="c fontdark">
-                        <td class="btn bottom">酷炫紅白</td>
+                        <td class=" bottom">酷炫紅白</td>
                     </tr>
                     {% endif %} 
                     {% if howmuch > 10 %}
@@ -97,12 +97,13 @@
                                 <div class="theme bdark">
                                     <div class="A bgdark"></div>
                                     <div class="B bglight"></div>
+                                </div>
                                 </a>
                             </button>
                         </td>
                     </tr>
                     <tr class="c fontdark">
-                        <td class="btn bottom">溫暖橘白</td>
+                        <td class=" bottom">溫暖橘白</td>
                     </tr>
                     {% endif %} 
                 </table>
