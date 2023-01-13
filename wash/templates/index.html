@@ -30,24 +30,170 @@
     <table class="ta2 blight">
         <tr>
             <td class="td1"><div  class="text1 blight fontlight">最新資訊</div></td>
-            <td class="text2 fontlight">內容</td>
-            
+            <td class="ml14">
+            <span class="text-wrapper">
+                <span class="letters text2 fontlight ">內容1321231325453453</span>
+
+              </span>
+            </td>
         </tr>
     </table>
 
     <div class = "new"><a href="{% url 'teach' %}"><img class = "teaching" src="{% static "images/1.png" %}"></a></div>
     <div class="btn"></div>
        <div class="ta3">
-            <a href="{% url 'wash1' %}"><div  class="text3 fontlight blight" id="small">開始洗衣</div></a>    
-            <a href="{% url 'map' %}"><div  class="text3 fontlight blight">商店地圖</div></a>              
-            <a href="{% url 'feedback' %}"><div  class="text3 fontlight blight">問題回饋</div></a>                
-            <a href="{% url 'faq' %}"><div  class="text3 fontlight blight">常見問題</div></a>                
-            <a href="{% url 'friend' %}"><div  class="text3 fontlight blight">友站連結</div></a>                
+            <a href="{% url 'wash1' %}"><div  class="text3 fontlight blight " id="small"><div class="ml3">開始洗衣</div></div></a>    
+            <a href="{% url 'map' %}"><div  class="text3 fontlight blight"><div class="ml4">商店地圖</div></div></a>              
+            <a href="{% url 'feedback' %}"><div  class="text3 fontlight blight"><div class="ml5">問題回饋</div></div></a>                
+            <a href="{% url 'faq' %}"><div  class="text3 fontlight blight"><div class="ml7">常見問題</div></div></a>                
+            <a href="{% url 'friend' %}"><div  class="text3 fontlight blight"><div class="ml8">友站連結</div></div></a>                
         </div>       
 
 
 </body>
-<footer class="bglight fontdark">
-    Copyright@2022 By AIwash Rights Reseved
+<footer class=" ml6 bglight fontdark">
+    
+    <span class="text-wrapper">
+        <span class="letters">Copyright@2022 By AIwash Rights Reseved</span>
+      </span>
 </footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+<script>
+
+var textWrapper = document.querySelector('.ml3');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml3 .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2250,
+    delay: (el, i) => 150 * (i+1)
+  }).add({
+    targets: '.ml3',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 5000
+  });
+  var textWrapper = document.querySelector('.ml4');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml4 .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2250,
+    delay: (el, i) => 150 * (i+1)
+  }).add({
+    targets: '.ml4',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 5000
+  });
+  var textWrapper = document.querySelector('.ml5');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml5 .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2250,
+    delay: (el, i) => 150 * (i+1)
+  }).add({
+    targets: '.ml5',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 5000
+  });
+   var textWrapper = document.querySelector('.ml7');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml7 .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2250,
+    delay: (el, i) => 150 * (i+1)
+  }).add({
+    targets: '.ml7',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 5000
+  });
+  var textWrapper = document.querySelector('.ml8');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml8 .letter',
+    opacity: [0,1],
+    easing: "easeInOutQuad",
+    duration: 2250,
+    delay: (el, i) => 150 * (i+1)
+  }).add({
+    targets: '.ml8',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 5000
+  });
+
+    var textWrapper = document.querySelector('.ml6 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml6 .letter',
+    translateY: ["1.1em", 0],
+    translateZ: 0,
+    duration: 750,
+    delay: (el, i) => 50 * i
+  }).add({
+    targets: '.ml6',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 3000
+  });
+
+
+
+  var textWrapper = document.querySelector('.ml14 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml14 .line',
+    scaleX: [0,1],
+    opacity: [0.5,1],
+    easing: "easeInOutExpo",
+    duration: 900
+  }).add({
+    targets: '.ml14 .letter',
+    opacity: [0,1],
+    translateX: [40,0],
+    translateZ: 0,
+    scaleX: [0.3, 1],
+    easing: "easeOutExpo",
+    duration: 800,
+    offset: '-=600',
+    delay: (el, i) => 150 + 25 * i
+  }).add({
+    targets: '.ml14',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 10000
+  });
+</script>
+
 </html>
