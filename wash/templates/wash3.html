@@ -48,6 +48,7 @@
                         <input name="day" type="date" class="num" id="date1" required="required"><br><br>
                         時間
                         <input name="time" type="time" class="num" id="time1" required="required"><br><br>
+                        
                     </div>
                 </td>
             </tr>
@@ -72,7 +73,7 @@
                         <tr>
                             <td class="td1" colspan="3">
                                 <input type="button" class="next fontdark bglight" onclick="history.back();" value="上一步"> </a>
-                                <input type="submit" class="confirm fontdark bglight" value="下一步">
+                                <input type="submit" class="confirm fontdark bglight" value="下一步"  onclick="dat()">
                             </td>
                         </tr>
                     </table>
@@ -81,10 +82,26 @@
     </form>
     </td>
     <script>
-        document.getElementById('date1').value = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 4).toISOString().split("T")[0];
-        document.getElementById('date1').min = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 4).toISOString().split("T")[0];
-        document.getElementById('time1').value = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 4).toISOString().slice(11).slice(0, -8);
-        document.getElementById('time1').min = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 4).toISOString().slice(11).slice(0, -8);
+        var datetime1 =  new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split("T")[0];
+        var datetime2 = new Date(new Date().getTime() + new Date().getTimezoneOffset() * 60000).toISOString().slice(11).slice(0, -8);
+        document.getElementById('date1').value =  datetime1;
+        document.getElementById('date1').min =  datetime1;
+        document.getElementById('time1').value = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 4.625).toISOString().slice(11).slice(0, -8);
+        if(document.getElementById('date1').value == datetime1){
+        document.getElementById('time1').min = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 4.625).toISOString().slice(11).slice(0, -8);
+        }else{
+        document.getElementById('time1').min = datetime2;
+        }
+        function dat(){
+        var datetime1 =  new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split("T")[0];
+        var datetime2 = new Date(new Date().getTime() + new Date().getTimezoneOffset() * 60000).toISOString().slice(11).slice(0, -8);
+         if(document.getElementById('date1').value == datetime1){
+        document.getElementById('time1').min = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 4.625).toISOString().slice(11).slice(0, -8);
+        }else{
+        document.getElementById('time1').min = "";
+        }
+        }
+        
     </script>
 </body>
 <footer class="bglight fontdark">
