@@ -48,7 +48,7 @@
                         <input name="day" type="date" class="num" id="date1" required="required"><br><br>
                         時間
                         <input name="time" type="time" class="num" id="time1" required="required"><br><br>
-                        <input type="text" id="text1" value="{{way}}" hidden><br><br>
+                        <input type="text" id="text1" value="{{way}}" hidden><br>
                     </div>
                 </td>
             </tr>
@@ -83,28 +83,56 @@
     </td>
     <script>
         var datetime1 =  new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split("T")[0];
-        var datetime2 = new Date(new Date().getTime() + new Date().getTimezoneOffset() * 60000).toISOString().slice(11).slice(0, -8);
-        document.getElementById('date1').value =  datetime1;
-        document.getElementById('date1').min =  datetime1;
-        document.getElementById('time1').value = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 4.625).toISOString().slice(11).slice(0, -8);
-        if(document.getElementById('date1').value == datetime1){
-        document.getElementById('time1').min = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 4.625).toISOString().slice(11).slice(0, -8);
-        document.getElementById('time1').setCustomValidity('自取不能少於五小時');
+        var datetime2 = new Date(new Date().getTime() - new Date().getTimezoneOffset()* 60000 * 1.625).toISOString().slice(11).slice(0, -8);
+        if(document.getElementById('text1').value == "自取"){
+            document.getElementById('date1').value =  datetime1;
+            document.getElementById('date1').min =  datetime1;
+            document.getElementById('time1').value = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 1.625).toISOString().slice(11).slice(0, -8);
+            if(document.getElementById('date1').value == datetime1){
+                document.getElementById('time1').min = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 1.625).toISOString().slice(11).slice(0, -8);
+            }else{
+                document.getElementById('time1').min = datetime2;
+            }
+            function dat(){
+            if(document.getElementById('date1').value == datetime1){
+                document.getElementById('time1').min = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 1.625).toISOString().slice(11).slice(0, -8);
+                if(document.getElementById('time1').value <datetime2){
+                    document.getElementById('time1').setCustomValidity('自取不能少於五小時');
+                }else{
+                    document.getElementById('time1').setCustomValidity('');
+
+                }
+            }else{
+                document.getElementById('time1').min = "";
+                document.getElementById('time1').setCustomValidity('');
+            }
+        }
         }else{
-        document.getElementById('time1').min = datetime2;
-        document.getElementById('time1').setCustomValidity('');
+            document.getElementById('date1').value =  datetime1;
+            document.getElementById('date1').min =  datetime1;
+            document.getElementById('time1').value = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 2).toISOString().slice(11).slice(0, -8);
+            if(document.getElementById('date1').value == datetime1){
+                document.getElementById('time1').min = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 2).toISOString().slice(11).slice(0, -8);
+            }else{
+                document.getElementById('time1').min = datetime2;
+            }
+            function dat(){
+                if(document.getElementById('date1').value == datetime1){
+                    document.getElementById('time1').min = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 2).toISOString().slice(11).slice(0, -8);
+                    if(document.getElementById('time1').value <datetime2){
+                        document.getElementById('time1').setCustomValidity('外送不能少於八小時');
+                    }else{
+                        document.getElementById('time1').setCustomValidity('');
+
+                    }
+            }else{
+            document.getElementById('time1').min = "";
+            document.getElementById('time1').setCustomValidity('');
+            }
+            }
         }
-        function dat(){
-        var datetime1 =  new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split("T")[0];
-        var datetime2 = new Date(new Date().getTime() + new Date().getTimezoneOffset() * 60000).toISOString().slice(11).slice(0, -8);
-         if(document.getElementById('date1').value == datetime1){
-        document.getElementById('time1').min = new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000 * 4.625).toISOString().slice(11).slice(0, -8);
-        document.getElementById('time1').setCustomValidity('自取不能少於五小時');
-        }else{
-        document.getElementById('time1').min = "";
-        document.getElementById('time1').setCustomValidity('');
-        }
-        }
+        
+
     </script>
 </body>
 <footer class="bglight fontdark">

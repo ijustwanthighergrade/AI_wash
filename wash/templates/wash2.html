@@ -232,6 +232,60 @@
     var tax1_1 = 1 , tax1_2 = 0 , tax1_3 = 0 , tax2_1 = 1 , tax2_2 = 0 , tax2_3 = 0 , tax3_1 = 1 , tax3_2 = 0 , tax3_3 = 0 ;
     var bag_1 = 1;
 
+    if(washing2.value =="標準"){
+                    document.getElementById("wash_2").innerHTML = "30 分鐘 0 元 5 點數 1 碳排";
+                    price2_1 = 0;
+                    point2_1 = 5;
+                    tax2_1 = 1;
+                }else if(washing2.value =="精緻洗"){
+                    document.getElementById("wash_2").innerHTML = "50 分鐘 5 元 0 點數 2 碳排";
+                    price2_1 = 5;
+                    point2_1 = 0;
+                    tax2_1 = 2;
+                }else if(washing2.value =="柔洗"){
+                    document.getElementById("wash_2").innerHTML = "50 分鐘 5 元 0 點數 2 碳排";
+                    price2_1 = 5;
+                    point2_1 = 0;
+                    tax2_1 = 2;
+                }else if(washing2.value =="快洗"){
+                    document.getElementById("wash_2").innerHTML = "20 分鐘 0 元 5 點數 2 碳排";
+                    price2_1 = 0;
+                    point2_1 = 5;
+                    tax2_1 = 2;
+                }
+    if(drying2.value =="日曬"){
+                    document.getElementById("dry_2").innerHTML = "1440 分鐘 0 元 5 點數 1 碳排";
+                    price2_2 = 0;
+                    point2_2 = 5;
+                    tax2_2 = 1;
+                }else if(drying2.value =="低溫烘乾"){
+                    document.getElementById("dry_2").innerHTML = "180 分鐘 5 元 0 點數 3 碳排";
+                    price2_2 = 5;
+                    point2_2 = 0;
+                    tax2_2 = 3;
+                }else if(drying2.value =="中溫烘乾"){
+                    document.getElementById("dry_2").innerHTML = "120 分鐘 5 元 0 點數 3 碳排";
+                    price2_2 = 5;
+                    point2_2 = 0;
+                    tax2_2 = 3;
+                }else if(drying2.value =="高溫烘乾"){
+                    document.getElementById("dry_2").innerHTML = "60 分鐘 5 元 0 點數 3 碳排";
+                    price2_2 = 5;
+                    point2_2 = 0;
+                    tax2_2 = 3;
+                }
+    if(store2.value =="不折"){
+                    document.getElementById("store_2").innerHTML = "0 分鐘 0 元 5 點數 0 碳排";
+                    price2_3 = 0;
+                    point2_3 = 5;
+                    tax2_3 = 0;
+                }else if(store2.value =="機器人"){
+                    document.getElementById("store_2").innerHTML = "20 分鐘 5 元 0 點數 1 碳排";
+                    price2_3 = 5;
+                    point2_3 = 0;
+                    tax2_3 = 1;
+                }
+
     document.getElementById("total1").innerHTML = "&emsp;總金額：" + ((price1_1 + price1_2 + price1_3 + bag_1*50)+(tax1_1 + tax1_2 + tax1_3)*3) + "(含碳稅：" + (tax1_1 + tax1_2 + tax1_3)*3 + ") 總點數：" + (point1_1 + point1_2 + point1_3 + 20*bag_1);
     document.getElementById("total2").innerHTML = "&emsp;總金額：" + ((price2_1 + price2_2 + price2_3 + bag_1*50)+(tax2_1 + tax2_2 + tax2_3)*3) + "(含碳稅：" + (tax2_1 + tax2_2 + tax2_3)*3 + ") 總點數：" + (point2_1 + point2_2 + point2_3 + 20*bag_1);
     document.getElementById("total3").innerHTML = "&emsp;總金額：" + ((price3_1 + price3_2 + price3_3 + bag_1*50)+(tax3_1 + tax3_2 + tax3_3)*3) + "(含碳稅：" + (tax3_1 + tax3_2 + tax3_3)*3 + ") 總點數：" + (point3_1 + point3_2 + point3_3 + 20*bag_1);
