@@ -75,16 +75,21 @@ def wash2(request):
    take=""
    addr=""
    maddr=""
+   t="0"
    if 'mem_session' in request.session:
-      if request.method == 'POST':
-         take=request.POST.get('r1')
-         addr=request.POST.get('addr')
-         maddr=request.POST.get('maddr')
+      if request.method == 'GET':
+         take=request.GET.get('r1')
+         addr=request.GET.get('addr')
+         maddr=request.GET.get('add1')
+         
+      print("t="+take,addr,maddr)
+      if maddr != None:
+         t="1"   
          
       orderdata['Take'] = take
       orderdata['addr']= addr
       
-      if maddr!="":
+      if orderdata['Take']=="外送" and  t=="1":
          MEMBER.objects.filter(MEMID=request.session['mem_session']).update(MEMADDR=addr)
       
       
@@ -188,6 +193,7 @@ def wash4(request):
          t="商家自取"
          
       mem = MEMBER.objects.get(MEMID=request.session['mem_session'])
+      
       phone=mem.MEMPHONE
       card=mem.MEMCARD
       
@@ -211,9 +217,9 @@ def dealorder(request):
       orderdata['creditcard']=card
       
    mem = MEMBER.objects.filter(MEMID=request.session['mem_session'])
-   if rememberphone != "":
+   if rememberphone != None:
       mem.update(MEMPHONE=phone)
-   if remembercard != "":
+   if remembercard != None:
       mem.update(MEMCARD=card)
       
    

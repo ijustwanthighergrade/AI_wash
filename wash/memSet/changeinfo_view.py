@@ -15,11 +15,11 @@ def changeinfo(request):
             changeaddr = request.GET.get('addr')
             changecard = request.GET.get('card')
         print(changephone,changeaddr,changecard)
-        if changephone != "":
+        if changephone != None:
             memc.update(MEMPHONE=changephone)
-        if changeaddr != "":
+        if changeaddr != None:
             memc.update(MEMADDR=changeaddr)
-        if changecard != "":
+        if changecard != None:
             memc.update(MEMCARD=changecard)
         mem = MEMBER.objects.get(MEMID=request.session['mem_session'])
         memphone=mem.MEMPHONE
