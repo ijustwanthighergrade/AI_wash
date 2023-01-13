@@ -6,6 +6,8 @@
     border-radius: 15px;
     margin-bottom: 2%;
     height: 40vh;
+    padding: 0% 5%;
+
 }
 
 .td1{
@@ -32,8 +34,8 @@
 
 .div3{
     font-weight: bold;
-    font-size: 16px;
-    text-align: center;
+    font-size: 12px;
+    text-align: left;
 }
 
 .tr1{
