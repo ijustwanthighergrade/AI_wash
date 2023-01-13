@@ -116,7 +116,7 @@ class shop(models.Model):
         return self.SHOPID
 
 class bag(models.Model):
-    BID = models.CharField('洗衣袋編號',max_length=20)
+    BID = models.CharField('洗衣袋編號',max_length=20,default="0")
     MEMID = models.CharField('使用者編號',max_length=20,default=0, null=False)
     GDATE = models.DateTimeField('租借時間',default = timezone.now)
     RDATE = models.DateTimeField('歸還時間',default = timezone.now)

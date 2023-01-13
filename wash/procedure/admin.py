@@ -44,5 +44,9 @@ admin.site.register(delivery, DELIVERYadmin)
 
 admin.site.register(order)
 admin.site.register(shop)
+class DELIVERYadmin(admin.ModelAdmin):
+    list_display=('id','BID','MEMID','RDATE','GDATE',)
+    list_filter=('id','MEMID',)
+    ordering=('id',)
 admin.site.register(bag)
 admin.site.register(lock)
