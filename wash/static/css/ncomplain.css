@@ -1,9 +1,4 @@
-    footer {
-        position: relative;
-    }
-    a:visited{
-        color: aliceblue;
-    }
+
     .content {
         display: flex;
         justify-content: center;

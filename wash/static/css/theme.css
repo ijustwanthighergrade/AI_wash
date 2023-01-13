@@ -31,3 +31,7 @@
         filter: drop-shadow(170px 0 #454b4a);
     }
 }
+a:visited{
+    color:#c7fffc;
+
+}

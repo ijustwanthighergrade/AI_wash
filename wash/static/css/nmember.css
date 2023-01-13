@@ -1,9 +1,4 @@
 
-footer{
-    position: relative;
-    margin-top: 5%;    
-}
-
 .content{
     display: flex;
     justify-content: center;
@@ -67,9 +62,7 @@ footer{
     border-width: 2px;
     border-style: solid;
 }
-a:visited{
-    color: #e4fffe;
-}
+
 
 @media screen and (max-width: 980px)
 {
