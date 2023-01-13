@@ -125,6 +125,9 @@ def wash3(request):
       lmode=LMODE.objects.get(LMODE=orderdata['dryway'])
       fmode=FMODE.objects.get(FMODE=orderdata['flodway'])
       
+      totaltime=wmode.TIME+fmode.TIME+lmode.TIME
+      
+      
       PRICE = wmode.MONEY + lmode.MONEY + fmode.MONEY + int(orderdata['bagamount']) * 50 + wmode.MEMISSIONS * 3 + lmode.MEMISSIONS * 3 + fmode.MEMISSIONS * 3
       GPOINT = wmode.POINTS + lmode.POINTS + fmode.POINTS+ int(orderdata['bagamount']) * 20
       C_AMOUNT = wmode.MEMISSIONS * 3 + lmode.MEMISSIONS * 3 + fmode.MEMISSIONS * 3
