@@ -38,7 +38,7 @@ urlpatterns = [
     path('order/', include('order.urls')),
     path('complain/', include('complain.urls')),
     path('detail/', include('detail.urls')),
-    path('showfeedback/', include('showfeedback.urls')),
+    path('showfeedback', include('showfeedback.urls')),
     path('login/', include('login.urls')),
     path('api2/', viewslogin.api2, name='api2'),
     path('changeinfo/', changeinfo_view.changeinfo, name='changeinfo'),

@@ -20,5 +20,5 @@ from . import views
 
 urlpatterns = [
     path('', views.feedback, name='feedback'),
-    path('../../home', views.index, name='index'),
+    path('../home', views.index, name='index'),
 ]
