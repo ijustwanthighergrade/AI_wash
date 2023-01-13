@@ -1,37 +1,41 @@
 .bglight{
-    background-color: #cceab0;
+    background-color: #ecad0f;
 }
 .bgdark{
-    background-color: #eeb225;
+    background-color: rgb(250, 241, 210);
 }
 .fontlight{
-    color: #cceab0;
+    color: #ecad0f;
 }
 .fontdark{
-    color:#eeb225;
+    color:rgb(250, 241, 210);
 }
 .blight{
-    border-color:#dff9c7;
+    border-color:#ecad0f;
 
 }
 .bdark{
-    border-color:#eeb225;
+    border-color:rgb(250, 241, 210);
 }
 .logo {
     width: 60%;
     animation: color linear forwards;
     transform: translateX(-100%);
-    filter: drop-shadow(170px 0 #eeb225);
+    filter: drop-shadow(170px 0 rgb(250, 241, 210));
 }
 @keyframes color {
     0% {
-        filter: drop-shadow(0 0 #eeb225);
+        filter: drop-shadow(0 0 rgb(250, 241, 210));
     }
     100% {
-        filter: drop-shadow(170px 0 #eeb225);
+        filter: drop-shadow(170px 0 rgb(250, 241, 210));
     }
 }
 a:visited{
-    color:#dff9c7;
+    color:#ecad0f;
+
+}
+a{
+    color:#ecad0f;
 
 }
