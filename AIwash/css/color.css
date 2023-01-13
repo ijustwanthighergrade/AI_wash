@@ -1,3 +1,4 @@
+
 .content{
     display: flex;
     justify-content: center;
@@ -7,12 +8,12 @@
     justify-content: space-around;
     margin: 5% 0% 15% 0%;
     width: 80%;
-    border-right-style: solid;
-    border-right-width: 2px;
+    border-style: solid;
+    border-width: 2px;
 }
 .text2{
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
 }
 .text3{
@@ -26,28 +27,33 @@
     font-weight: bold;
     font-size: 20px;
     margin-left: 2%;
-    border-right-style: solid;
-    border-right-width: 2px;
+    border-style: solid;
+    border-width: 2px;
+}
+.table1{
+    margin: 10% auto;
+    text-align: center;
+    width: 100%;
+}
+.bottom{
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-bottom-color:black ;
+}
+.c{
+    font-size: 20px;
+    font-weight: bold;
 }
 .btn{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    width: 80%;
-    flex-wrap: wrap;
-    margin-left: 50px;
+    text-align: center;
+    padding: 0% 35%;
+    height: 80px;
 }
 .theme{
     display:flex;
     flex-direction: row ;
-    margin-left: 100px;
-    margin-top: 50px;
-    border-right-style: solid;
-    border-right-width: 1px;
-}
-.btn2{
-    background-color: #2fcfc700;
-    border: 0px;
+    border-style: solid;
+    border-width: 1px;
 }
 .A{
     width: 100px;
@@ -66,10 +72,6 @@
 }
 @media screen and (max-width: 768px)
 {
-    
-    footer{
-        position: relative;
-    }
     .ta1{
         margin-bottom: 3%;
     }
@@ -89,7 +91,7 @@
         margin-left: 0px;
     }
     .text2{
-        font-size: 35px;
+        font-size: 25px;
     }
     .A{
         width: 50px;
@@ -98,10 +100,5 @@
     .B{
         width: 25px;
         height: 50px;
-    }
-    .theme{
-        margin-left: 50px;
-        margin-top: 25px;
-        margin-bottom: 50px;
     }
 }

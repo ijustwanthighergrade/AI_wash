@@ -8,46 +8,45 @@
     <title>signup</title>
     <link href="css/add.css" rel="stylesheet">
     <link href="css/signup.css" rel="stylesheet">
-</head>
+    <link href="css/theme.css" rel="stylesheet">
 
-<body>
-    <table class="manu">
+</head>
+<body class="bgdark">
+
+    <table class="manu bglight">
         <tr>
-            <td><img class="logo" src="image/logo.jpg"></td>
-            <td>
-                <div class="mem">會員</div>
-            </td>
+            <td><img class="logo" src="image/logo2.png"></td>
+            <td><a href="#"><div class="mem bgdark fontlight">會員</div></a></td>
+            <td><a href="#"><div class="mem bgdark fontlight">登出</div></a></td>
         </tr>
     </table>
 
-    <div class="ta2">
-        <div class="td1">
-            <div class="text4">
-                <a href="{% url 'member' %}">返回</a>
+    <div class="content blight bglight">
+        <div class="td1 bgdark fontlight">
+            <div class="text4 bgdark blight fontlight">
+                <a href="">返回</a>
             </div>
-            <form>
-                <div class="text1">
+            <form action="/yesitsignup">
+                <div class="text1 fontlight">
                     <table class="ta3">
                         <tr>
-                            <td class="td2">服務條款確認：</br>
-                                <input type="checkbox"><a href="">條款</a>
+                            <td class="td2">服務條款確認：</br></br></br>
+                                <input name="yes" value="1" type="checkbox" required><a href="">服務條款</a>
+                            </br></br>
                             </td>
                         </tr>
                     </table>
                 </div>
                 <div class="btn">
-                    <div class="text2">
-                        <input type="submit" value="確認條款" class="text3">
-                    </div>
-                    <div class="text2">
-                        <input type="reset" value="重新填寫" class="text3">
+                    <div class="text2 bgdark blight fontlight">
+                        <input type="submit" value="確認條款" class="text3 bgdark fontlight">
                     </div>
                 </div>
             </form>
         </div>
     </div>
 </body>
-<footer>
+<footer class="bglight fontdark">
     Copyright@2022 By AIwash Rights Reseved
 </footer>
 

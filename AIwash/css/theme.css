@@ -1,19 +1,37 @@
 .bglight{
     background-color: #c7fffc;
 }
-.fontlight{
-    color: #c7fffc;
-}
 .bgdark{
     background-color: #343837;
+}
+.fontlight{
+    color: #c7fffc;
 }
 .fontdark{
     color:#454b4a;
 }
 .blight{
-    border-right-color:#c7fffc;
+    border-color:#c7fffc;
 
 }
 .bdark{
-    border-right-color:#454b4a;
+    border-color:#454b4a;
+}
+.logo {
+    width: 60%;
+    animation: color linear forwards;
+    transform: translateX(-100%);
+    filter: drop-shadow(170px 0 #454b4a);
+}
+@keyframes color {
+    0% {
+        filter: drop-shadow(0 0 #454b4a);
+    }
+    100% {
+        filter: drop-shadow(170px 0 #454b4a);
+    }
+}
+a:visited{
+    color:#c7fffc;
+
 }
