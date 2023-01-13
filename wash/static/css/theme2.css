@@ -1,33 +1,37 @@
 .bglight{
-    background-color: #cceab0;
+    background-color: #ffecec;
 }
 .bgdark{
-    background-color: #119464;
+    background-color: #a5220e;
 }
 .fontlight{
-    color: #cceab0;
+    color: #ffecec;
 }
 .fontdark{
-    color:#119464;
+    color:#a5220e;
 }
 .blight{
-    border-color:#dff9c7;
+    border-color:#ffecec;
 
 }
 .bdark{
-    border-color:#119464;
+    border-color:#a5220e;
 }
 .logo {
     width: 60%;
     animation: color linear forwards;
     transform: translateX(-100%);
-    filter: drop-shadow(170px 0 #119464);
+    filter: drop-shadow(170px 0 #a5220e);
 }
 @keyframes color {
     0% {
-        filter: drop-shadow(0 0 #119464);
+        filter: drop-shadow(0 0 #a5220e);
     }
     100% {
-        filter: drop-shadow(170px 0 #119464);
+        filter: drop-shadow(170px 0 #a5220e);
     }
+}
+a:visited{
+    color:#ffecec;
+
 }
