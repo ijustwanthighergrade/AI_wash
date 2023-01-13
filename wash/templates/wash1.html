@@ -62,7 +62,8 @@
                             <td colspan="2">
                                 <div id="w1" style="display:block;" class="t3 fontlight">
                                     地址
-                                    <input type="text" id="addr" name="addr" value="{{memaddr}}" required="required" disabled>
+                                    <input type="text" id="addr" name="addr" value="{{memaddr}}" required="required" disabled><br><br>
+                                    <input type="checkbox" id="che1" disabled name="add1" value="1">設為預設
                                 </div>
 
                             </td>
@@ -83,16 +84,17 @@
 </body>
 <script>
     var addr = document.getElementById('addr');
+    var addr = document.getElementById('che1');
 
     function rad1(){
         var addr = document.getElementById('addr');
-
         addr.setAttribute("disabled", "disabled");
+        che1.setAttribute("disabled", "disabled");
     }
     function rad2(){
         var addr = document.getElementById('addr');
-
         addr.removeAttribute("disabled");
+        che1.removeAttribute("disabled");
     }
 </script>
 <footer class="bglight fontdark">
