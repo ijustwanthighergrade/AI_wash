@@ -84,6 +84,11 @@ def wash2(request):
       
       mycolor=COLOR.objects.get(MEMID=request.session['mem_session']).WHICHCOLOR
       print(mycolor)
+      mem=MEMBER.objects.get(MEMID=request.session['mem_session'])
+      
+      print(mem.MEMBAGS)
+      bagamount =int(mem.MEMBAGS) - int(mem.USINGBAG)
+      print(mem.MEMBAGS)
       
       prefer=prefermode.objects.get(MEMID=request.session['mem_session'])
       FMODE=prefer.FMODE
@@ -221,6 +226,9 @@ def dealorder(request):
    
    datechange=orderdata['getdate']+" "+orderdata['gettime']
    datetime.strptime(datechange,'%Y-%m-%d %H:%S')
+   
+   bag.objects.create(MEMID=request.session['mem_session'],GDATE=datechange)
+   
    if(orderdata['Take']=="外送"):
       delivery.objects.create(ORDID=ORD,SHOPID=SHOPS,PHONE=orderdata['mphone'], ADDRESS=orderdata['addr'],GDATE=datechange)
       
