@@ -13,7 +13,7 @@ from member.models import COLOR
 #進入view
 #建立SACCngrok及自己的serverngrok
 SACCngrok="https://10eb-1-34-54-152.jp.ngrok.io"
-serverngrok="https://5d32-58-115-108-180.jp.ngrok.io"
+serverngrok="https://47db-27-240-216-58.jp.ngrok.io"
 #第一步 登入介面的view，每次重整都會run一次
 
 # def login(request):

@@ -28,7 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = ['https://5d32-58-115-108-180.jp.ngrok.io']
+CSRF_TRUSTED_ORIGINS = ['https://47db-27-240-216-58.jp.ngrok.io']
 
 # Application definition
 

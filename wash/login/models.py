@@ -15,11 +15,11 @@ class LOGIN(models.Model):
 
 class MEMBER(models.Model):
     MEMID=models.CharField(max_length=43, primary_key=True, editable=False)
-    MEMADDR=models.CharField(max_length=256,default="")
-    MEMPHONE=models.CharField(max_length=12,default="")
-    ACCESS=models.CharField(max_length=43,default="")
+    MEMADDR=models.CharField(max_length=256,default="DEFAULT")
+    MEMPHONE=models.CharField(max_length=12,default="DEFAULT")
+    ACCESS=models.CharField(max_length=43,default="DEFAULT")
     MEMBAGS=models.IntegerField(default=5)
-    MEMCARD=models.CharField(max_length=19,default="")
+    MEMCARD=models.CharField(max_length=19,default="DEFAULT")
     USINGBAG=models.IntegerField(default=0)
     
 class AGREE(models.Model):

@@ -4,6 +4,7 @@ from django.http import HttpResponse
 import sqlite3
 from django.template import Template,Context
 from login.views import login2
+from django.utils import timezone
 from procedure.models import order
 from procedure.models import WMODE
 from procedure.models import LMODE
@@ -51,12 +52,16 @@ def wash1(request):
          WMODE.objects.create(WMODE="精緻洗",MONEY=5,POINTS=0,MEMISSIONS=2,TIME=50)
          WMODE.objects.create(WMODE="柔洗",MONEY=5,POINTS=0,MEMISSIONS=2,TIME=40)
          WMODE.objects.create(WMODE="快洗",MONEY=0,POINTS=5,MEMISSIONS=2,TIME=20)
-
+      else:
+         pass
+      if not LMODE.objects.exists():
          LMODE.objects.create(LMODE="日曬",MONEY=0,POINTS=5,MEMISSIONS=0,TIME=1440)
          LMODE.objects.create(LMODE="低溫烘乾",MONEY=5,POINTS=0,MEMISSIONS=3,TIME=180)
          LMODE.objects.create(LMODE="中溫烘乾",MONEY=5,POINTS=0,MEMISSIONS=3,TIME=120)
          LMODE.objects.create(LMODE="高溫烘乾",MONEY=5,POINTS=0,MEMISSIONS=3,TIME=60)
-
+      else:
+         pass
+      if not FMODE.objects.exists():
          FMODE.objects.create(FMODE="不折",MONEY=0,POINTS=5,MEMISSIONS=0,TIME=0)
          FMODE.objects.create(FMODE="機器人",MONEY=5,POINTS=0,MEMISSIONS=1,TIME=20)
       else:
@@ -252,10 +257,10 @@ def dealorder(request):
       "CDATE": a.CDATE.strftime("%Y-%m-%d %H:%M"),
       "GPOINT": a.GPOINT,
       "AMOUNT": a.AMOUNT,
-      "APPID": a.APPID
+      "APPID": str(a.APPID)
    }
    res = requests.post('https://a6b2-59-124-157-21.jp.ngrok.io/api/myapp/', data,headers = {'ngrok-skip-browser-warning': '7414'} )
-
+   print(res)
    print(orderdata)
 
    mycolor=COLOR.objects.get(MEMID=request.session['mem_session']).WHICHCOLOR

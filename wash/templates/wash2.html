@@ -44,7 +44,7 @@
                     <input type="number" name="bagamount" class="num" required="required" min="1" value="1" id="bagamount" onkeydown="return false">
                     <div class="add1 fontlight"  onclick="bagamount1()">+</div>
                     <div class="add2 fontlight"  onclick="bagamount2()">-</div>
-                    <input type="text" value="bagamount" hidden>
+                    <input type="text" value="{{bagamount}}" hidden id="bag3">
                 </div>
                 
             </td>
@@ -233,6 +233,7 @@
     var tax1_1 = 1 , tax1_2 = 0 , tax1_3 = 0 , tax2_1 = 1 , tax2_2 = 0 , tax2_3 = 0 , tax3_1 = 1 , tax3_2 = 0 , tax3_3 = 0 ;
     var bag_1 = 1;
 
+    document.getElementById("bagamount").max =document.getElementById("bag3").value ;
     if(washing2.value =="標準"){
                     document.getElementById("wash_2").innerHTML = "30 分鐘 0 元 5 點數 1 碳排";
                     price2_1 = 0;
