@@ -18,31 +18,30 @@ serverngrok="https://47db-27-240-216-58.jp.ngrok.io/"
 #第二步
 def api2(request):
     if request.method == 'GET':
-        fknum = request.GET.get('fk')
-        nomatter=LOGIN.objects.filter(FKcheck = fknum)
-        sum=''
+        fk = request.GET.get('fk')
+        nomatter=LOGIN.objects.filter(FKcheck = fk)
+        rstate=''
         for i in nomatter:
-            sum=i.Rstate
-    url = SACCngrok+'/RESTapiApp/Line_2/?Rstate='+sum
-    req=requests.get(url,headers = {'Authorization': 'Token e747f053f1e4ecf0228195b5652e27060e0937bd','ngrok-skip-browser-warning': '7414'})
-    req_read = req.json()
-    print(req_read)
-    userUID=req_read["RuserID"]
-    access_code=req_read["Raccess_code"]
-    print(req_read["Raccess_code"])
-    LOGIN.objects.filter(FKcheck = fknum).update(Raccesscode=access_code)
-    if(MEMBER.objects.filter(MEMID__exact = userUID)): 
+            rstate=i.Rstate
+    url = SACCngrok+'/RESTapiApp/Line_2/?Rstate='+rstate
+    r=requests.get(url,headers = {'Authorization': 'Token e747f053f1e4ecf0228195b5652e27060e0937bd','ngrok-skip-browser-warning': '7414'})
+    r_r = r.json()
+    print(r_r)
+    userid=r_r["RuserID"]
+    access_code=r_r["Raccess_code"]
+    LOGIN.objects.filter(FKcheck = fk).update(Raccesscode=access_code)
+    if(MEMBER.objects.filter(MEMID__exact = userid)): 
         if 'mem_session' in request.session:
             try:
                 del request.session['mem_session']
             except:
                 pass
-        request.session['mem_session'] = userUID
+        request.session['mem_session'] = userid
         request.session.modified = True
         request.session.set_expiry(60*30) #存在20分鐘
     else:
-        MEMBER.objects.create(MEMID=userUID)
-        request.session['mem_session'] = userUID
+        MEMBER.objects.create(MEMID=userid)
+        request.session['mem_session'] = userid
         request.session.modified = True
         request.session.set_expiry(60*30) #存在20分鐘
     
@@ -53,7 +52,7 @@ def api2(request):
     mycolor=COLOR.objects.get(MEMID=request.session['mem_session']).WHICHCOLOR
     print(mycolor)
         
-    MEMBER.objects.filter(MEMID = userUID).update(ACCESS=access_code)
+    MEMBER.objects.filter(MEMID = userid).update(ACCESS=access_code)
     print(request.session['mem_session'])
     
     if AGREE.objects.filter(MEMID=request.session['mem_session']).exists():
@@ -66,35 +65,35 @@ def api2(request):
     
 def api1(request):
     if request.method == 'GET':
-        fknum = request.GET.get('fk')
-        nomatter=LOGIN.objects.filter(FKcheck = fknum)
-        sum=''
+        fk = request.GET.get('fk')
+        nomatter=LOGIN.objects.filter(FKcheck = fk)
+        rstate=''
         for i in nomatter:
-            sum=i.Rstate
-    url = SACCngrok+'/RESTapiApp/SMS_2/?RSMSid='+sum
-    req=requests.get(url,headers = {'Authorization': 'Token e747f053f1e4ecf0228195b5652e27060e0937bd','ngrok-skip-browser-warning': '7414'})
-    req_read = req.json()
-    print(req_read)
-    userUID=req_read["RuserID"]
-    access_code=req_read["Raccess_code"]
-    print(req_read["Raccess_code"])
-    LOGIN.objects.filter(FKcheck = fknum).update(Raccesscode=access_code)
-    if(MEMBER.objects.filter(MEMID__exact = userUID)): 
+            rstate=i.Rstate
+    url = SACCngrok+'/RESTapiApp/SMS_2/?RSMSid='+rstate
+    r=requests.get(url,headers = {'Authorization': 'Token e747f053f1e4ecf0228195b5652e27060e0937bd','ngrok-skip-browser-warning': '7414'})
+    r_r = r.json()
+    print(r_r)
+    userid=r_r["RuserID"]
+    access_code=r_r["Raccess_code"]
+    print(r_r["Raccess_code"])
+    LOGIN.objects.filter(FKcheck = fk).update(Raccesscode=access_code)
+    if(MEMBER.objects.filter(MEMID__exact = userid)): 
         if 'mem_session' in request.session:
             try:
                 del request.session['mem_session']
             except:
                 pass
-        request.session['mem_session'] = userUID
+        request.session['mem_session'] = userid
         request.session.modified = True
         request.session.set_expiry(60*30) #存在20分鐘
     else:
-        MEMBER.objects.create(MEMID=userUID)
-        request.session['mem_session'] = userUID
+        MEMBER.objects.create(MEMID=userid)
+        request.session['mem_session'] = userid
         request.session.modified = True
         request.session.set_expiry(60*30) #存在20分鐘
         
-    MEMBER.objects.filter(MEMID = userUID).update(ACCESS=access_code)
+    MEMBER.objects.filter(MEMID = userid).update(ACCESS=access_code)
     print(request.session['mem_session'])
     return render(request, 'index.html', locals())
 
